@@ -1,6 +1,3 @@
-<?php
-    require_once "./includes/connect_mysql.php";
-?>
 <!-- Header Top -->
 <div class="navbar navbar-static top-links first-bg" >
   <div class="navbar-inner container_9">

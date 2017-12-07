@@ -40,22 +40,22 @@ jQuery(document).ready(function() {
 <body id="index" class=" ">
 <div id="page" class="clearfix">
 
-    <?php
-        require_once "./includes/header.php";
-
-        $sql = "SELECT * FROM products";
-        $result = $conn->query($sql);
-
-        
-    ?>
+  <?php
+    require_once "./includes/header.php";echo 123;
+    require_once "./model/Product.php";
+    $productObj = new Product();
+    
+    $products = $productObj->getProducts();
+  ?>
 
   <!-- Main -->
   <section  id="columns" class="container_9 clearfix col2-right">
     <!-- Center -->
     <article id="center_column" class=" grid_5">
       <?php
-        if ($result->num_rows > 0) {
-          while($row = $result->fetch_assoc()) {
+//        if ($products->num_rows > 0) {
+//          while($row = $products->fetch_assoc()) {
+//            echo $row['id'];
       ?>
       <ul class="products-grid">
         <li class="item first fadeIn animated">
@@ -74,10 +74,10 @@ jQuery(document).ready(function() {
         </li>
       </ul>
       <?php
-        }
-      } else {
-        echo "<b>No products</b>";
-      }
+//        }
+//      } else {
+//        echo "<b>No products</b>";
+//      }
       ?>
     </article>
 
@@ -92,7 +92,6 @@ jQuery(document).ready(function() {
       <p><a href="javascript:"><img src="media/footer-banner.png" alt=""></a></p>
     </div>
   </div>
-
 
     <?php
         require_once "./includes/footer.php";
