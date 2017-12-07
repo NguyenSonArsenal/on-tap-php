@@ -1,3 +1,12 @@
+<?php
+//require_once ('./model/Database.php');
+//var_dump(file_exists('./model/Database.php'));
+//echo 456;
+// $productObj = new Product();
+
+// $products = $productObj->getProducts();
+?>
+
 <!-- Header Top -->
 <div class="navbar navbar-static top-links first-bg" >
   <div class="navbar-inner container_9">

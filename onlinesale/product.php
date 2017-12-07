@@ -1,3 +1,17 @@
+<?php
+require_once './model/Product.php';
+
+$productObj = new Product();
+$productId = isset($_GET['id']) ? $_GET['id'] : 0;
+$product = $productObj->getProductById($productId);
+if($product->num_rows > 0)
+{
+  $product = $product->fetch_assoc();
+} else {
+  header('Location: ./404.php');
+}
+?>
+
 <!DOCTYPE html>
 
 <!--[if lt IE 9]>
@@ -33,75 +47,61 @@ location.replace("http://windows.microsoft.com/en-US/internet-explorer/products/
 <script type="text/javascript">
 
 jQuery(document).ready(function() {
-
-$(".fa-search-btn").prettyPhoto();
-
-	
+  $(".fa-search-btn").prettyPhoto();
 });
 
 </script>
 </head>
-
-
 <body id="index" class=" ">
-<div id="page" class="clearfix">
+  <div id="page" class="clearfix">
 
     <?php
         require_once "./includes/header.php";
     ?>
 
   <div class="category-full-image">
-
-      <!-- bxSlider Javascript file -->
-        <script src="js/jquery.bxslider.min.js"></script>
-        <!-- bxSlider CSS file -->
-        <link href="css/jquery.bxslider.css" rel="stylesheet" />
-        <script>
-$(document).ready(function(){
-  $('.category-slider').bxSlider({
-
-       auto: true,
-	   mode:'fade'
-
-  });
-});
-</script>
-
-
-
-
+     <script src="js/jquery.bxslider.min.js"></script>
+     <link href="css/jquery.bxslider.css" rel="stylesheet" />
+     <script>
+       $(document).ready(function(){
+         $('.category-slider').bxSlider({
+           auto: true,
+           mode:'fade'
+          });
+        });
+     </script>
   </div>
   
   <section  id="columns" class="container_9 clearfix col2-right">
  
-  
   <!-- Center -->
   <article id="center_column" class=" grid_5">
      <div class="clearfix" id="primary_block">
-        
         <!-- right infos-->
         <div id="pb-right-column"> 
-          
           <!-- product img-->
           <div id="image-block">
             <link rel="stylesheet" href="css/prettyPhoto.css" />
             <script src="js/jquery.prettyPhoto.js"></script> 
             <script type="text/javascript">
-
-jQuery(document).ready(function() {
-
-$(".prettyPhoto").prettyPhoto();
-	 
-});
-
-</script> 
-            <a class="prettyPhoto" href="media/246-thickbox_default.jpg"><img src="media/246-thickbox_default.jpg" width="470" height="261"></a> </div>
+              jQuery(document).ready(function() {
+                $(".prettyPhoto").prettyPhoto();
+              });
+            </script>
+            <a class="prettyPhoto" href="<?php echo 'photos/' . $product['name']?>">
+              <img src="<?php echo 'photos/' . $product['name']?>" width="470" height="280">
+            </a>
+          </div>
         </div>
         <div id="pb-left-column">
           <div id="short_description_block">
-            <h1>Proins gravda</h1>
+            <h1><?php echo $product['name']?></h1>
             <div class="price">
-              <p class="our_price_display"> <span id="our_price_display">$345.00</span> </p>
+              <p class="our_price_display">
+                <span id="our_price_display">
+                  <?php echo number_format($product['price'],0,"",".") . '$' ?>
+                </span>
+              </p>
             </div>
             <div class="rte align_justify" id="short_description_content">
               <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a</p>
@@ -111,26 +111,20 @@ $(".prettyPhoto").prettyPhoto();
             <div class="product_attributes">
               <div class="add-to-box"> 
                 <script>
-$(document).ready(function(){
-
-  
-  
-  	    $(".input a").click(function () {
-        var inputEl = $(this).parent().parent().children().next().children();
-        var qty = inputEl.val();
-        if ($(this).parent().hasClass("plus"))
-            qty++;
-        else
-            qty--;
-        if (qty < 0)
-            qty = 0;
-        inputEl.val(qty);
-    })
-	
-	
-	
-});
-</script>
+                  $(document).ready(function(){
+                    $(".input a").click(function () {
+                      var inputEl = $(this).parent().parent().children().next().children();
+                      var qty = inputEl.val();
+                      if ($(this).parent().hasClass("plus"))
+                          qty++;
+                      else
+                          qty--;
+                      if (qty < 0)
+                          qty = 0;
+                      inputEl.val(qty);
+                    })
+                  });
+                </script>
                 <div class="input-qty-box">
                   <div class="input">
                     <ul class="range">
@@ -148,27 +142,19 @@ $(document).ready(function(){
             </div>
           </form>
         </div>
-      </div>
-      
-      
-            <script>
-$(document).ready(function(){
-
-  
-  
-  	$('.content-li:first').addClass ('active');
-	$('.content-li:first').css ('display', 'block');
-	
-	$('ul.i-tab').delegate('li:not(.active)', 'click', function() {
-    $(this).addClass('active').siblings().removeClass('active')
-	.parents('.tabs').find('ul.tab-content .content-li').hide()
-	.eq($(this).index()).show();
-	})
-	
-	
-	
-});
-</script>
+     </div>
+      <script>
+        $(document).ready(function(){
+          $('.content-li:first').addClass ('active');
+          $('.content-li:first').css ('display', 'block');
+          
+          $('ul.i-tab').delegate('li:not(.active)', 'click', function() {
+            $(this).addClass('active').siblings().removeClass('active')
+          .parents('.tabs').find('ul.tab-content .content-li').hide()
+          .eq($(this).index()).show();
+          })
+        });
+      </script>
       <div class="tabs">
         <ul class="i-tab">
           <li class="active first-bg-hover"> Description </li>
@@ -202,9 +188,10 @@ $(document).ready(function(){
         
   </article>
 
-      <?php
-        require_once "./includes/right-bar.php";
-      ?>
+    <?php
+      require_once "./includes/right-bar.php";
+    ?>
+    
 </section>
 
   <div class="footer-info first-bg">
@@ -214,7 +201,7 @@ $(document).ready(function(){
   </div>
 
     <?php
-    require_once "./includes/footer.php";
+      require_once "./includes/footer.php";
     ?>
 
 </div>

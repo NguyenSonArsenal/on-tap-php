@@ -1,6 +1,6 @@
 <?php
 
-class Connect_database
+class Database
 {
   public $servername = "localhost";
   public $username = "root";
@@ -12,11 +12,10 @@ class Connect_database
   {
     $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
   
-    // Check connection
     if ($this->conn->connect_error) {
-      die("Connection database failed: " . $this->conn->connect_error);
+      return $this->conn->connect_error . "Connection database failed: " ;
     } else {
-      echo 'ok';
+      echo 'Connect db successfully';
       return $this->conn;
     }
   }

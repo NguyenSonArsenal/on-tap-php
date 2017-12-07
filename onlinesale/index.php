@@ -41,11 +41,11 @@ jQuery(document).ready(function() {
 <div id="page" class="clearfix">
 
   <?php
-    require_once "./includes/header.php";echo 123;
-    require_once "./model/Product.php";
-    $productObj = new Product();
-    
-    $products = $productObj->getProducts();
+  require_once "./includes/header.php";
+  require_once './model/Product.php';
+
+  $productObj = new Product();
+  $products = $productObj->getProducts();
   ?>
 
   <!-- Main -->
@@ -53,17 +53,16 @@ jQuery(document).ready(function() {
     <!-- Center -->
     <article id="center_column" class=" grid_5">
       <?php
-//        if ($products->num_rows > 0) {
-//          while($row = $products->fetch_assoc()) {
-//            echo $row['id'];
+        if ($products->num_rows > 0) {
+          while($row = $products->fetch_assoc()) {
       ?>
       <ul class="products-grid">
         <li class="item first fadeIn animated">
-          <a class="fa-search-btn first-bg"  href="media/246-thickbox_default.jpg">
+          <a class="fa-search-btn first-bg" href="photos/<?php echo $row['name'] ?>">
             enlarge image
             <i class="icon-search"></i>
           </a>
-          <a class="product-image" title="Product Name" href="product.php">
+          <a class="product-image" title="Product Name" href="product.php?id=<?php echo $row['id'] ?>">
             <img src="photos/<?php echo $row['name'] ?> " width="249" height="180" alt="product">
           </a>
           <h2 class="product-name"> <a title="Product Name" href="product.php"> Product Name </a> </h2>
@@ -74,10 +73,10 @@ jQuery(document).ready(function() {
         </li>
       </ul>
       <?php
-//        }
-//      } else {
-//        echo "<b>No products</b>";
-//      }
+        }
+      } else {
+        echo "<b>No products</b>";
+      }
       ?>
     </article>
 
