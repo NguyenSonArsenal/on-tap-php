@@ -22,6 +22,6 @@ class Singleton_demo
     }
 }
 
-$singleton = Singleton_demo::getInstance();
-$singleton = Singleton_demo::getInstance();
-$singleton = Singleton_demo::getInstance();
+$singleton = Singleton_demo::getInstance(); // New
+$singleton = Singleton_demo::getInstance(); // Old
+$singleton = Singleton_demo::getInstance(); // Old
