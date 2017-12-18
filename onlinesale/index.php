@@ -65,10 +65,17 @@ jQuery(document).ready(function() {
           <a class="product-image" title="Product Name" href="product.php?id=<?php echo $row['id'] ?>">
             <img src="photos/<?php echo $row['name'] ?> " width="249" height="180" alt="product">
           </a>
-          <h2 class="product-name"> <a title="Product Name" href="product.php"> Product Name </a> </h2>
+          <h2 class="product-name">
+            <a title="Product Name" href="product.php?id=<?php echo $row['id'] ?>"> Product Name </a>
+          </h2>
           <div class="actions">
             <a class="btn-circle first-bg-hover"> <i class="icon-heart"></i> </a>
-            <a class="btn-circle first-bg-hover"> <i class="icon-shopping-cart"></i> </a>
+            <a class="btn-circle first-bg-hover"
+               href="shopping-cart.php?id=<?php echo $row['id'] ?>"
+              title="add to cart"
+            >
+              <i class="icon-shopping-cart"></i>
+            </a>
           </div>
         </li>
       </ul>

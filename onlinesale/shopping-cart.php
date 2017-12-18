@@ -1,3 +1,46 @@
+<?php
+session_start();
+require_once './model/Product.php';
+
+$productCart = array();
+
+$productObj = new Product();
+$productId = isset($_GET['id']) ? $_GET['id'] : 0;
+$product = $productObj->getProductById($productId);
+
+if($product->num_rows > 0)
+{
+  $productCart = $product->fetch_assoc();
+//  echo '<pre>';
+//  print_r($productCart);
+  
+  if(!isset($_SESSION['cart']) || $_SESSION['cart'] === null ) {
+    echo 'The cart is no products';
+    $id = $productCart['id'];
+    $_SESSION['cart'][$id] = $productCart;
+    echo '<pre>';
+    print_r($_SESSION['cart']);
+    echo 123456;
+  } else {
+    echo 'The cart has products';
+  }
+} else {
+  header('Location: ./404.php');
+}
+die;
+
+//if( isset( $_SESSION['counter'] ) )
+//{
+//  $_SESSION['counter'] += 1;
+//}
+//else
+//{
+//  $_SESSION['counter'] = 1;
+//}
+//$msg = "Bạn đã truy cập trang này ".  $_SESSION['counter'];
+//$msg .= " lần trong session này.";
+
+?>
 <!DOCTYPE html>
 
 <!--[if lt IE 9]>
@@ -31,23 +74,18 @@ location.replace("http://windows.microsoft.com/en-US/internet-explorer/products/
 <link rel="stylesheet" href="css/prettyPhoto.css" />
 <script src="js/jquery.prettyPhoto.js"></script>
 <script type="text/javascript">
-
-jQuery(document).ready(function() {
-
-$(".fa-search-btn").prettyPhoto();
-
-	
-});
-
+  jQuery(document).ready(function() {
+    $(".fa-search-btn").prettyPhoto();
+  });
 </script>
 </head>
 
 <body id="index" class=" ">
 <div id="page" class="clearfix">
 
-    <?php
-        require_once "./includes/header.php";
-    ?>
+  <?php
+    require_once "./includes/header.php";
+  ?>
 
   <section  id="columns" class="container_9 clearfix col1"> 
     
@@ -78,60 +116,56 @@ $(".fa-search-btn").prettyPhoto();
               </thead>
               <tfoot>
                 <tr class="first last">
-                  <td class="a-center last" colspan="50"><button  class="button btn-continue" title="Continue Shopping" type="button"><span><span><i class="icon-shopping-cart"></i>Continue Shopping</span></span></button>
-                    <button class="button btn-update" title="Update Shopping Cart" value="update_qty" name="update_cart_action" type="submit"><span><span><i class="icon-refresh"></i>Update Shopping Cart</span></span></button></td>
+                  <td class="a-center last" colspan="50">
+                    <button  class="button btn-continue" title="Continue Shopping" type="button">
+                      <span><i class="icon-shopping-cart"></i>Continue Shopping</span>
+                    </button>
+                    <button class="button btn-update" title="Update Shopping Cart"
+                            value="update_qty" name="update_cart_action" type="submit">
+                      <span><i class="icon-refresh"></i>Update Shopping Cart</span>
+                    </button>
+                  </td>
                 </tr>
               </tfoot>
               <tbody>
                 <tr class="first last odd">
-                  <td><a class="product-image"  href="/"><img src="media/246-thickbox_default.jpg" width="110" height="75"></a></td>
-                  <td><h2 class="product-name"> <a href="sony-vaio-vgn-txn27n-b-11-1-notebook-pc.html">Brown Wood Chair</a> </h2>
+                  <td>
+                    <a class="product-image" href="product.php?id=<?php echo $product['id'] ?>">
+                      <img src="photos/<?php echo $product['name'] ?>" width="110" height="75">
+                    </a>
+                  </td>
+                  <td>
+                    <h2 class="product-name">
+                      <a href="product.php?id=<?php echo $product['id'] ?>"><?php echo $product['name'] ?></a>
+                    </h2>
                     <dl>
-                      <dt><strong>Color:</strong> Brown</dt>
-                      <dt><strong>Size:</strong>12</dt>
+                      <dt><strong>Color:</strong>Brown</dt>
+                      <dt><strong>Size:</strong>M</dt>
                     </dl></td>
-                  <td class="a-center"><span class="cart-price"> <span class="price">$2,699.99</span> </span></td>
+                  <td class="a-center"><span class="cart-price"> <span class="price"><?php echo $product['price'] ?></span> </span></td>
                   <td class="a-center">
-				  <script>
-$(document).ready(function(){
-
-  
-  
-  	    $(".input a").click(function () {
-        var inputEl = $(this).parent().parent().children().next().children();
-        var qty = inputEl.val();
-        if ($(this).parent().hasClass("plus"))
-            qty++;
-        else
-            qty--;
-        if (qty < 0)
-            qty = 0;
-        inputEl.val(qty);
-    })
-	
-	
-	
-});
-</script>
+				            <script>
+                      $(document).ready(function(){
+                
+                  
+                  
+                        $(".input a").click(function () {
+                        var inputEl = $(this).parent().parent().children().next().children();
+                        var qty = inputEl.val();
+                        if ($(this).parent().hasClass("plus"))
+                            qty++;
+                        else
+                            qty--;
+                        if (qty < 0)
+                            qty = 0;
+                        inputEl.val(qty);
+                    })
+                  
+                  
+                  
+                });
+                    </script>
                     <div class="input-qty-box">
-                      <div class="input">
-                        <ul class="range">
-                          <li class="item minus"><a style=" cursor:pointer">-</a></li>
-                          <li>
-                            <input type="text" maxlength="3" size="2" value="1" class="input-text qty text" id="quantity_wanted" name="qty">
-                          </li>
-                          <li class="item plus"><a style=" cursor:pointer">+</a></li>
-                        </ul>
-                      </div>
-                    </div></td>
-                  <td class="a-center"><span class="cart-price"> <span class="price">$2,699.99</span> </span></td>
-                  <td class="a-center last"><a class="btn-remove btn-remove2" title="Remove item" href="/">x</a></td>
-                </tr>
-                <tr class="first last odd">
-                  <td><a class="product-image"  href="/"><img src="media/246-thickbox_default.jpg" width="110" height="75"></a></td>
-                  <td><h2 class="product-name"> <a href="sony-vaio-vgn-txn27n-b-11-1-notebook-pc.html">Brown Wood Chair</a> </h2></td>
-                  <td class="a-center"><span class="cart-price"> <span class="price">$2,699.99</span> </span></td>
-                  <td class="a-center"><div class="input-qty-box">
                       <div class="input">
                         <ul class="range">
                           <li class="item minus"><a style=" cursor:pointer">-</a></li>
@@ -149,6 +183,7 @@ $(document).ready(function(){
             </table>
           </fieldset>
         </form>
+        
         <div class="cart-collaterals">
           <div class="col2-set">
             <div class="col-1">
