@@ -20,9 +20,23 @@ $parseUrl = parse_url($url);
 $result = checkHttpOrHttps($parseUrl['scheme']);
 
 if ($result == 0) {
-  echo 'This page using HTTP';
+  echo 'This page using HTTP'."<br>";
 } else if($result == 1) {
-  echo 'This page using HTTPS';
+  echo 'This page using HTTPS'."<br>";
 } else {
-  echo 'Nothing to say';
+  echo 'Nothing to say'."<br>";
+}
+
+echo '<pre>';
+print_r($_SERVER);
+
+// Cach 2
+
+if (!empty($_SERVER['HTTPS']))
+{
+  echo 'https is enabled'."\n";
+}
+else
+{
+  echo 'http is enabled'."\n";
 }
