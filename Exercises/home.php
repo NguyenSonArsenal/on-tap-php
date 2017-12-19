@@ -1,3 +1,52 @@
+<?php
+  $fileName = array(
+    "1.GetVersionPhp.php",
+    "2.DisplayString.php",
+    "3.AddVarToTitle.php",
+    "4.FormDisplayName.php",
+    "5.GetIPClient.php",
+    "6.GetInfoBrowser.php",
+    "7.GetCurrentFile.php",
+    "8.GetURL.php",
+    "9.ChangeColorFirstCharacter.php",
+    "10.CheckHttpOrHttps.php",
+    "11.RedirectAnotherPage.php",
+    "12.CheckEmail.php",
+    "13.DisplayTable.php",
+    "14.DisplaySourceCodePage.php",
+    "15.GetLastModifiedOfFile.php",
+    "16.CountLineNumberOfFile.php",
+    "17.GetVersionPhp.php",
+    "18.DelayProgram.php",
+    "19.ArithmeticOperations.php",
+    "20.GetLastError.php",
+    "21.TernaryOperator.php",
+    "22.GetUrl.php",
+    "23.CompareVersionPhp.php",
+    "24.GetNameOfTheOwnerPHP.php",
+    "25.GetDocumentRootDirectory.php",
+    "26.GetInfoSystem.php",
+    "27.GetCredits.php",
+    "28.GetTempDir.php",
+    "29.GetFunctionName.php",
+    "30.GetTimeLastModified.php",
+    "31.SwapVar.php",
+    "32.NumberAmstrong.php",
+    "33.ConvertWordToDigit.php",
+    "37.TongSoNguyenTo.php",
+    "38.ValidateEmail.php",
+    "39.GetFileSize.php",
+    "45.TotalDigitOfNumber.php"
+  );
+  
+  function getNumberExercise($txt)
+  {
+    $arr = explode(".",$txt);
+    return $arr[0];
+  }
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,21 +62,15 @@
 <body>
 
 <div class="container">
-  <a href="./Basic/1.GetVersionPhp.php" class="link-exercise">Exercise 1</a></li>
-  <a href="./Basic/2.DisplayString.php" class="link-exercise">Exercise 2</a></li>
-  <a href="./Basic/3.AddVarToTitle.php" class="link-exercise">Exercise 3</a></li>
-  <a href="./Basic/4.FormDisplayName.php" class="link-exercise">Exercise 4</a></li>
-  <a href="./Basic/5.GetIPClient.php" class="link-exercise">Exercise 5</a></li>
-  <a href="./Basic/6.GetInfoBrowser.php" class="link-exercise">Exercise 6</a></li>
-  <a href="./Basic/7.GetCurrentFile.php" class="link-exercise">Exercise 7</a></li>
-  <a href="./Basic/8.GetURL.php" class="link-exercise">Exercise 8</a></li>
-  <a href="./Basic/9.ChangeColorFirstCharacter.php" class="link-exercise">Exercise 9</a></li>
-  <a href="./Basic/10.CheckHttpOrHttps.php" class="link-exercise">Exercise 10</a></li>
-  <a href="./Basic/11.RedirectAnotherPage.php" class="link-exercise">Exercise 11</a></li>
-  <a href="./Basic/12.CheckEmail.php" class="link-exercise">Exercise 12</a></li>
+    <?php
+        foreach ($fileName as $key => $file) {
+    ?>
+          <a href="./Basic/<?=$file?>" class="link-exercise">
+            Exercise <?=getNumberExercise($file)?></a></li>
+    <?php
+        }
+    ?>
 </div>
-
-
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
