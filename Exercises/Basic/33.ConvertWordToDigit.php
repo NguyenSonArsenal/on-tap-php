@@ -20,4 +20,23 @@ $data = array(
     'nine'      => '9',
 );
 
-echo $data['zero'];
+function convertWordToDigit($data, $str)
+{
+    $arrStrInput = explode(';', $str);
+
+    $length = count($arrStrInput);
+    
+    $result = '';
+    
+    for ($i = 0; $i < $length; $i++)
+    {
+         $result .= $data[$arrStrInput[$i]];
+    }
+    
+    return $result;
+}
+
+$result = convertWordToDigit($data, $str);
+echo $result;
+echo '<br>';
+var_dump($result);
