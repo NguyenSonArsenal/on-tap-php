@@ -1,5 +1,5 @@
 <?php
-  $fileName = array(
+  $basic = array(
     "1.GetVersionPhp.php", "2.DisplayString.php", "3.AddVarToTitle.php", "4.FormDisplayName.php",
     "5.GetIPClient.php", "6.GetInfoBrowser.php", "7.GetCurrentFile.php", "8.GetURL.php",
     "9.ChangeColorFirstCharacter.php", "10.CheckHttpOrHttps.php", "11.RedirectAnotherPage.php",
@@ -9,8 +9,17 @@
     "20.GetLastError.php", "21.TernaryOperator.php", "22.GetUrl.php", "23.CompareVersionPhp.php",
     "24.GetNameOfTheOwnerPHP.php", "25.GetDocumentRootDirectory.php", "26.GetInfoSystem.php",
     "27.GetCredits.php", "28.GetTempDir.php", "29.GetFunctionName.php", "30.GetTimeLastModified.php",
-    "31.SwapVar.php", "32.NumberAmstrong.php", "33.ConvertWordToDigit.php", "37.TongSoNguyenTo.php",
-    "38.ValidateEmail.php", "39.GetFileSize.php", "45.TotalDigitOfNumber.php"
+    "31.SwapVar.php", "32.NumberAmstrong.php", "33.ConvertWordToDigit.php", "34.CheckSamePositionBits.php",
+    "35.RemoveDuplicates.php", "36.CheckStr2BelongToEndOfStr1.php", "37.TongSoNguyenTo.php",
+    "38.ValidateEmail.php", "39.GetFileSize.php", "40.CaculateMod.php", "41.MultiplicationTable.php",
+    "42.FirstNonRepeatedCharacter.php", "43.MultipliesCorrespondingElementsTwoList.php",
+    "44.SumOfPairsOfNumbers.php", "45.TotalDigitOfNumber.php", "46.BangCuuChuong.php"
+  );
+  
+  $array = array(
+    "1.Welcom.php", "2.php", "3.DisplayCapital.php", "4.DeleteElement.php", "5.GetFirstElement.php",
+    "6.DecodeJsonStringToArray.php", "7.InsertNewItem.php", "8.Sort.php", "9.AverageTemperature.php",
+      "10.BeadSortAlgorithm.php", "11.MergeTwoArray.php", "12.ChangeValue.php", "13.DivisibleForFour.php"
   );
   
   function getNumberExercise($txt)
@@ -36,14 +45,25 @@
 <body>
 
 <div class="container">
+    <h1>Basic</h1>
     <?php
-        foreach ($fileName as $key => $file) {
+        foreach ($basic as $key => $file) {
     ?>
           <a href="./Basic/<?=$file?>" class="link-exercise">
             Exercise <?=getNumberExercise($file)?></a></li>
     <?php
         }
     ?>
+    <h1>Array</h1>
+    <?php
+    foreach ($array as $key => $file) {
+        ?>
+      <a href="./Array/<?=$file?>" class="link-exercise">
+        Exercise <?=getNumberExercise($file)?></a></li>
+        <?php
+    }
+    ?>
+  
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

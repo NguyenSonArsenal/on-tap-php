@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147231d-9fd6-46aa-bebf-890f80b5c2ea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Exercises/Basic/1.GetVersionPhp.php" afterPath="$PROJECT_DIR$/Exercises/Basic/1.GetVersionPhp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Exercises/Basic/10.CheckHttpOrHttps.php" afterPath="$PROJECT_DIR$/Exercises/Basic/10.CheckHttpOrHttps.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Exercises/home.php" afterPath="$PROJECT_DIR$/Exercises/home.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,31 +14,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="33.ConvertWordToDigit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Exercises/Basic/33.ConvertWordToDigit.php">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Exercises/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="480">
+              <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+              <folding>
+                <marker date="1513764875959" expanded="true" signature="1788:1865" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exercises/helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="45.TotalDigitOfNumber.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Exercises/Basic/45.TotalDigitOfNumber.php">
+      <file leaf-file-name="11.MergeTwoArray.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exercises/Array/11.MergeTwoArray.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="32.NumberAmstrong.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Exercises/Basic/32.NumberAmstrong.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="96">
+              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -71,35 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Exercises/Basic/4.FormDisplayName.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/5.GetIPClient.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/6.GetInfoBrowser.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/7.GetCurrentFile.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/8.GetURL.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/9.ChangeColorFirstCharacter.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/11.RedirectAnotherPage.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/10.CheckHttpOrHttps.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/home.php" />
-        <option value="$PROJECT_DIR$/Exercises/css/home.css" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/1.GetVersionPhp.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/SideBarLeft.php" />
-        <option value="$PROJECT_DIR$/Exercises/css/home.scss" />
-        <option value="$PROJECT_DIR$/Exercises/home.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/13.DisplayTable.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/14.DisplaySourceCodePage.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/17.GetVersionPhp.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/15.GetLastModifiedOfFile.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/16. CountLineNumberOfFile.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/18.DelayProgram.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/19.ArithmeticOperations.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/20.GetLastError.php" />
-        <option value="$PROJECT_DIR$/PHP_Fundamentals/14.Function.php" />
-        <option value="$PROJECT_DIR$/PHP_Fundamentals/15.Constant.php" />
-        <option value="$PROJECT_DIR$/PHP_Fundamentals/16.DateAndTime.php" />
-        <option value="$PROJECT_DIR$/PHP_Fundamentals/17.RamdomNumber.php" />
-        <option value="$PROJECT_DIR$/PHP_Fundamentals/18.RamdomString.php" />
-        <option value="$PROJECT_DIR$/PHP_Fundamentals/19.DataType.php" />
-        <option value="$PROJECT_DIR$/PHP_Fundamentals/20.Math.php" />
         <option value="$PROJECT_DIR$/PHP_Fundamentals/21. ExplodeImplode.php" />
         <option value="$PROJECT_DIR$/PHP_Fundamentals/22.HashFunction.php" />
         <option value="$PROJECT_DIR$/PHP_Fundamentals/23.SuperGlobal.php" />
@@ -118,10 +91,39 @@
         <option value="$PROJECT_DIR$/Exercises/Basic/38.ValidateEmail.php" />
         <option value="$PROJECT_DIR$/Exercises/Basic/12.CheckEmail.php" />
         <option value="$PROJECT_DIR$/Exercises/Basic/39.GetFileSize.php" />
-        <option value="$PROJECT_DIR$/Exercises/Basic/33.ConvertWordToDigit.php" />
         <option value="$PROJECT_DIR$/Exercises/Basic/32.NumberAmstrong.php" />
         <option value="$PROJECT_DIR$/Exercises/Basic/37.TongSoNguyenTo.php" />
         <option value="$PROJECT_DIR$/Exercises/Basic/45.TotalDigitOfNumber.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/checkNguyenTo.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/35.RemoveDuplicates.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/33.ConvertWordToDigit.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/34.CheckSamePositionBits.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/36.CheckStr1BelongToEndOfStr2.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/36.CheckStr2BelongToEndOfStr1.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/40.CaculateMod.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/42. FirstNonRepeatedCharacter.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/41.MultiplicationTable.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/43.MultipliesCorrespondingElementsTwoList.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/44.SumOfPairsOfNumbers.php" />
+        <option value="$PROJECT_DIR$/Exercises/Basic/46.BangCuuChuong.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/1.Welcom.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/2.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/4.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/3.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/3.DisplayCapital.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/4.DeleteElement.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/5.GetFirstElement.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/6.DecodeJsonStringToArray.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/7.InsertNewItem.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/9.AverageTemperature.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/12.ChangeValue.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/14.DivisibleForFour.php" />
+        <option value="$PROJECT_DIR$/Exercises/helper.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/13.DivisibleForFour.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/8.Sort.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/10.BeadSortAlgorithm.php" />
+        <option value="$PROJECT_DIR$/Exercises/Array/11.MergeTwoArray.php" />
+        <option value="$PROJECT_DIR$/Exercises/home.php" />
       </list>
     </option>
   </component>
@@ -173,7 +175,7 @@
               <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="on-tap-php" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Exercises" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Basic" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Array" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -185,18 +187,19 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/onlinesale/model" />
-      <recent name="$PROJECT_DIR$/onlinesale" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Exercises/Basic" />
       <recent name="$PROJECT_DIR$/Exercises" />
       <recent name="$PROJECT_DIR$/PHP_Fundamentals" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Exercises/Array" />
+      <recent name="$PROJECT_DIR$/onlinesale/model" />
+      <recent name="$PROJECT_DIR$/onlinesale" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,18 +237,21 @@
       <workItem from="1512649927008" duration="12653000" />
       <workItem from="1512700413910" duration="5577000" />
       <workItem from="1513560738862" duration="32882000" />
-      <workItem from="1513646850672" duration="27481000" />
+      <workItem from="1513646850672" duration="30237000" />
+      <workItem from="1513683646991" duration="943000" />
+      <workItem from="1513697024930" duration="2266000" />
+      <workItem from="1513733561636" duration="27664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110245000" />
+    <option name="totallyTimeSpent" value="143874000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="196" y="324" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25737053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27091634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -275,199 +281,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/7.GetCurrentFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/9.ChangeColorFirstCharacter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <marker date="1513590924527" expanded="true" signature="125:135" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/8.GetURL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/10.CheckHttpOrHttps.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/5.GetIPClient.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/home.scss" />
-    <entry file="file://$PROJECT_DIR$/Exercises/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/SideBarLeft.php" />
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/1.GetVersionPhp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/css/home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/4.FormDisplayName.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/14.DisplaySourceCodePage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/17.GetVersionPhp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/13.DisplayTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/18.DelayProgram.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/16. CountLineNumberOfFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/11.RedirectAnotherPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="51" lean-forward="true" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/15.Constant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/16.DateAndTime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/17.RamdomNumber.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/18.RamdomString.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/19.DataType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/22.HashFunction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/21. ExplodeImplode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/23.SuperGlobal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -475,18 +292,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/22.GetURL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/22.GetURL.php" />
     <entry file="file://$PROJECT_DIR$/Exercises/Basic/22.GetUrl.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -503,7 +312,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/24. GetNameOfTheOwnerPHP.php">
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/24.GetNameOfTheOwnerPHP.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="12" />
@@ -573,15 +382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/31.SwapVar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,14 +425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/20.Math.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Exercises/Basic/19.ArithmeticOperations.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -649,6 +441,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/45.TotalDigitOfNumber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/checkNguyenTo.php" />
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/32.NumberAmstrong.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PHP_Fundamentals/20.Math.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/40.CaculateMod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/36.CheckStr2BelongToEndOfStr1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/34.CheckSamePositionBits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/35.RemoveDuplicates.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/42.FirstNonRepeatedCharacter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/41.MultiplicationTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/43.MultipliesCorrespondingElementsTwoList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/44.SumOfPairsOfNumbers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/46.BangCuuChuong.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/1.Welcom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/3.DisplayCapital.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/4.DeleteElement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/5.GetFirstElement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Exercises/Basic/33.ConvertWordToDigit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -657,19 +586,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/32.NumberAmstrong.php">
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/7.InsertNewItem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="160">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/Basic/45.TotalDigitOfNumber.php">
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/6.DecodeJsonStringToArray.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="517">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Basic/31.SwapVar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/12.ChangeValue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/9.AverageTemperature.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-692">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/8.Sort.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/10.BeadSortAlgorithm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/13.DivisibleForFour.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/11.MergeTwoArray.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+          <folding>
+            <marker date="1513764875959" expanded="true" signature="1788:1865" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
