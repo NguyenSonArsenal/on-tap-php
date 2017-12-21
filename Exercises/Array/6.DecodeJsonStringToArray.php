@@ -14,8 +14,6 @@ $arr = json_decode($json, true);
 
 foreach ($arr as $key => $value)
 {
-    
-    
     if ($key != 'Detail')
     {
         echo $key . ' : ' . $value . '<br>';
