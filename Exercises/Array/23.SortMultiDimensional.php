@@ -27,5 +27,67 @@ echo ' + INIT ARRAY';
 echo '<pre>';
 print_r($array);
 
+function sortByKey($arr, $key)
+{
+    $tmpArr = array();
+    
+    $length = count($arr);
+    
+    for ($i=0; $i<$length; $i++)
+    {
+        array_push($tmpArr, $arr[$i][$key]);
+    }
+    
+    for ($i=0; $i<$length; $i++)
+    {
+        for ($j=$i+1; $j<$length; $j++)
+        {
+            if($tmpArr[$i] > $tmpArr[$j])
+            {
+                swap($tmpArr[$i], $tmpArr[$j]);
+            }
+        }
+    }
+    
+    return $tmpArr;
+}
+
+function columnSort($arr, $key)
+{
+    $length = count($arr);
+    
+    for($i=0; $i<$length; $i++)
+    {
+        for($j=$i+1; $j<$length; $j++)
+        {
+            if($arr[$i][$key] > $arr[$j][$key])
+            {
+                swap($arr[$i][$key], $arr[$j][$key]);
+            }
+        }
+    }
+    
+    return $arr;
+}
+
+$arrKeys = array();
+
+$key = 'name';
+
+if (checkKeyBelongArray(getAllKeys($array, $arrKeys), $key))
+{
+    $result = sortByKey($array, $key);
+    echo '<pre>';
+    print_r($result);
+    
+    $result = columnSort($array, $key);
+    echo '<pre>';
+    print_r($result);
+}
+else
+{
+    echo 'Something in wrong';
+}
+
 
 

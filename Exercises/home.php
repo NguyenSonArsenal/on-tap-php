@@ -19,7 +19,17 @@
   $array = array(
     "1.Welcom.php", "2.php", "3.DisplayCapital.php", "4.DeleteElement.php", "5.GetFirstElement.php",
     "6.DecodeJsonStringToArray.php", "7.InsertNewItem.php", "8.Sort.php", "9.AverageTemperature.php",
-      "10.BeadSortAlgorithm.php", "11.MergeTwoArray.php", "12.ChangeValue.php", "13.DivisibleForFour.php"
+    "10.BeadSortAlgorithm.php", "11.MergeTwoArray.php", "12.ChangeValue.php", "13.DivisibleForFour.php",
+    "14.GetShortestLongestStr.php", "15.GenerateUniqueRandomNumbers.php", "16.GetKeyMax.php",
+    "17.MinValuesNotZero.php", "18.FloorDecimalNumbers.php", "19.PrintElement.php",
+    "20.SortByPriorityList.php", "21.SortSubnets.php", "23.SortMultiDimensional.php",
+    "24.SortByCaseInsensitiveNatural.php", "25.SortEntityLetters.php", "26.ShuffleAssociative.php",
+    "27.GenerateRandomPassword.php", "28.SortDecending.php", "29.GenerateArrayWithString.php",
+    "30.LetterRange.php.php", "31.GetIndexOfTheHighestValue.php", "32.GetExtentionOfFile.php",
+    "33.SearchSpecifiedValue.php", "34.SortAssociative.php", "35.TrimValueByArrayWalk.php",
+    "36.UpperLowerCaseElements.php", "37.TotalTimesValueAppears.php",
+    "38.GenerateMultidimensionalUnique.php", "39.RemoveDuplicateValue.php",
+    "40.SortWithoutPreservingKeys.php"
   );
   
   function getNumberExercise($txt)
