@@ -6,6 +6,9 @@ echo "<br>";
 
 require '../helper.php';
 
+$keyUnique = "city_id";
+$arrUnique = [];
+
 $students = array(
     0 => array("city_id"=>"1", "name"=>"Sara",  "mobile_num"=>"1111"),
     1 => array("city_id"=>"2", "name"=>"Robin", "mobile_num"=>"2222"),
@@ -14,54 +17,20 @@ $students = array(
     4 => array("city_id"=>"5", "name"=>"Sara", "mobile_num"=>"1111"),
     5 => array("city_id"=>"5", "name"=>"Sara", "mobile_num"=>"1111"),
     6 => array("city_id"=>"5", "name"=>"Moy", "mobile_num"=>"1111"),
-    7 => array("city_id"=>"7", "name"=>"Sara", "mobile_num"=>"1111"),
+    7 => array("city_id"=>"1", "name"=>"Sara", "mobile_num"=>"1111"),
 );
-echo '<pre>';
-//print_r(($students));
 
-//function uniqueArray($arr, $keyUnique)
-//{
-//    $arrKeys = getAllKeys($arr);
-//
-//    if(in_array($keyUnique, $arrKeys))
-//    {
-//        foreach ($arr as $key => $value)
-//        {
-//
-//        }
-//    }
-//}
-//
-$keyUnique = "city_id";
-//
-//uniqueArray($students, $keyUnique);
-// die();
 
-$total = count($students);
-
-$arrKeys = getAllKeys($students);
-
-if(checkItemBelongArray($keyUnique, $arrKeys))
+foreach ($students as $student)
 {
-    for($i=0; $i<$total; $i++)
+    foreach ($student as $key => $item)
     {
-        for($j=$i+1; $j<$total; $j++)
+        if ($key == $keyUnique && !array_key_exists($item, $arrUnique))
         {
-            if($students[$i][$keyUnique] == $students[$j][$keyUnique])
-            {
-                array_splice($students, $i, 1);
-                $total = count($students);
-                echo $total;
-            }
+            $arrUnique[$item] = $student;
         }
     }
-    echo '<pre>';
-    print_r(($students));
-}
-else
-{
-    echo "$keyUnique is not exits in keys array";
 }
 
-
-// CHUA HOAN THANH
+echo '<pre>';
+print_r($arrUnique);
