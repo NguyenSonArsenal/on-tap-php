@@ -29,7 +29,11 @@
     "33.SearchSpecifiedValue.php", "34.SortAssociative.php", "35.TrimValueByArrayWalk.php",
     "36.UpperLowerCaseElements.php", "37.TotalTimesValueAppears.php",
     "38.GenerateMultidimensionalUnique.php", "39.RemoveDuplicateValue.php",
-    "40.SortWithoutPreservingKeys.php"
+    "40.SortWithoutPreservingKeys.php", "41.ArrayNotUnique.php", "42.FindUniqueValues.php",
+    "43.MergeArrayUnique.php", "44.RemoveSpecifiedDuplicateEntry.php", "45.MultidimensionalDifference.php",
+    "46.ValueIsString.php", "47.GetFirseOfKeyAndValue.php", "48.UnionTwoArrays.php",
+    "49.GetEntries.php", "50.GetTheLastValue.php", "54.RemoveAllWhiteSpaces.php",
+    "55.StringToArray.php", "56.GenerateTwo-dimensionalArray.php", "59.ArrayCombine.php"
   );
   
   function getNumberExercise($txt)
@@ -73,6 +77,7 @@
         <?php
     }
     ?>
+    <a href="javascript:()" style="color: red;">Exercise 22</a>
   
 </div>
 

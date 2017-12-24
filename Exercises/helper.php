@@ -123,6 +123,24 @@ function getAllKeys($arr, &$arrKeys = array())
     return (array_values(array_unique($arrKeys)));
 }
 
+// get values from associate array
+function getAllValues($arr, &$arrValues = array())
+{
+    foreach ($arr as $key => $value)
+    {
+        if(is_array($value))
+        {
+            getAllValues($value, $arrValues);
+        }
+        else
+        {
+            array_push($arrValues, $value);
+        }
+    }
+    
+    return $arrValues;
+}
+
 function checkKeyBelongArray($arr, $key)
 {
     $length = count($arr);
