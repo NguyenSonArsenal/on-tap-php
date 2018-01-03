@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <title>Javascript alert box example-1</title>
+</head>
+<body>
+<h1 style="color: red">JavaScript alert() box example</h1>
+<hr />
+
+<h1>This is a simple HTML document</h1>
+
+<p>W3 tut</p>
+<p><a href="#" onclick="showdata();">Show text</a></p>
+
+<script type="text/javascript">
+
+    var var1 = 45;
+    var var2 = 78;
+    var var3 = 7.5;
+    var var4 = 3;
+
+    var newvar  = var1 % var2;
+    var newvar1 = var3 % var4;
+
+    console.log(newvar);
+    console.log(newvar1);
+
+    Number.prototype.plus = function(value){
+        return this.valueOf() + parseInt(value);
+    };
+
+    // Tạo mới đối tượng
+    var age = Number(12);
+    document.write(age.plus(12) + "<br/>");
+
+    // Tạo đối tượng khác
+    var year = 2014;
+    document.write(year.plus(12));
+
+</script>
+</body>
+</html>
