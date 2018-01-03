@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2>Write a JavaScript program to check two given numbers and
+    return true if one of the number is 50 or if their sum is 50</h2>
+
+<form action="#">
+    <label for="">1st</label>
+    <input type="text" id="1stNumber">
+    <label for="">2nd</label>
+    <input type="text" id="2ndNumber">
+
+    <button onclick="test50(event)">Sum</button>
+
+    <p id="result"></p>
+
+</form>
+
+<script>
+
+    function test50(e) {
+        e.preventDefault();
+
+        var number1 = document.getElementById('1stNumber').value;
+        var number2 = document.getElementById('2ndNumber').value;
+
+        var result = Number(number2) + Number(number1);
+
+        console.log(result);
+
+        if (result == 50)
+        {
+            document.getElementById('result').innerHTML = true;
+        }
+        else
+        {
+            document.getElementById('result').innerHTML = false;
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

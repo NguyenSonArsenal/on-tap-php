@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2> Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.</h2>
+
+
+<form action="#">
+    <input type="text" placeholder="Enter your temperature ...">
+
+    <button onclick="convertTemperature(event, 'CtoF')">Convert C to F</button>
+    <button onclick="convertTemperature(event, 'FtoC')">Convert F to C</button>
+</form>
+
+<p>Reult = <span id="result"></span></p>
+
+
+<script>
+
+    function convertTemperature(event, action) {
+        event.preventDefault();
+
+        var temp = parseInt(document.getElementsByTagName('input')[0].value);
+
+        if (temp != NaN)
+        {
+            if (action === 'FtoC')
+            {
+                document.getElementById('result').innerHTML = (temp-32)*5/9;
+            }
+            else if (action === 'CtoF')
+            {
+                document.getElementById('result').innerHTML = 9*temp/5 + 32;
+            }
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2>Write a JavaScript program to remove a character at the specified position
+    of a given string and return the new string</h2>
+
+<script>
+
+    function  removeCharacter(str, position) {
+
+        var str = str.trim();
+
+        var length = str.length;
+
+        console.log(length);
+
+        if (0<=position && position <= length-1)
+        {
+            str = str.slice(0,position) + str.slice(position+1, length);
+            return str;
+        }
+
+        return false;
+
+    }
+
+
+    var str = 'Today is beutifull day';
+
+    var result = removeCharacter(str, 1456);
+
+    if (result)
+    {
+        document.write(result);
+    }
+    else
+    {
+        document.write('Something in wrong');
+    }
+
+</script>
+
+
+</body>
+</html>

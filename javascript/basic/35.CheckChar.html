@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to check a given string contains 2 to 4 numbers of a specified character.</h2>
+
+<script>
+
+    function checkChar(str, char) {
+        var count = 0;
+
+        length = str.length;
+
+        for (var i=0; i< length; i++)
+        {
+            if (str.charAt(i) == char)
+            {
+                count ++;
+            }
+        }
+
+        if (2 <= count && count <=4)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+
+    document.write(checkChar("Python", "y"));
+    document.write(checkChar('javascript', 'a'));
+    document.write(checkChar("Console", "o"));
+
+</script>
+
+
+</body>
+</html>

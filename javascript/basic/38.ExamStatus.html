@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2> Write a JavaScript program to check the total marks of a student in various examinations.
+    The student will get A+ grade if the total marks are in the range 89..100 inclusive,
+    if the examination is "Final-exam." the student will get A+ grade and total marks must be greater than or equal to 90.
+    Return true if the student get A+ grade or false otherwise </h2>
+
+<script>
+
+    function examSttus(totalMarks, isExam) {
+        if ((totalMarks >= 89 && totalMarks <=100) || (isExam && totalMarks >= 90))
+        {
+            document.write('You get A+ grade <br>');
+        }
+        else
+        {
+            document.write('You must try to get A+ grade <br>');
+        }
+    }
+
+    examSttus(75, "");
+    examSttus("89", "true ");
+    examSttus(99, "true");
+
+
+</script>
+
+
+</body>
+</html>

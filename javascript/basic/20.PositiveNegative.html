@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2>Write a JavaScript program to check from two given integers, if one is positive and one is negative</h2>
+<form action="#">
+    <label for="">1st</label>
+    <input type="text" id="1stNumber">
+    <label for="">2nd</label>
+    <input type="text" id="2ndNumber">
+
+    <button onclick="positiveNegative(event)">Sum</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+
+    function  positiveNegative(event) {
+
+        var n1 = parseInt(document.getElementById('1stNumber').value);
+        var n2 = parseInt(document.getElementById('2ndNumber').value);
+
+        if (n1!=NaN && n2 != NaN)
+        {
+            if (n1>0 && n2<0 || n1<0 && n2>0)
+            {
+                document.getElementById('result').innerHTML = true;
+            }
+            else
+            {
+                document.getElementById('result').innerHTML = false;
+            }
+        }
+        else
+        {
+            document.getElementById('result').innerHTML = false;
+        }
+
+
+        return false;
+    }
+
+</script>
+
+
+</body>
+</html>

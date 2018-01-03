@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to check if the last digit of the three given positive integers is same.</h2>
+
+<script>
+
+    function lastDigit(n1, n2, n3) {
+
+        if (n1>0 && n2 >0 && n3>0)
+        {
+            var digitN1 = n1%10;
+            var digitN2 = n2%10;
+            var digitN3 = n3%10;
+
+            if (digitN1 == digitN2 && digitN2 ==digitN3)
+            {
+                document.write('true <br>');
+            }
+            else
+            {
+                document.write('false <br>');
+            }
+        }
+        else
+        {
+            document.write('false <br>');
+        }
+    }
+
+    lastDigit(1, 200, 333);
+    lastDigit(20, 30, 400);
+    lastDigit(20, 30, 400);
+    lastDigit(20, -30, 400);
+    lastDigit(-20, 30, -400);
+
+
+</script>
+
+
+</body>
+</html>

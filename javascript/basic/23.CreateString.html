@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2>Write a JavaScript program to create a new string from a given string changing the position of first and last characters.</h2>
+<h2>The string length must be greater than or equal to 1</h2>
+
+<script>
+
+    function  createNewString(str) {
+
+        var length = str.length;
+
+        if (length >= 1 )
+        {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            var lengthPossibe = possible.length;
+
+            var position = [];
+
+            for (var i=0; i<=1; i++)
+            {
+                position.push(Math.floor(Math.random() * lengthPossibe) + 1);
+            }
+
+            return possible.charAt(position[0]) + str + possible.charAt(position[1]);
+        }
+
+        return false;
+
+    }
+
+
+    var str = 'Today is ';
+
+    var result = createNewString(str);
+
+    if (result)
+    {
+        document.write(result);
+    }
+    else
+    {
+        document.write('Length str must be grater than 1');
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

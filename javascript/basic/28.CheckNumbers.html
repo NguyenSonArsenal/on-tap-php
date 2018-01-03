@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2>Write a JavaScript program to check if two given integer values are in the range 50..99 (inclusive).
+    Return true if either of them are in the said range</h2>
+
+<form action="#">
+    <label for="">1st</label>
+    <input type="text" id="1stNumber">
+    <label for="">2nd</label>
+    <input type="text" id="2ndNumber">
+
+    <button onclick="checkNumbers()">Sum</button>
+
+    <p id="result"></p>
+
+</form>
+
+<script>
+
+    function checkNumbers()
+    {
+        var n1 = parseInt(document.getElementById('1stNumber').value);
+        var n2 = parseInt(document.getElementById('2ndNumber').value);
+
+        if (n1!=NaN && n2 != NaN)
+        {
+            if ((50<=n1 && n1<=99 || 50<=n2 && n2<=99) )
+            {
+                document.getElementById('result').innerHTML = true;
+            }
+            else
+            {
+                document.getElementById('result').innerHTML = false;
+            }
+        }
+        else
+        {
+            document.getElementById('result').innerHTML = false;
+        }
+
+        return false;
+    }
+
+</script>
+
+
+</body>
+</html>

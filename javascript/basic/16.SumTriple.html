@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2>Write a JavaScript program to compute the sum of the two given integers.</h2>
+<h2>If the two values are same, then returns triple their sum</h2>
+
+<form action="#">
+    <label for="">1st</label>
+    <input type="text" id="1stNumber">
+    <label for="">2nd</label>
+    <input type="text" id="2ndNumber">
+
+    <button onclick="sumTriple(event)">Sum</button>
+
+    <p id="result"></p>
+</form>
+
+<script>
+
+    function sumTriple(e)
+    {
+        e.preventDefault();
+
+        var number1 = parseInt(document.getElementById('1stNumber').value);
+        var number2 = parseInt(document.getElementById('2ndNumber').value);
+
+        if (number1 != NaN && number2 != NaN)
+        {
+            if (number1 === number2)
+            {
+                document.getElementById('result').innerHTML = 'Number 1 = number 2 them sum = ' + 3*(number2+number1);
+            }
+            else
+            {
+                document.getElementById('result').innerHTML = 'Sum number1 + number2 is ' + (number1+number2);
+            }
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>

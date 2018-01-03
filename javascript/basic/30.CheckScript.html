@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2>Write a JavaScript program to check if a string "Script" presents at 5th (index 4) position in a given string, </h2>
+<h2>if "Script" presents in the string return the string without "Script" otherwise return the original one.</h2>
+<script>
+
+    function checkScript(str, neelde) {
+        console.log(str.search(neelde));
+        if (str.search(neelde) == 4)
+        {
+            return str.substring(0, 4) + str.substring(10, str.length);
+        }
+        else
+        {
+            return str;
+        }
+    }
+
+    var str = 'javascript12345';
+
+    var result = checkScript(str, 'script');
+
+    document.write(result);
+
+</script>
+
+
+</body>
+</html>

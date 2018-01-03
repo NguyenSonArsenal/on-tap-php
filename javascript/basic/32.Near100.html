@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2> Write a JavaScript program to find a value which is nearest to 100
+    from two different given integer values.</h2>
+
+<script>
+
+    function near100(n1, n2) {
+        var subn1 = Math.abs(100-n1);
+        var subn2 = Math.abs(100-n2);
+
+        if (subn1 < subn2)
+        {
+            document.write(n1 + ' near 100 than '+n2 + '<br>');
+        }
+        else if (subn2 == subn1)
+        {
+            document.write(n1 + ' and ' + n2 + ' same near with 100'+ '<br>');
+        }
+        else
+        {
+            document.write(n2 + ' near 100 than '+n1+ '<br>');
+        }
+
+    }
+
+    var result = near100(1,0);
+    var result = near100(0,-10);
+    var result = near100(1000,510);
+
+</script>
+
+
+</body>
+</html>

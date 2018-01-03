@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to create new string with first 3 characters are in lower case.
+    If the string length is less than 3 convert all the characters in upper case. </h2>
+
+<script>
+
+    function upperLower(length) {
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        lengthPossible = possible.length;
+
+        var index = [];
+
+        var result = '';
+
+        if (0<length && length < 3 )
+        {
+            var randomIndex;
+
+            for (var i=0; i<length; i++)
+            {
+                randomIndex = Math.floor(Math.random()*lengthPossible+1);
+                result += possible.charAt(randomIndex).toUpperCase();
+            }
+        }
+
+        if (length >= 3)
+        {
+            var randomIndex;
+
+            for (var i=0; i<length; i++)
+            {
+                randomIndex = Math.floor(Math.random()*lengthPossible+1);
+
+                if (i<3)
+                {
+                    result += (possible.charAt(randomIndex)).toLowerCase();
+                }
+                else
+                {
+                    result += possible.charAt(randomIndex);
+                }
+            }
+        }
+
+        document.write(result);
+    }
+
+    upperLower(4);
+
+
+</script>
+
+
+</body>
+</html>

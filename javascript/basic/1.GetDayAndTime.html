@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript current day and time</title>
+</head>
+<body>
+
+<h1>Write a JavaScript program to display the current day and time in the following format.</h1>
+
+<script>
+    var date = new Date();
+    var day = date.getDay();
+
+    switch(day) {
+        case 0:
+            day = 'Sunday';
+            break;
+        case 1:
+            day = 'Monthday';
+            break;
+        case 2:
+            day = 'Tuesday';
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+    }
+
+    document.write("Today is " + day);
+
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+
+    hour = (hour >= 12 ) ? hour+'PM' : hour+'AM';
+
+    document.write("<br>Time now is " + hour + ' : '+ minute + ' : ' + second);
+
+</script>
+
+</body>
+</html>

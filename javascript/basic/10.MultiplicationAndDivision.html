@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+
+<h2>Write a JavaScript program to calculate multiplication and division of two numbers (input from user)</h2>
+
+
+<form action="#">
+    1st number:<br>
+    <input type="text" name="firstname" id="1stnumber" value="" placeholder="Enter 1st number">
+    <br>
+    2nd number:<br>
+    <input type="text" name="lastname" id="2ndnumber" value="" placeholder="Enter 2nd number">
+    <br><br>
+    <input type="submit" value="multiply" id="multiplyBtn" onclick="caculate(event, 'multiply')">
+    <input type="submit" value="division" id="divisionBtn" onclick="caculate(event, 'division')">
+    <input type="submit" value="plus" id="plusBtn" onclick="caculate(event, 'plus')">
+</form>
+
+<p>Reult = <span id="result"></span></p>
+
+
+<script>
+
+    function caculate(event, action) {
+        event.preventDefault();
+
+        var number1 = parseInt(document.getElementById('1stnumber').value);
+        var number2 = parseInt(document.getElementById('2ndnumber').value);
+
+
+        if (number1 != NaN && number2 != NaN)
+        {
+            if (action === 'multiply')
+            {
+                document.getElementById('result').innerHTML = number1 * number2;
+            }
+            else if (action === 'division')
+            {
+                document.getElementById('result').innerHTML = number1 / number2;
+            }
+            else if (action == 'plus')
+            {
+                document.getElementById('result').innerHTML = number1 + number2;
+            }
+        }
+
+        return false;
+    }
+
+</script>
+
+
+</body>
+</html>
