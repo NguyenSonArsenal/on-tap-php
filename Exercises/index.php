@@ -35,6 +35,12 @@
     "49.GetEntries.php", "50.GetTheLastValue.php", "54.RemoveAllWhiteSpaces.php",
     "55.StringToArray.php", "56.GenerateTwo-dimensionalArray.php", "59.ArrayCombine.php"
   );
+
+$string = array(
+    "1.php", "2.SplitString.php", "3.CheckSpecificString.php",
+    "4.ConvertVariableToString.php", "5.ExtractFileName.php", "6.ExtractUserName.php",
+    "7.GetLastThreeCharacter.php", "8.CurrencyStyle.php", "9.GenerateSimpleRandomPassword.php"
+);
   
   function getNumberExercise($txt)
   {
@@ -68,6 +74,7 @@
     <?php
         }
     ?>
+
     <h1>Array</h1>
     <?php
     foreach ($array as $key => $file) {
@@ -78,7 +85,17 @@
     }
     ?>
     <a href="javascript:()" style="color: red;">Exercise 22</a>
-  
+
+    <h1>String</h1>
+    <?php
+    foreach ($string as $key => $file) {
+        ?>
+        <a href="./String/<?=$file?>" class="link-exercise">
+            Exercise <?=getNumberExercise($file)?></a></li>
+        <?php
+    }
+    ?>
+
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
