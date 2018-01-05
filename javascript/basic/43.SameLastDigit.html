@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2> Write a JavaScript program to check from three given numbers (non negative integers)
+    that two or all of them have the same rightmost digit. </h2>
+
+<script>
+
+    function sameLastDigit(x, y, z)
+    {
+        if (x > 0 && y >0 && z > 0)
+        {
+            var lastDigitX = x % 10;
+            var lastDigitY = y % 10;
+            var lastDigitZ = z % 10;
+
+            if (lastDigitX == lastDigitY && lastDigitY == lastDigitZ)
+                document.write('True <br>');
+            else
+                document.write('False <br>');
+        }
+        else
+        {
+            document.write('Input is not valid <br>')
+        }
+    }
+
+    sameLastDigit(22,32,42);
+    sameLastDigit(102,302,2);
+    sameLastDigit(20,22,45);
+    sameLastDigit(8, -9, 18);
+
+</script>
+
+
+</body>
+</html>

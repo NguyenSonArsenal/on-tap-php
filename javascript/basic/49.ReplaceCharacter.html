@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to replace every character in a given string
+    with the character following it in the alphabet.</h2>
+
+<script>
+    
+    // return ascii of character
+    function ascii (a) {
+        return a.charCodeAt(0);
+    }
+
+    function letterChanges(str)
+    {
+        var lengthStr = str.length;
+
+        var result = '';
+
+        for (var i=0; i < lengthStr; i++)
+        {
+            var asc2 = ascii(str.charAt(i)) + 1;
+            result += String.fromCharCode(asc2);
+        }
+
+        document.write(result);
+    }
+
+    letterChanges('abcd ef');
+
+</script>
+
+
+</body>
+</html>

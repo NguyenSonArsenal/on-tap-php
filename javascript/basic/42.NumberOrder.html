@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to check if three given numbers (integers) are increasing in strict mode and flag is "false",
+    however if "true" is false the numbers will in soft mode</h2>
+
+<script>
+
+    function numberOrder(x, y, z)
+    {
+        if (x < y && y < z)
+            document.write('Strict mode <br>');
+        else if (z > y)
+            document.write('Soft mode <br>');
+        else
+            document.write('Undefined <br>');
+    }
+
+    numberOrder(8, 8, 8);
+    numberOrder(8, 8, 18);
+    numberOrder(8, 7, 18);
+    numberOrder(8, 9, 18);
+
+</script>
+
+
+</body>
+</html>

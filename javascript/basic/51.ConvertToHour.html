@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to convert a given number to hours and minutes</h2>
+
+<script>
+
+    function numberToTime(number) {
+        if (number > 0)
+        {
+            if (number / 60 < 1)
+            {
+                document.write(number + '<br>');
+            }
+            else
+            {
+                var hour = parseInt(number / 60);
+
+                var minutes = number % 60;
+
+                document.write(hour + ':' + minutes);
+            }
+        }
+        else
+        {
+            document.write('Input is invalid <br>');
+        }
+    }
+
+    numberToTime(1);
+    numberToTime(51);
+    numberToTime(81);
+
+</script>
+
+
+</body>
+</html>

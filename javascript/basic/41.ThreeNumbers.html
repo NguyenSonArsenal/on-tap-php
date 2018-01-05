@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to check three given numbers,
+    if the three numbers are same return 30 otherwise return 40 and if two numbers are same return 20.</h2>
+
+<script>
+
+    function threeNumber(x, y, z)
+    {
+        if (x == y && y == z)
+            document.write('30 <br>');
+        else if (x == y || z == y || x == z)
+            document.write('20 <br>');
+        else
+            document.write('40 <br>');
+    }
+
+    threeNumber(8, 8, 8);
+    threeNumber(8, 8, 18);
+    threeNumber(8, 7, 18);
+
+</script>
+
+
+</body>
+</html>

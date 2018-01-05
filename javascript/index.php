@@ -9,7 +9,12 @@ $basic = array(
     "25.Multiple7And3.html", "26.FrontBack3.html", "27.StartSpecStr.html", "28.CheckNumbers.html",
     "29.CheckNumbers.html", "30.CheckScript.html", "31.MaxInt3Char.html", "32.Near100.html",
     "33.CheckNumbers.html", "34.CheckNumbers.html", "35.CheckChar.html", "36.LastDigit.html",
-    "37.UpperLower.html", "38.ExamStatus.html", "39.CheckNumbers.html", "40.CheckNumbers.html"
+    "37.UpperLower.html", "38.ExamStatus.html", "39.CheckNumbers.html", "40.CheckNumbers.html",
+    "41.ThreeNumbers.html","42.NumberOrder.html","43.SameLastDigit.html","44.LessBy20Others.html",
+    "45.Number15.html", "46.CheckNumbers7And11.html","47.CheckNumber.html","48.ReverseString.html",
+    "49.ReplaceCharacter.html","51.ConvertToHour.html",
+    "52.AlphabetSoup.html","53.abCheck.html","54.VowelChar.html", "55.Equal_pt.html",
+    "56.DivisionString.html"
 );
   
   function getNumberExercise($txt)
@@ -44,7 +49,9 @@ $basic = array(
     <?php
         }
     ?>
+    <br>
     <a href="javascript:()" style="color: red;">Exercise 4</a>
+    <a href="javascript:()" style="color: red;">Exercise 50</a>
 
 
 </div>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to count the number of vowels in a given string</h2>
+
+<script>
+
+    function countVowel(str) {
+        var string = str.toString();
+
+        var lengthStr = string.length;
+
+        var count = 0;
+
+        for (var i=0; i<lengthStr; i++)
+        {
+            if (string.charAt(i) == 'u' || string.charAt(i) == 'e' || string.charAt(i) == 'o' ||
+                string.charAt(i) == 'a' || string.charAt(i) == 'i' ||
+                string.charAt(i) == 'U' || string.charAt(i) == 'E' || string.charAt(i) == ')' ||
+                string.charAt(i) == 'A' || string.charAt(i) == 'I')
+            {
+                count++;
+            }
+        }
+
+        document.write('Count vowel of '+str + ' is: ' + count + '<br>');
+    }
+
+    countVowel('Python');
+    countVowel('w3resource.com');
+
+</script>
+
+
+</body>
+</html>

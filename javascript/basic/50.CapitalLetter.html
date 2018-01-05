@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to capitalize the first letter of each word of a given string</h2>
+
+<script>
+
+    function capitalString(str) {
+        var arrStr = str.split(' ');
+
+        var lengthArrStr = arrStr.length;
+
+        var result = '';
+
+        for (var i=0; i<lengthArrStr; i++)
+        {
+            arrStr[i] = arrStr[i].split('');
+            arrStr[i][0] = arrStr[i][0].toUpperCase();
+            result = arrStr[i].join('');
+        }
+
+        document.write(result);
+    }
+
+    var str = "Write a JavaScript program to capitalize the first letter of each word of a given string";
+
+    document.write('Input: '+str+ '<br>');
+
+    capitalString(str);
+
+    // chua hoan thanh
+
+
+
+</script>
+
+
+</body>
+</html>

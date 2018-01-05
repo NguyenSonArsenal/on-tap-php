@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2> Write a JavaScript program to check two given non-negative integers and
+    if one of the number (not both) is multiple of 7 or 11 </h2>
+
+<script>
+
+    function checkNumber(x, y)
+    {
+        if (x % 7 == 0 || x % 11 == 0 || y % 7 == 0 || y % 11 == 0)
+            document.write('True <br>');
+        else
+            document.write('False <br>')
+    }
+
+    checkNumber(14);
+    checkNumber(22);
+    checkNumber(17);
+    checkNumber(150);
+
+</script>
+
+
+</body>
+</html>
