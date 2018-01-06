@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to extract the first half of a string of even length</h2>
+
+<script>
+
+    function firstHaft(str) {
+        str = str.toString();
+        var lengthStr = str.length;
+
+        var indexHaft = Math.ceil(lengthStr/2);
+
+        var result = str.substring(0, indexHaft);
+
+        document.write(result + '<br>');
+    }
+
+    firstHaft('Ho quang hieu');
+    firstHaft('H');
+
+</script>
+
+
+</body>
+</html>

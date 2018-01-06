@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Basic</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to create a new string without the first and last character of a given string</h2>
+
+<script>
+
+    function withoutFirstEnd(str) {
+
+        var lengthStr = str.length;
+
+        if (lengthStr >=3)
+        {
+            var result = str.substring(1, lengthStr-1);
+            document.write(result + '<br>');
+        }
+        else
+        {
+            document.write('null <br>');
+        }
+    }
+
+    withoutFirstEnd('Ho quang hieu');
+    withoutFirstEnd('H');
+
+</script>
+
+
+</body>
+</html>
