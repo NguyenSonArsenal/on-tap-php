@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Recursion</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to calculate the factorial of a number</h2>
+
+<script>
+
+    function fib(n) {
+        if (n == 1)
+            return 1;
+        return n * fib(n-1);
+    }
+
+    var result = fib(5);
+    document.write(result);
+
+</script>
+
+
+</body>
+</html>

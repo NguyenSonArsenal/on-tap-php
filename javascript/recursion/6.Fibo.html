@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Recursion</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to get the first n Fibonacci numbers</h2>
+
+<script>
+
+    function fibonacci_series(n) {
+        var arr = [];
+        if (n===1)
+            return [0,1];
+
+        var s = fibonacci_series(n-1);
+        s.push(s[s.length-1] + s[s.length-2]);
+        return s;
+    }
+
+    var result = fibonacci_series(5);
+    document.write(result);
+
+</script>
+
+
+</body>
+</html>

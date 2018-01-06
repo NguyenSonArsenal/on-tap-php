@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Recursion</title>
+</head>
+<body>
+
+<h2> Write a JavaScript program to find the greatest common divisor (gcd) of two positive numbers</h2>
+
+<script>
+
+    function ucln(n1, n2) {
+        if (n1 ==0)
+            return n2;
+        else if (n2 ==0)
+            return n1;
+        else
+            return ucln(n2, n1 % n2);
+    }
+
+    var result = ucln(2145, 458);
+    document.write(result);
+
+</script>
+
+
+</body>
+</html>

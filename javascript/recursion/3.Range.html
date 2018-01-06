@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Recursion</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to get the integers in range (x, y)</h2>
+
+<script>
+
+    function range(n1, n2) {
+        if (n1 == n2)
+        {
+            document.write(n1 + ',');
+        }
+        if (n1 < n2-1)
+        {
+            document.write(n1+1 + ',');
+            range(n1+1, n2);
+        }
+    }
+
+    var result = range(2,3);
+    console.log(result);
+
+</script>
+
+
+</body>
+</html>

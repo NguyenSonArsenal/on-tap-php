@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Recursion</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to check whether a number is even or not</h2>
+
+<script>
+
+    function isEvenNumber(n) {
+        if (n<0)
+            return isEvenNumber(Math.abs(n));
+        else if(n==0)
+            return true;
+        else if(n==1)
+            return false;
+        else
+        {
+            n = n-2;
+            return isEvenNumber(n);
+        }
+    }
+
+    var n =  -50;
+    var result = isEvenNumber(n);
+    document.write(n + ':'+result);
+
+</script>
+
+
+</body>
+</html>

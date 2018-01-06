@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Recursion</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to compute the exponent of a number </h2>
+
+<script>
+
+    function exponent(number, index) {
+        if (index<=1)
+            return number;
+        return number * exponent(number, index-1);
+    }
+
+    var result = exponent(2,10);
+
+    document.write(result);
+
+</script>
+
+
+</body>
+</html>
