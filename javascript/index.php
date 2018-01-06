@@ -14,7 +14,18 @@ $basic = array(
     "45.Number15.html", "46.CheckNumbers7And11.html","47.CheckNumber.html","48.ReverseString.html",
     "49.ReplaceCharacter.html","51.ConvertToHour.html",
     "52.AlphabetSoup.html","53.abCheck.html","54.VowelChar.html", "55.Equal_pt.html",
-    "56.DivisionString.html"
+    "56.DivisionString.html", "57.StringCopy.html", "58.NewString3LastChar.html",
+    "59.FirstHalf.html", "60.WithoutFirstEnd.html"
+);
+
+$recursion = array(
+    "1.Fibo.html", "2.UocChungLonNhat.html", "3.Range.html", "4.SumInt.html", "5.TinhSoMu.html",
+    "6.Fibo.html", "7.IsSoChan.html"
+);
+
+$condition_loop = array(
+    "1.NumberLarger.html", "2.SignNumber.html", "3.Sort3Number.html", "4.Max5Number.html",
+    "5.OldAndEven.html", "6.AvgMarks.html", "12.BoiCua3Va5.html"
 );
   
   function getNumberExercise($txt)
@@ -52,6 +63,32 @@ $basic = array(
     <br>
     <a href="javascript:()" style="color: red;">Exercise 4</a>
     <a href="javascript:()" style="color: red;">Exercise 50</a>
+
+
+    <h1>Recursion</h1>
+    <?php
+    foreach ($recursion as $key => $file) {
+        ?>
+        <a href="./basic/<?=$file?>" class="link-exercise">
+            Exercise <?=getNumberExercise($file)?></a></li>
+        <?php
+    }
+    ?>
+    <br>
+    <a href="javascript:()" style="color: red;">Exercise 8</a>
+    <a href="javascript:()" style="color: red;">Exercise 9</a>
+
+    <h1>Condition anh loop</h1>
+    <?php
+    foreach ($condition_loop as $key => $file) {
+        ?>
+        <a href="./basic/<?=$file?>" class="link-exercise">
+            Exercise <?=getNumberExercise($file)?></a></li>
+        <?php
+    }
+    ?>
+    <br>
+    <a href="javascript:()" style="color: red;">Exercise 11</a>
 
 
 </div>

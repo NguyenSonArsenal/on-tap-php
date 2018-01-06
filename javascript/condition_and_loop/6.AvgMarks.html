@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Condition_and_Loop</title>
+</head>
+<body>
+
+<h2>  Write a JavaScript program which compute, the average marks of the following students.
+    Then, this average is used to determine the corresponding grade.</h2>
+
+<script>
+
+    var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
+
+    var countStudents = students.length;
+    var totalMarks = 0;
+    for (var i=0; i< countStudents; i++)
+    {
+        totalMarks += students[i][1];
+    }
+
+    document.write('The avg marks is: ' + totalMarks/countStudents);
+
+
+
+</script>
+
+</body>
+</html>

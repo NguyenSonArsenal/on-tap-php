@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Condition_and_Loop</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program that accept two integers and display the larger</h2>
+
+<script>
+
+    function numberLarger(x, y) {
+        if (typeof x == 'number' && typeof y == 'number')
+        {
+            var max = (x > y) ? x : y;
+            document.write('Max of ' + x + ' and '+y + ' is: '+max);
+        }
+        else
+        {
+            document.write('Input is invalid');
+        }
+    }
+
+    numberLarger(5,5);
+
+</script>
+
+
+</body>
+</html>
