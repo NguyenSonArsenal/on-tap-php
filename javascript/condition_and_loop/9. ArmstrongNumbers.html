@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Condition_and_Loop</title>
+</head>
+<body>
+
+<h2>Write a JavaScript program to construct the following pattern, using a nested for loop</h2>
+
+<script>
+
+    var n = 371;
+
+    var donvi = n%10;
+    var chuc = (parseInt(n/10))%10;
+    var tram = parseInt(parseInt(n/10)/10);
+
+    var tmp =  Math.pow(donvi, 3) + Math.pow(chuc, 3) + Math.pow(tram, 3);
+
+    if (tmp == n)
+        document.write(n + ' is armstrong number <br>');
+    else
+        document.write(n + ' is not armstrong number <br>');
+
+</script>
+
+</body>
+</html>

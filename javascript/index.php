@@ -25,7 +25,8 @@ $recursion = array(
 
 $condition_loop = array(
     "1.NumberLarger.html", "2.SignNumber.html", "3.Sort3Number.html", "4.Max5Number.html",
-    "5.OldAndEven.html", "6.AvgMarks.html", "12.BoiCua3Va5.html"
+    "5.OldAndEven.html", "6.AvgMarks.html", "7.FizzBuzz.html",
+    "9. ArmstrongNumbers.html","10.TamGiacVuong.html", "12.BoiCua3Va5.html"
 );
   
   function getNumberExercise($txt)
@@ -88,6 +89,7 @@ $condition_loop = array(
     }
     ?>
     <br>
+    <a href="javascript:()" style="color: red;">Exercise 8</a>
     <a href="javascript:()" style="color: red;">Exercise 11</a>
 
 
