@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to hide email addresses to protect from unauthorized user.</h2>
+
+<script>
+
+    var str = 'vanson297.nguyen@gmail.com';
+    var str2 = 'robin_singh@example.com';
+
+    function hideAPArtEmail(str) {
+        document.write('Init str: '+str+'<br>');
+
+        var arrStr = str.trim().split('@');
+
+        var subEmail = str.substring(0, 5);
+
+        var result = subEmail + '...@'+arrStr[1];
+
+        document.write('Hide a part email is: '+result);
+
+        document.write('<br>')
+        document.write('==========')
+        document.write('<br>')
+
+    }
+
+    hideAPArtEmail(str);
+    hideAPArtEmail(str2);
+
+
+</script>
+
+
+</body>
+</html>

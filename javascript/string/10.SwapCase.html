@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function that takes a string which has lower and upper case letters as a parameter
+    and converts upper case letters to lower case, and lower case letters to upper caseg</h2>
+
+<script>
+
+    var str = 'AaBbc';
+
+    function swapCase(str) {
+        str = str.toString().trim();
+
+        document.write('Init str: '+str+'<br>');
+
+        var length = str.length;
+
+        var arrStr = str.split('');
+
+        for (var i=0; i< length; i++)
+        {
+            if (65 <= str[i].charCodeAt(0) && str[i].charCodeAt(0) <= 90)
+            {
+                arrStr[i] = arrStr[i].replace(arrStr[i], lcfirst(arrStr[i]));
+            }
+            else if (97 <= str[i].charCodeAt(0) && str[i].charCodeAt(0) <= 122)
+            {
+                arrStr[i] = arrStr[i].replace(arrStr[i], ucfirst(arrStr[i]));
+            }
+        }
+        document.write('Result: '+arrStr.join('')+'<br>');
+    }
+
+    swapCase(str);
+
+
+</script>
+
+
+</body>
+</html>

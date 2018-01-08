@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to insert a string within a string at a particular position (default is 1)..</h2>
+
+<script>
+
+    function insert(str, needle = '' , position = 1) {
+        str = str.toString().trim();
+
+        console.log(needle);
+
+        var arrStr = str.split(' ');
+
+        if (needle.length > 0)
+        {
+            if (position == 1)
+            {
+                arrStr.unshift(needle);
+            }
+            else if (position != 1)
+            {
+                if (Number.isInteger(position) && 0 < position && position < arrStr.length)
+                {
+                    arrStr.splice(position, 0, needle);
+                }
+
+            }
+        }
+        document.write(arrStr.join(' '));
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var str = 'We are doing some exercises';
+    insert(str);
+    insert(str,'JavaScript');
+    insert(str,'JavaScript',4);
+
+</script>
+
+
+</body>
+</html>

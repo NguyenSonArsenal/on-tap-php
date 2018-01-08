@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check whether a string is blank or not</h2>
+
+<script>
+
+    function is_Blank(str) {
+        var lengthStr = str.length;
+
+        if (lengthStr > 0)
+        {
+            document.write('is_Blank('+str+'): true <br>');
+        }
+        else
+        {
+            document.write('is_Blank('+str+'): false <br>');
+        }
+    }
+
+    is_Blank('');
+    is_Blank('ac');
+    is_Blank('33vvv');
+
+</script>
+
+
+</body>
+</html>

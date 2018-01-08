@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript function to extract a specified number of characters from a string</h2>
+
+<script>
+
+    var str = 'nguyen son arsenal';
+
+    function getSubStr(str, n) {
+        if (typeof  str == 'string' && n>0 && str.length > n )
+        {
+            document.write('Init str: '+str+'<br>');
+
+            document.write('get '+n+' characters: '+str.substring(0, n));
+        }
+        else
+        {
+            document.write('Something in wrong');
+        }
+
+    }
+
+    getSubStr(str, 2);
+
+
+</script>
+
+
+</body>
+</html>

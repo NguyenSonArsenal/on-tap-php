@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript function to convert a string in abbreviated form</h2>
+
+<script>
+
+    var str = 'nguyen son arsenal';
+
+    function vietTat(str) {
+        document.write('Init str: '+str+'<br>');
+
+        var arrStr = str.trim().split(' ');
+
+        var result = arrStr[0]+ ' ' + arrStr[1].charAt(0) + '.';
+
+        document.write('Ten viet tat la: '+result+'<br>');
+    }
+
+    vietTat(str);
+
+
+</script>
+
+
+</body>
+</html>

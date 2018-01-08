@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to concatenates a given string n times (default is 1).</h2>
+
+<script>
+
+    function repeat(str, needle = 1) {
+        str = str.toString().trim();
+
+        var result = '';
+
+        if (Number.isInteger(needle) && needle > 0)
+        {
+            for (var i=0; i<needle; i++)
+            {
+                result += str;
+            }
+            document.write(result);
+        }
+        else
+        {
+            document.write('Something in wrong <br>');
+        }
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var str = 'ha!';
+    repeat(str);
+    repeat(str,3);
+    repeat(str,-5);
+
+</script>
+
+
+</body>
+</html>

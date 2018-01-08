@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to uncamelize a string</h2>
+
+<script>
+
+    function uncamelize(str, needle) {
+        str = str.toString().trim();
+        var lengthStr = str.length;
+
+        var arrTmpIndex = [0];
+        var arrResult = [];
+
+        for (var i=0; i<lengthStr; i++)
+        {
+            if(65 <= str.charAt(i).charCodeAt(0) && str.charAt(i).charCodeAt(0) <=90)
+            {
+                arrTmpIndex.push(i);
+            }
+        }
+
+        var lengArrTmpIndex = arrTmpIndex.length;
+
+        for (var i=0; i<lengArrTmpIndex; i++)
+        {
+            arrResult.push(str.substring(arrTmpIndex[i], arrTmpIndex[i+1]));
+        }
+
+        document.write(arrResult.join(needle));
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var str = 'homNayLaMotNgayThoiTietThayDoi';
+    uncamelize(str, '-');
+    uncamelize(str, '_');
+    uncamelize(str, ' ');
+
+</script>
+
+
+</body>
+</html>
