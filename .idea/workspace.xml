@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9147231d-9fd6-46aa-bebf-890f80b5c2ea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/javascript/helper.js" afterPath="$PROJECT_DIR$/javascript/helper.js" />
       <change beforePath="$PROJECT_DIR$/javascript/index.php" afterPath="$PROJECT_DIR$/javascript/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,31 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="9. ArmstrongNumbers.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/condition_and_loop/9. ArmstrongNumbers.html">
+      <file leaf-file-name="14.ChuyenTien.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javascript/functions/14.ChuyenTien.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8.IsHappyNumber.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/condition_and_loop/8.IsHappyNumber.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="91" column="58" lean-forward="false" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
+            <state relative-caret-position="323">
+              <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -86,27 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/javascript/basic/39.CheckNumbers.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/xxx.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/37.UpperLower.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/38.ExamStatus.html" />
-        <option value="$PROJECT_DIR$/Exercises/index.php" />
-        <option value="$PROJECT_DIR$/javascript/basic/41.ThreeNumbers.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/42.NumberOrder.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/43.SameLastDigit.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/45.Number15.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/44.LessBy20Others.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/46.CheckNumbers7And11.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/47..html" />
-        <option value="$PROJECT_DIR$/javascript/basic/47.ReverseString.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/49.ReplaceCharacter.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/51.ConvertToHour.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/52.AlphabetSoup.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/53..html" />
-        <option value="$PROJECT_DIR$/javascript/basic/53.abCheck.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/54.VovelChar.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/54.VowelChar.html" />
-        <option value="$PROJECT_DIR$/javascript/basic/55..html" />
         <option value="$PROJECT_DIR$/javascript/basic/55.Equal_pt.html" />
         <option value="$PROJECT_DIR$/javascript/basic/56.DivisionString.html" />
         <option value="$PROJECT_DIR$/javascript/basic/50.CapitalLetter.html" />
@@ -136,7 +96,28 @@
         <option value="$PROJECT_DIR$/javascript/condition_and_loop/10.TamGiacVuong.html" />
         <option value="$PROJECT_DIR$/javascript/condition_and_loop/9. ArmstrongNumbers.html" />
         <option value="$PROJECT_DIR$/javascript/condition_and_loop/8.IsHappyNumber.html" />
+        <option value="$PROJECT_DIR$/javascript/helper.js" />
+        <option value="$PROJECT_DIR$/javascript/functions/1.ReverseNumber.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/2.PalindromeString.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/4.AlphabeticalStr.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/6.LongestString.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/7.DemSoNguyenAm.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/8.SoNguyenTo.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/9.ReturnTypeParamaster.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/10.Matran.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/11.2ndMax.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/12.Factors.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/13.NumberPerfect.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/16.UniqueStr.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/15.SoMu.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/17.SoLanXuatHienCuaKiTu.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/19.BiggerElement.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/20.RandomStr.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/3.LietKeTapHopString.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/21.GetSubSet.html" />
+        <option value="$PROJECT_DIR$/javascript/functions/5.FirstLetterUpperCase.html" />
         <option value="$PROJECT_DIR$/javascript/index.php" />
+        <option value="$PROJECT_DIR$/javascript/functions/14.ChuyenTien.html" />
       </list>
     </option>
   </component>
@@ -187,7 +168,7 @@
               <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="condition_and_loop" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,19 +188,19 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/javascript/condition_and_loop" />
-      <recent name="$PROJECT_DIR$/javascript/recursion" />
-      <recent name="$PROJECT_DIR$/javascript/basic" />
-      <recent name="$PROJECT_DIR$/javascript" />
-      <recent name="$PROJECT_DIR$/Exercises/String" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/javascript" />
       <recent name="$PROJECT_DIR$/Exercises/Basic" />
       <recent name="$PROJECT_DIR$/Exercises" />
       <recent name="$PROJECT_DIR$/PHP_Fundamentals" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/javascript/functions" />
+      <recent name="$PROJECT_DIR$/javascript/condition_and_loop" />
+      <recent name="$PROJECT_DIR$/javascript/recursion" />
+      <recent name="$PROJECT_DIR$/javascript/basic" />
+      <recent name="$PROJECT_DIR$/javascript" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -318,12 +299,13 @@
       <workItem from="1515201462022" duration="9325000" />
       <workItem from="1515226303214" duration="5067000" />
       <workItem from="1515231655407" duration="38000" />
-      <workItem from="1515295100764" duration="2148000" />
+      <workItem from="1515295100764" duration="2310000" />
+      <workItem from="1515375150540" duration="22703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218909000" />
+    <option name="totallyTimeSpent" value="241774000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,7 +317,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="-4" width="1309" height="772" extended-state="6" />
+    <frame x="57" y="21" width="1311" height="783" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24828114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -387,75 +369,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript/basic/36.LastDigit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="32" column="38" lean-forward="false" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/basic/40.CheckNumbers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="115" lean-forward="false" selection-start-line="9" selection-start-column="115" selection-end-line="9" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/basic/39.CheckNumbers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/basic/30.CheckScript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/basic/xxx.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="76" lean-forward="false" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/basic/37.UpperLower.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/basic/38.ExamStatus.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="17" column="79" lean-forward="false" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Exercises/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="90" column="40" lean-forward="true" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/index.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/css/home.css" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/41.ThreeNumbers.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/42.NumberOrder.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/43.SameLastDigit.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/45.Number15.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/44.LessBy20Others.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/46.CheckNumbers7And11.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/48.ReverseString.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/51.ConvertToHour.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/52.AlphabetSoup.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/54.VowelChar.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/basic/53.abCheck.html" />
     <entry file="file://$PROJECT_DIR$/javascript/basic/55.Equal_pt.html" />
     <entry file="file://$PROJECT_DIR$/javascript/basic/56.DivisionString.html" />
     <entry file="file://$PROJECT_DIR$/javascript/basic/47.CheckNumber.html">
@@ -610,7 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,7 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -626,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -634,13 +544,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="83" lean-forward="true" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/condition_and_loop/9. ArmstrongNumbers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="0">
           <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
           <folding />
         </state>
@@ -649,15 +558,183 @@
     <entry file="file://$PROJECT_DIR$/javascript/condition_and_loop/8.IsHappyNumber.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/1.ReverseNumber.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/7.DemSoNguyenAm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/8.SoNguyenTo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/6.LongestString.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/4.AlphabeticalStr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/10.Matran.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/9.ReturnTypeParamaster.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="18" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/13.NumberPerfect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/16.UniqueStr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="36" lean-forward="false" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/15.SoMu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/17.SoLanXuatHienCuaKiTu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/19.BiggerElement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/20.RandomStr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/2.PalindromeString.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/12.Factors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/3.LietKeTapHopString.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/21.GetSubSet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/5.FirstLetterUpperCase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/11.2ndMax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="91" column="58" lean-forward="false" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
+        <state relative-caret-position="409">
+          <caret line="112" column="0" lean-forward="true" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/functions/14.ChuyenTien.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="39" />
           <folding />
         </state>
       </provider>

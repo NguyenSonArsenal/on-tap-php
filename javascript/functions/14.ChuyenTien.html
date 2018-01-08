@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Function</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to convert an amount to coins</h2>
+
+<script>
+
+    function chuyenTien(money, list) {
+
+        if (money === 0)
+        {
+            return [];
+        }
+        else
+        {
+            if (money >= list[0])
+            {
+                var tmp = money - list[0];
+                return [list[0]].concat(chuyenTien(tmp, list));
+            }
+            else
+            {
+                list.shift();
+                return chuyenTien(money, list);
+            }
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var list = [25, 10, 5, 2, 1];
+
+    var result = chuyenTien(46, list);
+    console.log(result);
+    // Chua hoan thanh
+
+</script>
+
+
+</body>
+</html>

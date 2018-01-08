@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Function</title>
+</head>
+<body>
+
+<h2>Write a JavaScript function that accepts a string as a parameter and
+    converts the first letter of each word of the string in upper case</h2>
+
+<script>
+
+    function firstLetterUpperCase(str) {
+        str = str.toString().trim();
+
+        document.write('Init str: '+str+ '<br>');
+
+        str = str.charAt(0).toUpperCase() + str.slice(1);
+
+        var arrStr = str.split('');
+
+        var lengthArrStr = arrStr.length;
+
+        for (var i=0; i<lengthArrStr-1; i++)
+        {
+            //console.log(arrStr[i].charCodeAt(0) + ' + '+ arrStr[i+1].charCodeAt(0) + '<br>');
+            if (arrStr[i].charCodeAt(0) == 32 && arrStr[i+1].charCodeAt(0)!= 32)
+            {
+                arrStr[i+1] = arrStr[i+1].toUpperCase();
+            }
+        }
+
+        document.write('Uppercase first letter: '+arrStr.join('') + '<br>');
+        console.log(arrStr);
+    }
+
+    firstLetterUpperCase('nguyen van son');
+
+    // Chua hoan thanh
+
+</script>
+
+
+</body>
+</html>

@@ -11,12 +11,10 @@ validNumber = (aNumber) => {
     return validNum;
 };
 
-function swap(&n1,; &n2;){
-    var tmp;
-
-    if(n1<n2) {
-        tmp = n1;
-        n1=n2;
-        n2=tmp;
+isNumber = (n) => {
+    if (typeof n == 'number')
+    {
+        return true;
     }
-}
+    return false;
+};

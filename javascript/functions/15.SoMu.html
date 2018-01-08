@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Function</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases.
+    Accept b and n from the user and display the result</h2>
+
+<script>
+
+    function luyThua(x, y) {
+        if (isNumber(x) && isNumber(y))
+        {
+            var result = x;
+            for (var i=0; i< y-1; i++)
+            {
+                result *= x;
+            }
+        }
+
+        document.write(result);
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    luyThua(6,2);
+    luyThua(2,10);
+    // Chua hoan thanh
+
+</script>
+
+
+</body>
+</html>

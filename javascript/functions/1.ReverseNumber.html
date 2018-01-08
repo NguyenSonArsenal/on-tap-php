@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Function</title>
+</head>
+<body>
+
+<h2> Write a JavaScript function that reverse a number</h2>
+
+<script>
+
+    function reverseNumber(n) {
+        var tmp = n.toString();
+
+        var lengthTmp = tmp.length;
+
+        var arrTmp = tmp.split('');
+
+        console.log(arrTmp);
+
+        if (lengthTmp % 2 ==0)
+        {
+            for (var i=0; i< lengthTmp/2; i++)
+            {
+                var c = arrTmp[i];
+                arrTmp[i] = arrTmp[lengthTmp-i-1];
+                arrTmp[lengthTmp-i-1] = c;
+            }
+        }
+        else
+        {
+            for (var i=0; i<lengthTmp/2-1; i++)
+            {
+                var c = arrTmp[i];
+                arrTmp[i] = arrTmp[lengthTmp-i-1];
+                arrTmp[lengthTmp-i-1] = c;
+            }
+        }
+
+        document.write(arrTmp.join(''));
+        document.write('<br>');
+
+    }
+
+    reverseNumber(12345);
+    reverseNumber(123456);
+    reverseNumber(1234567890);
+
+    // Cach 2
+
+
+
+</script>
+
+
+</body>
+</html>

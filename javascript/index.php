@@ -23,6 +23,14 @@ $recursion = array(
     "6.Fibo.html", "7.IsSoChan.html"
 );
 
+$functions = array(
+    "1.ReverseNumber.html", "2.PalindromeString.html", "3.LietKeTapHopString.html", "4.AlphabeticalStr.html",
+    "5.FirstLetterUpperCase.html", "6.LongestString.html", "7.DemSoNguyenAm.html", "8.SoNguyenTo.html",
+    "9.ReturnTypeParamaster.html", "10.Matran.html", "11.2ndMax.html", "12.Factors.html",
+    "13.NumberPerfect.html", "14.ChuyenTien.html", "15.SoMu.html", "16.UniqueStr.html",
+    "17.SoLanXuatHienCuaKiTu.html", "19.BiggerElement.html", "20.RandomStr.html", "21.GetSubSet.html"
+);
+
 $condition_loop = array(
     "1.NumberLarger.html", "2.SignNumber.html", "3.Sort3Number.html", "4.Max5Number.html",
     "5.OldAndEven.html", "6.AvgMarks.html", "7.FizzBuzz.html",
@@ -79,7 +87,7 @@ $condition_loop = array(
     <a href="javascript:()" style="color: red;">Exercise 8</a>
     <a href="javascript:()" style="color: red;">Exercise 9</a>
 
-    <h1>Condition anh loop</h1>
+    <h1>Condition and loop</h1>
     <?php
     foreach ($condition_loop as $key => $file) {
         ?>
@@ -91,6 +99,17 @@ $condition_loop = array(
     <br>
     <a href="javascript:()" style="color: red;">Exercise 8</a>
     <a href="javascript:()" style="color: red;">Exercise 11</a>
+
+    <h1>Functions</h1>
+        <?php
+        foreach ($functions as $key => $file) {
+            ?>
+            <a href="./functions/<?=$file?>" class="link-exercise">
+                Exercise <?=getNumberExercise($file)?></a></li>
+            <?php
+        }
+        ?>
+        <br>
 
 
 </div>

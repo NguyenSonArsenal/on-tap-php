@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Function</title>
+</head>
+<body>
+
+<h2>Write a JavaScript function that returns a passed string with letters in alphabetical order.</h2>
+
+<script>
+
+    function sortAlphabStr(str) {
+        str = str.toString().trim();
+
+        document.write('Init str: ' + str + '<br>');
+
+        var lengthStr = str.length;
+
+        for (var i=0; i<lengthStr; i++)
+        {
+            if (str.charAt(i).charCodeAt(0) == 32)
+            {
+                str = str.substring(0, i) + str.substring(i+1);
+            }
+        }
+
+        str = str.split('').sort().join('');
+
+        document.write('Sort to alphabel: '+ str + '<br>');
+    }
+
+    sortAlphabStr('nguyen van son');
+
+</script>
+
+
+</body>
+</html>

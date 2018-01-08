@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Condition_and_Loop</title>
+</head>
+<body>
+
+<h2>Write a JavaScript function that generates all combinations of a string</h2>
+
+<script>
+
+    function getCombinations(str) {
+
+        var str = str.toString();
+
+        var array1 = [];
+        var count = 0;
+
+        var lengStr = str.length;
+
+        for (var x = 0; x < lengStr; x++)
+        {
+            for (var y = x+1; y < lengStr+1; y++)
+            {
+                count++;
+                array1.push(str.substring(x, y));
+            }
+        }
+        document.write(count + ' result: ');
+        document.write(array1);
+        document.write('<br>');
+    }
+
+    getCombinations('12345');
+
+</script>
+
+
+</body>
+</html>

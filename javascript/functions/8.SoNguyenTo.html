@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Function</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript function that accepts a number as a parameter and
+    check the number is prime or not</h2>
+
+<script>
+
+    function kiemTraSonguyenTo(n) {
+
+        if (isNumber(n))
+        {
+            if (n>2)
+            {
+                for (var i=2; i<n/2; i++)
+                {
+                    if (n%i == 0)
+                    {
+                        return document.write(n + ' is not prime (khong la so nguyen to) <br>');
+                    }
+                }
+                return document.write(n + ' is prime (la so nguyen to) <br>');
+            }
+            else
+            {
+                document.write(n + ' is prime (la so nguyen to) <br>');
+            }
+
+        }
+        else
+        {
+            document.write('input is invalid <br>');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+
+    }
+
+    kiemTraSonguyenTo(7);
+    kiemTraSonguyenTo(77);
+
+    // Chua hoan thanh
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Function</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function that generates a string id (specified length) of random characters</h2>
+
+<script>
+    function randomStr(n) {
+        var result = '';
+        var tmp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var length = tmp.length;
+
+        if (typeof n == 'number' && Number.isInteger(n) && n >=1)
+        {
+            for (var i=0; i<n; i++)
+            {
+                var intRandom = Math.floor(Math.random()*length);
+                result+=tmp[intRandom];
+            }
+        }
+
+        document.write('Password random is: '+result);
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+
+    randomStr(5);
+
+    // Chua hoan thanh
+
+</script>
+
+
+</body>
+</html>

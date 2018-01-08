@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Function</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function which will take an array of numbers stored and
+    find the second lowest and second greatest numbers, respectively</h2>
+
+<script>
+
+    function max_2nd(arrNumber) {
+        document.write('init arr: '+arrNumber+'<br>');
+
+        var arrSort = arrNumber.sort();
+
+        var length = arrSort.length;
+
+        for (var i=0; i< length; i++)
+        {
+            for (var j=i+1; j<length; j++)
+            {
+                if (arrSort[i] == arrSort[j])
+                {
+                    arrSort.splice(i+1, i+2);
+                }
+            }
+        }
+
+        document.write('2nd_max is: '+arrSort[arrSort.length-2]+'<br>');
+        document.write('2nd_min is: '+arrSort[1]+'<br>');
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var arrNumber = [1,2,3,4,5];
+    var arrNumber1 = [2,9,0,7,1,9,9,5];
+    max_2nd(arrNumber);
+    max_2nd(arrNumber1);
+
+
+
+    // Chua hoan thanh
+
+</script>
+
+
+</body>
+</html>
