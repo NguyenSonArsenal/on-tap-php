@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to escape a HTML string</h2>
+
+<script>
+
+    function escape_HTML(str, needle, position) {
+        var result = '';
+
+        str = str.toString().trim();
+
+        if (typeof needle === 'undefined')
+        {
+            document.write(str);
+        }
+        else
+        {
+            if (str.length > needle.length)
+            {
+                if (position === 'l')
+                {
+                    result = str.slice(0, str.length-needle.length)+needle;
+                }
+                else
+                {
+                    var tmp = needle + str;
+                    result = (needle+str).substring(0, tmp.length - needle.length);
+                }
+                document.write(result);
+            }
+            else
+            {
+                document.write('Something in wrong');
+            }
+
+        }
+
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    escape_HTML('0000', '123', 'l');
+    escape_HTML('00000000', '123');
+
+    // Chua hoan thanh
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to truncate a string to a certain number of words</h2>
+
+<script>
+
+    function truncate(str, n) {
+
+        str = str.toString().trim();
+
+        if (Number.isInteger(n) && n > 0 )
+        {
+            var arrStr = str.split(' ');
+
+            if (arrStr.length >= n)
+            {
+                var result = [];
+
+
+                for (var i=0; i<n; i++)
+                {
+                    result.push(arrStr[i]);
+                }
+                document.write(result);
+            }
+            else
+            {
+                document.write('Length of str must be longer than ' +n);
+            }
+
+        }
+        else
+        {
+            document.write('Something in wrong');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var str = 'The quick brown fox jumps over the lazy dog';
+
+    truncate(str, 4);
+    truncate(str, 20);
+    truncate(str, -7);
+    truncate(str, 7.5);
+
+</script>
+
+
+</body>
+</html>

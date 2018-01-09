@@ -36,6 +36,17 @@ $condition_loop = array(
     "5.OldAndEven.html", "6.AvgMarks.html", "7.FizzBuzz.html",
     "9. ArmstrongNumbers.html","10.TamGiacVuong.html", "12.BoiCua3Va5.html"
 );
+
+$string = array(
+    "1.isString.html", "2.isBlank.html", "3.StrToArr.html", "4.SubStr.html",
+    "5.TenVietTat.html", "6.HideEmail.html", "7.StringParamaster.html", "8.FirstUpperCase.html",
+    "9.Xem bai 7.html", "10.SwapCase.html", "11.Xem bai 7.html", "12.UncamelizeString.html",
+    "13.RepeatStr.html", "14.InsertStr.html", "15.HumanizeFormatnumber.html", "16.TextTruncate.html",
+    "17.StrIntoChunks.html", "18.CountSubStrin.html", "19.EscapeHTML.html", "20.FormattedString.html",
+    "21.Xembai13.html", "22.SubStrAfterChars.html", "23.Trim.html", "24.Truncate.html",
+    "25.SapXepAB.html", "26.RemoveFirstElement.html", "29.Xem bai 18.html", "30.StringEndWith.html",
+    "31.EscapeHtml.html"
+);
   
   function getNumberExercise($txt)
   {
@@ -91,7 +102,7 @@ $condition_loop = array(
     <?php
     foreach ($condition_loop as $key => $file) {
         ?>
-        <a href="./basic/<?=$file?>" class="link-exercise">
+        <a href="./condition_and_loop/<?=$file?>" class="link-exercise">
             Exercise <?=getNumberExercise($file)?></a></li>
         <?php
     }
@@ -101,15 +112,27 @@ $condition_loop = array(
     <a href="javascript:()" style="color: red;">Exercise 11</a>
 
     <h1>Functions</h1>
-        <?php
-        foreach ($functions as $key => $file) {
-            ?>
-            <a href="./functions/<?=$file?>" class="link-exercise">
-                Exercise <?=getNumberExercise($file)?></a></li>
-            <?php
-        }
+    <?php
+    foreach ($functions as $key => $file) {
         ?>
-        <br>
+        <a href="./functions/<?=$file?>" class="link-exercise">
+            Exercise <?=getNumberExercise($file)?></a></li>
+        <?php
+    }
+    ?>
+    <br>
+
+    <h1>String</h1>
+    <?php
+    foreach ($string as $key => $file) {
+        ?>
+        <a href="./string/<?=$file?>" class="link-exercise">
+            Exercise <?=getNumberExercise($file)?></a></li>
+        <?php
+    }
+    ?>
+    <br>
+    <a href="javascript:()" style="color: red;">Exercise 27</a>
 
 
 </div>

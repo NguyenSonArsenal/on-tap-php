@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to count the occurrence of a substring in a string</h2>
+
+<script>
+
+    function countSubStr(str, subStr, caseSensitive = true) {
+
+        var count = 0; // count substring in str
+
+        document.write('Init str: '+str+'<br>');
+
+        str = str.toString().trim();
+        subStr = subStr.toString().trim();
+
+        var length = str.length;
+        var lengthSubStr = subStr.length;
+
+        for (var i=0; i<length-lengthSubStr; i++)
+        {
+            if (caseSensitive == true)
+            {
+                if (str.substring(i, i+lengthSubStr) === subStr)
+                {
+                    count++;
+                }
+            }
+            else if (caseSensitive == false)
+            {
+                if ( (str.substring(i, i+lengthSubStr)).toUpperCase() === subStr.toUpperCase())
+                {
+                    count ++;
+                }
+            }
+        }
+
+        if (count == 1)
+        {
+            document.write( '\''+subStr+'\'' + ' appear ' + count + ' time');
+        }
+        else if (count > 1)
+        {
+            document.write( '\''+subStr+'\'' + ' appear ' + count + ' times');
+        }
+        else
+        {
+            document.write( '\''+subStr+'\'' + ' is not appear in str input ');
+        }
+
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var str = 'The quick brown fox the jumps over the lazy dog';
+
+    countSubStr(str, 'the');
+    countSubStr(str, 'ThE', false);
+
+
+</script>
+
+
+</body>
+</html>

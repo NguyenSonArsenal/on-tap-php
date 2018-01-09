@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function check if a string ends with specified suffix</h2>
+
+<script>
+
+    function stringEndWith(str, needle) {
+
+        str = str.toString().trim();
+        needle = needle.toString().trim();
+
+        var lengthNeedle = needle.length;
+        var lengthStr = str.length;
+
+        var tmp = str.slice(-lengthNeedle);
+
+        if (tmp === needle)
+        {
+            document.write('true');
+        }
+        else
+        {
+            document.write('false');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var str = 'JS PHP PYTHON';
+
+    stringEndWith(str, 'PHP');
+    stringEndWith(str, 'PYTHON');
+
+</script>
+
+
+</body>
+</html>

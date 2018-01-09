@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-String</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to remove the first occurrence of a given 'search string' from a string</h2>
+
+<script>
+
+    function removeFirstElement(str, needle) {
+
+        str = str.toString().trim();
+
+        var result = '';
+
+        var lengthStr = str.length;
+        var lengthNeedle = needle.length;
+
+        for (var i=0; i< lengthStr; i++)
+        {
+            var tmp = str.substring(i, i+lengthNeedle);
+            if (tmp === needle)
+            {
+                result = str.substring(lengthNeedle);
+                return document.write(result);
+            }
+        }
+
+        document.write(str);
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var str = 'Then, today i am very tired. Then, tonight, i will go to bed soon.';
+    var str2 = 'xx';
+    removeFirstElement(str2, 'Then');
+    removeFirstElement(str, 'Then');
+
+</script>
+
+
+</body>
+</html>
