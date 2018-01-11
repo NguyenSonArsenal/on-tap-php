@@ -1,7 +1,15 @@
 function getTimeToSaveId() {
     var d = new Date();
-    var n = d.getTime();
-    return n;
+    return d.getTime();
+}
+
+function setItemInLocalStorage(key, value) {
+    localStorage.setItem(key, value);
+}
+
+function getItemInLocalStorage(key)
+{
+    return localStorage.getItem(key);
 }
 
 
@@ -17,17 +25,9 @@ function getIdNodeTodo(item) {
     return idTodo;
 }
 
-function setItemInLocalStorage(key, value) {
-    localStorage.setItem(key, value);
-}
-
-function getItemInLocalStorage(key, valueDefault)
-{
-    return localStorage.getItem() || valueDefault
-}
-
 function reRenderTodoByActions(arrTodo) {
     var nodeMain = document.getElementsByClassName('main'); // NodeList : object HTMLCollectio
+
     while (nodeMain[0].firstChild) {
         nodeMain[0].removeChild(nodeMain[0].firstChild);
     }
@@ -37,28 +37,51 @@ function reRenderTodoByActions(arrTodo) {
     // ========== append todos to html from local storage =========== //
     for (var i=0; i < length; i++)
     {
-
-        var isCompleted = arrTodo[i].completed == true ? 'isComplete' : '';
-
-        var checked = arrTodo[i].completed == true ? 'checked' : '';
-
-        var str =
-            '<input class="checkbox" '+checked+' type="checkbox" onclick = "completedTodo(this)">' +
-            '<label class='+isCompleted+' id='+arrTodo[i].id+'>'+arrTodo[i].title+'</label>' +
-            '<a class="destroy"  onclick="destroyATodo(this)">' +
-            '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
-            '</a>';
-
-        var nodeTmp = document.createElement('div');
-        nodeTmp.setAttribute('class', 'view');
-        nodeTmp.innerHTML = str ;
-
-        nodeMain[0].appendChild(nodeTmp);
+        var str = makeHtmlTodo(arrTodo[i]);
+        addTodoToTodos(str);
     }
 }
 
-function changeTotalTodoUnit(needle) {
-    var countTodo = localStorage.getItem('count');
+function addTodoToTodos(str) {
+    var nodeTmp = document.createElement('div');
+    nodeTmp.setAttribute('class', 'view');
+    nodeTmp.innerHTML = str ;
+
+    var node = document.getElementsByClassName('main'); // NodeList : object HTMLCollection
+
+    // add a to_do to main to_do
+    node[0].appendChild(nodeTmp);
+}
+
+
+function displayFooter() {
+    var nodeFooter = document.getElementsByClassName('footer');
+    nodeFooter[0].style.display = 'inline-flex';
+}
+
+function hideFooter() {
+    var nodeFooter = document.getElementsByClassName('footer');
+    nodeFooter[0].style.display = 'none';
+}
+
+function displayCountTodo() {
+    var countTodos = getItemInLocalStorage('count') || 0;
+    document.getElementById('count_todo').innerHTML = countTodos;
+}
+
+function displayLinkClearTodo() {
+    var nodeClear = document.getElementsByClassName('clear');
+    nodeClear[0].style.display = 'block';
+}
+
+function hideLinkClearTodo() {
+    var nodeClear = document.getElementsByClassName('clear');
+    nodeClear[0].style.display = 'none';
+}
+
+
+function reCountTodo(needle) {
+    var countTodo = getItemInLocalStorage('count') || 0;
 
     if (needle == 'des')
     {
@@ -69,132 +92,144 @@ function changeTotalTodoUnit(needle) {
         countTodo++;
     }
 
-    localStorage.setItem('count', countTodo);
-    document.getElementById('count_todo').innerHTML = countTodo;
+    setItemInLocalStorage('count', countTodo);
+    displayCountTodo();
+
     return countTodo;
+}
+
+function makeHtmlTodo(todo) {
+    var isCompleted = todo.completed == true ? 'isComplete' : 'xxx';
+
+    var isChecked = todo.completed == true ? 'checked' : 'xxx';
+
+    var str =
+        '<input class="checkbox" '+isChecked+' type="checkbox" onclick = "isCompletedTodo(this)">' +
+        '<label class='+isCompleted+' id='+todo.id+'>'+todo.title+'</label>' +
+        '<a class="destroy"  onclick="destroyATodo(this)">' +
+        '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
+        '</a>';
+
+    return str;
+}
+
+
+function removeHtmlTodo(todo) {
+    var currentNode = todo.parentNode;
+    var mainNode = currentNode.parentNode;
+    mainNode.removeChild(currentNode);
+}
+
+
+
+function toggleCompletedTodo(id) {
+    var localTodos = JSON.parse(getItemInLocalStorage('todos'));
+
+    var lengthLocalTodos = localTodos.length;
+
+    if (lengthLocalTodos > 0)
+    {
+        for (var i=0; i < lengthLocalTodos; i++) {
+            if (id == localTodos[i].id.toString())
+            {
+                var tmp = localTodos[i].completed;
+                localTodos[i].completed = !tmp;
+            }
+        }
+    }
+
+    setItemInLocalStorage('todos', JSON.stringify(localTodos));
 }
 
 
 function getCompletedTodo(needle) {
-    var localTodos = localStorage.getItem('todos');
+    var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
 
-    var arrLocalTmp = convertJsonTodoToArray(localTodos);
-
-    var lengthArrLocalTmp = arrLocalTmp.length;
+    var lengthLocalTodos = localTodos.length;
     var arrCompleteTodo = [];
 
     var arrActiveTodo = [];
 
     if (needle == 'completed')
     {
-        for (var i=0; i<lengthArrLocalTmp; i++)
+        for (var i=0; i<lengthLocalTodos; i++)
         {
-            if (arrLocalTmp[i].completed == true)
+            if (localTodos[i].completed == true)
             {
-                arrCompleteTodo.push(arrLocalTmp[i]);
+                arrCompleteTodo.push(localTodos[i]);
             }
         }
         return arrCompleteTodo;
     }
     else if (needle == 'active')
     {
-        for (var i=0; i<lengthArrLocalTmp; i++)
+        for (var i=0; i<lengthLocalTodos; i++)
         {
-            if (arrLocalTmp[i].completed == false)
+            if (localTodos[i].completed == false)
             {
-                arrActiveTodo.push(arrLocalTmp[i]);
+                arrActiveTodo.push(localTodos[i]);
             }
         }
         return arrActiveTodo;
     }
 
-    return arrLocalTmp;
+    return localTodos;
 }
 
 
-function convertJsonTodoToArray(json) {
-    if (json)
+function countItemCompletedFromLocalStorage() {
+    var arrCompleteTodo = getCompletedTodo('completed');
+
+    if(arrCompleteTodo.length > 0)
     {
-        if (json.length > 2)
-        {
-            var localTmp = json.substring(1, json.length-1);
-            var arrLocalTmp = localTmp.split('},');
-            var lengthArrLocalTmp = arrLocalTmp.length;
-            for (var i=0; i<lengthArrLocalTmp; i++)
-            {
-                if(i != lengthArrLocalTmp-1)
-                {
-                    arrLocalTmp[i]+='}';
-
-                }
-                arrLocalTmp[i] = JSON.parse(arrLocalTmp[i])
-            }
-            return arrLocalTmp;
-        }
+        displayLinkClearTodo();
     }
-    return false;
+    else
+    {
+        hideLinkClearTodo();
+    }
 }
+
 
 function fetchListTodos()
 {
-    var localTodos = getItemInLocalStorage('todos', []);
+    var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
 
-    if (localTodos)
+    var lengthLocalTodos = localTodos.length;
+
+    if (lengthLocalTodos > 0)
     {
-        // ==========convert string json todos to array ========== //
-        var arrLocalTmp = convertJsonTodoToArray(localTodos);
-
-        var lengthArrLocalTmp = arrLocalTmp.length;
-
-        // ========== append todos to html from local storage =========== //
-        for (var i=0; i < lengthArrLocalTmp; i++)
+        for (var i=0; i<lengthLocalTodos; i++)
         {
-            var isCompleted = arrLocalTmp[i].completed == true ? 'isComplete' : '';
+            var str = makeHtmlTodo(localTodos[i]);
 
-            if (arrLocalTmp[i].completed == false)
-            {
-                var str =
-                    '<input class="checkbox" type="checkbox" onclick = "completedTodo(this)">' +
-                    '<label id='+arrLocalTmp[i].id+'>'+arrLocalTmp[i].title+'</label>' +
-                    '<a class="destroy"  onclick="destroyATodo(this)">' +
-                    '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
-                    '</a>';
-            }
-            else
-            {
-                var str =
-                    '<input class="checkbox" checked type="checkbox" onclick = "completedTodo(this)">' +
-                    '<label class="isComplete" id='+arrLocalTmp[i].id+'>'+arrLocalTmp[i].title+'</label>' +
-                    '<a class="destroy"  onclick="destroyATodo(this)">' +
-                    '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
-                    '</a>';
-            }
-
-            var nodeTmp = document.createElement('div');
-            nodeTmp.setAttribute('class', 'view');
-            nodeTmp.innerHTML = str ;
-
-            var node = document.getElementsByClassName('main'); // NodeList : object HTMLCollection
-
-            // add a to_do to main to_do
-            node[0].appendChild(nodeTmp);
-
-            // show to_do main and footer
-            var nodeFooter = document.getElementsByClassName('footer');
-            nodeFooter[0].style.display = 'inline-flex';
-
-            var countTodo = localStorage.count || 0;
-            document.getElementById('count_todo').innerHTML = countTodo;
+            addTodoToTodos(str);
         }
+
+        displayFooter();
+
+        displayCountTodo();
     }
 }
 
-if (typeof(Storage) !== 'undefined') {
-    // add input_todo to list todo
 
+function getTabTodos()
+{
+    var url = window.location.href;
+
+    var arrSplitUrl = url.split('/');
+
+    var tabActive = arrSplitUrl[arrSplitUrl.length-1];
+
+    selectAction(tabActive);
+}
+
+if (typeof(Storage) !== 'undefined') {
     onloadBody = () =>
     {
         fetchListTodos();
+        getTabTodos();
+        countItemCompletedFromLocalStorage();
     };
 
     function runScript(e)
@@ -213,40 +248,25 @@ if (typeof(Storage) !== 'undefined') {
                     id: getTimeToSaveId()
                 };
 
-                var oldTodos =  JSON.parse(localStorage.getItem('todos')) || [];
+                var oldTodos =  JSON.parse(getItemInLocalStorage('todos')) || []; // obj
 
                 oldTodos.push(todo);
 
                 // Put the object into storage
-                localStorage.setItem('todos', JSON.stringify(oldTodos));
+                setItemInLocalStorage('todos', JSON.stringify(oldTodos));
 
                 // ============Append to html================== //
-                var str =
-                    '<input class="checkbox" type="checkbox" onclick = "completedTodo(this)">' +
-                    '<label id='+todo.id+'>'+todo.title+'</label>' +
-                    '<a class="destroy"  onclick="destroyATodo(this)">' +
-                    '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
-                    '</a>';
+                var str = makeHtmlTodo(todo);
 
-                var nodeTmp = document.createElement('div');
-                nodeTmp.setAttribute('class', 'view');
-                nodeTmp.innerHTML = str ;
-
-                var node = document.getElementsByClassName('main'); // NodeList : object HTMLCollection
-
-                // add a to_do to main to_do
-                node[0].appendChild(nodeTmp);
+                addTodoToTodos(str);
 
                 // clear input to_do to empty
                 nodeInputTodo.value = '';
 
-                // show to_do main and footer
-                var nodeFooter = document.getElementsByClassName('footer');
-                nodeFooter[0].style.display = 'inline-flex';
-
+                displayFooter();
 
                 // ========== count to_do ==========
-                changeTotalTodoUnit('asc');
+                reCountTodo('asc');
 
             }
             return false; // returning false will prevent the event from bubbling up.
@@ -264,126 +284,117 @@ if (typeof(Storage) !== 'undefined') {
 
     }
 
-    // event delete a todo
+    // event delete a to_do
     function destroyATodo(item) {
-        var todos =  localStorage.getItem('todos') || [];
+        var listTodo = JSON.parse(getItemInLocalStorage('todos')) || [];
 
-        if (todos) {
+        var lengthTodos = listTodo.length;
 
+        if (lengthTodos > 0)
+        {
             var idTodo = getIdNodeTodo(item);
 
-            // ========== remove html to_do========== //
-            var currentNode = item.parentNode;
-            var mainNode = currentNode.parentNode;
-            mainNode.removeChild(currentNode);
-
-            var arrLocalTmp = convertJsonTodoToArray(todos);
-            var lengthArrLocalTmp = arrLocalTmp.length;
-
-            for (var i=0; i < lengthArrLocalTmp; i++) {
-
-                if (idTodo == arrLocalTmp[i].id.toString())
-                {
-                    arrLocalTmp.splice(i, 1);
+            for (var i=0; i<lengthTodos; i++) {
+                if (idTodo == listTodo[i].id.toString()) {
+                    listTodo.splice(i, 1);
                     break;
                 }
             }
 
-            localStorage.setItem('todos', JSON.stringify(arrLocalTmp));
+            setItemInLocalStorage('todos', JSON.stringify(listTodo));
 
-            // =========== descending count a unit ========== //
-            var countTodo = changeTotalTodoUnit('des');
+            removeHtmlTodo(item);
 
-            if (countTodo == 0)
+            var countTodos = reCountTodo('des');
+
+            if (countTodos == 0)
             {
-                // hide to_do main and footer
-                var nodeFooter = document.getElementsByClassName('footer');
-                nodeFooter[0].style.display = 'none';
+                hideFooter();
             }
         }
     }
 
     clearATodo = () =>
     {
-        var nodeMain = document.getElementsByClassName('main');
-        var elementUnActive =document.querySelectorAll('.view .un_active');
+        console.log('doing clear completed todo');
 
-        var total = elementUnActive.length;
+        var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
 
-        for (var i=0; i<total; i++)
+        // console.log(localTodos);
+
+        var lengthLocalTodos = localTodos.length;
+
+        var arrCompleteTodo = getCompletedTodo('completed');
+
+        //console.log(arrCompleteTodo);
+
+        var lengthArrCompleteTodo = arrCompleteTodo.length;
+
+        var indexToRemove = [];
+
+        for (var i=0; i<lengthLocalTodos; i++)
         {
-            var nodeToClear = elementUnActive[i].parentNode;
-            nodeMain[0].removeChild(nodeToClear);
+            for (var j=0; j<lengthArrCompleteTodo; j++)
+            {
+                if (localTodos[i].id == arrCompleteTodo[j].id )
+                {
+                    indexToRemove.push(i);
+                }
+            }
         }
+
+        var lengthIndexToRemove = indexToRemove.length;
+
+        for(var i=0; i< lengthIndexToRemove; i++)
+        {
+            console.log(indexToRemove[i]);
+            var localTodos = localTodos.splice(indexToRemove[i],1);
+        }
+
+        console.log(localTodos);
+
+        setItemInLocalStorage('todos', JSON.stringify(localTodos));
+
+        var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
+        //var lengthLocalTodosNew = localTodos.length;
+
+        reRenderTodoByActions(localTodos);
+
     };
 
-    // completed a to_do
-    completedTodo = (item) =>
+    // toggle completed a to_do
+    isCompletedTodo = (item) =>
     {
-        console.log(item.checked);
         var currentNode = item.parentNode; // node view
-
-
 
         var idTodo = currentNode.childNodes[1].id; // string
 
         if (item.checked === true)
         {
-            var localTodos = localStorage.getItem('todos');
-            console.log('checked');
             currentNode.childNodes[1].classList.add('isComplete');
 
-            if (localTodos)
-            {
-                // ==========convert string json todos to array ========== //
-                var arrLocalTmp = convertJsonTodoToArray(localTodos);
+            toggleCompletedTodo(idTodo);
 
-                var lengthArrLocalTmp = arrLocalTmp.length;
+            displayCountTodo();
 
-                // ========== append todos to html from local storage =========== //
-                for (var i=0; i < lengthArrLocalTmp; i++) {
-                    if (idTodo == arrLocalTmp[i].id.toString())
-                    {
-                        console.log('nnn');
-                        var tmp = arrLocalTmp[i].completed;
-                        arrLocalTmp[i].completed = !tmp;
-                    }
-                }
-            }
+            reCountTodo('des');
 
-            localStorage.setItem('todos', JSON.stringify(arrLocalTmp));
-
-            var countTodo = changeTotalTodoUnit('des');
-
+            displayLinkClearTodo();
         }
         else
         {
-            var localTodos = localStorage.getItem('todos');
-            console.log('unchecked');
             currentNode.childNodes[1].classList.remove('isComplete');
 
-            if (localTodos)
+            toggleCompletedTodo(idTodo);
+
+            var countTodo = reCountTodo('asc');
+
+            var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
+
+            if (localTodos.length == countTodo)
             {
-                // ==========convert string json todos to array ========== //
-                var arrLocalTmp = convertJsonTodoToArray(localTodos);
-
-                var lengthArrLocalTmp = arrLocalTmp.length;
-
-                // ========== append todos to html from local storage =========== //
-                for (var i=0; i < lengthArrLocalTmp; i++) {
-                    if (idTodo == arrLocalTmp[i].id.toString())
-                    {
-
-                        var tmp = arrLocalTmp[i].completed;
-                        arrLocalTmp[i].completed = !tmp;
-                    }
-                }
+                hideLinkClearTodo();
             }
-
-            localStorage.setItem('todos', JSON.stringify(arrLocalTmp));
-
-            var countTodo = changeTotalTodoUnit('asc');
-
         }
     };
 
@@ -396,17 +407,14 @@ if (typeof(Storage) !== 'undefined') {
 
         if (nodeActive && nodeAll && nodeCompleted)
         {
-            if (needle == 'all')
+            if (needle == 'all' || needle=='')
             {
                 nodeActive[0].classList.remove("selected");
                 nodeAll[0].classList.add("selected");
                 nodeCompleted[0].classList.remove("selected");
 
                 var allTodo = getCompletedTodo('all');
-                console.log(allTodo);
                 reRenderTodoByActions(allTodo);
-
-                localStorage.setItem = ('action', 'all');
             }
             else if (needle == 'active')
             {
@@ -415,10 +423,7 @@ if (typeof(Storage) !== 'undefined') {
                 nodeCompleted[0].classList.remove("selected");
 
                 var activeTodo = getCompletedTodo('active');
-                console.log(activeTodo);
                 reRenderTodoByActions(activeTodo);
-
-                localStorage.setItem = ('action', 'active');
             }
             if (needle == 'completed')
             {
@@ -427,10 +432,7 @@ if (typeof(Storage) !== 'undefined') {
                 nodeCompleted[0].classList.add("selected");
 
                 var completedTodo = getCompletedTodo('completed');
-                console.log(completedTodo);
                 reRenderTodoByActions(completedTodo);
-
-                localStorage.setItem = ('action', 'completed');
             }
         }
     }

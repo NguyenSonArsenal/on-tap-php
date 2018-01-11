@@ -26,3 +26,8 @@ function  randomString(n) {
 function isEmpty(str) {
     return (!str || 0 === str.length || !str.trim());
 }
+
+
+function removeElementFromArray(arr, index) {
+    arr.splice(index, 1);
+}
