@@ -15,7 +15,7 @@
 
 
 </head>
-<body>
+<body  onload="onloadBody()">
 
 <div class="wrapper">
     <p class="title-todo">Todos</p>
@@ -36,7 +36,7 @@
     <div class="footer">
         <div class="todo-count"><strong id="count_todo">0</strong> item left</div>
         <div class="filters">
-            <span><a class="a_link add selected" href="#/all" onclick="selectAction('all')">All</a></span>
+            <span><a class="a_link add selected" href="#/" onclick="selectAction('all')">All</a></span>
             <span><a class="a_link active" href="#/active"  onclick="selectAction('active')">Active</a></span>
             <span><a class="a_link completed" href="#/completed" onclick="selectAction('completed')">Completed</a></span>
         </div>
@@ -47,6 +47,7 @@
 
 </div>
 
+<script src="helper.js"></script>
 <script src="index.js"></script>
 
 </body>
