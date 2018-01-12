@@ -35,25 +35,29 @@ body {
   background: #fff;
   display: inline-flex;
 }
-.wrapper .header .toggle_check_all_checkbox {
+.wrapper .header .header_left {
+  width: 50px;
+}
+.wrapper .header .header_left #toggle_check_all_checkbox {
   position: relative;
   top: 20px;
+  display: none;
 }
-.wrapper .header .new_todo {
+.wrapper .header .header_right .new_todo {
   padding: 16px 165px 16px 3px;
   border: none;
   font-size: 24px;
   margin: 0 auto;
   display: block;
 }
-.wrapper .header ::placeholder {
+.wrapper .header .header_right ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #999;
   opacity: 0.2;
   /* Firefox */
   font-style: italic;
 }
-.wrapper .header input:focus {
+.wrapper .header .header_right input:focus {
   outline: none;
 }
 .wrapper .main {
@@ -86,7 +90,7 @@ body {
   width: 480px;
 }
 .wrapper .footer .filters {
-  margin: 0px 20px 0 85px;
+  margin: 0px 15px 0 70px;
 }
 .wrapper .footer .filters .selected {
   color: inherit;

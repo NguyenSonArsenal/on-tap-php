@@ -35,28 +35,33 @@ $width_wrapper: 500px;
     .header {
         background: #fff;
         display: inline-flex;
-        .toggle_check_all_checkbox {
-            position: relative;
-            top: 20px;
+        .header_left {
+            width: 50px;
+            #toggle_check_all_checkbox {
+                position: relative;
+                top: 20px;
+                display: none;
+            }
         }
-        .new_todo {
-            padding: 16px 165px 16px 3px;
-            border: none;
-            font-size: 24px;
-            margin: 0 auto;
-            display: block;
-        }
+        .header_right {
+            .new_todo {
+                padding: 16px 165px 16px 3px;
+                border: none;
+                font-size: 24px;
+                margin: 0 auto;
+                display: block;
+            }
 
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #999;
-            opacity: 0.2; /* Firefox */
-            font-style: italic;
-        }
+            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #999;
+                opacity: 0.2; /* Firefox */
+                font-style: italic;
+            }
 
-        input:focus{
-            outline: none;
+            input:focus{
+                outline: none;
+            }
         }
-
     }
 
     .main {
@@ -99,7 +104,7 @@ $width_wrapper: 500px;
         .todo-count {
         }
         .filters {
-            margin: 0px 20px 0 85px;
+            margin: 0px 15px 0 70px;
             .selected {
                 color: inherit;
                 margin: 3px;

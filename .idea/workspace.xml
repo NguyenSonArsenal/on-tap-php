@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9147231d-9fd6-46aa-bebf-890f80b5c2ea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/helper.js" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/helper.js" />
-      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css" />
+      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css.map" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css.map" />
+      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss" />
+      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/index.html" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/index.html" />
+      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/index.js" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,8 +35,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="46" />
+            <state relative-caret-position="178">
+              <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -42,22 +45,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="360" column="42" lean-forward="true" selection-start-line="360" selection-start-column="42" selection-end-line="360" selection-end-column="42" />
-              <folding>
-                <element signature="n#!!block;n#getTabTodos#0" expanded="false" />
-                <element signature="e#5283#6487#0" expanded="false" />
-                <element signature="e#6557#6755#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xxx.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/basic/xxx.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="374">
+              <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -78,8 +67,8 @@
       <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="13" lean-forward="false" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="23" />
+            <state relative-caret-position="250">
+              <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -89,8 +78,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nav-wrap container_9</find>
-      <find>page-title first-bg</find>
       <find>media/home-default.png</find>
       <find>pagination</find>
       <find>media/footer-banner.png</find>
@@ -105,9 +92,30 @@
       <find>removeHtmlTodo</find>
       <find>makeHtmlTodo</find>
       <find>w</find>
+      <find>reRender</find>
+      <find>reRenderTodoByActions</find>
+      <find>clearATodo</find>
+      <find>removeTodoCompleted</find>
+      <find>show</find>
+      <find>display</find>
+      <find>is</find>
+      <find>toggleCompletedTodo</find>
+      <find>isCompletedTodo</find>
+      <find>style</find>
+      <find>setA</find>
+      <find>toggleCheckAllCheckbox</find>
+      <find>toggle_check_all_checkbox</find>
+      <find>20px</find>
+      <find>checkCompletedTodo</find>
+      <find>while</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>reRenderTodos</replace>
+      <replace>removeTodoCompleted</replace>
+      <replace>removeTodosCompleted</replace>
+      <replace>toggleStatusCompletedTodo</replace>
+      <replace>checkCompletedTodo</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/PHP_Fundamentals</dir>
@@ -165,10 +173,10 @@
         <option value="$PROJECT_DIR$/javascript/challenge1_todo/indexJquery.js" />
         <option value="$PROJECT_DIR$/javascript/basic/xoa1elementarray.js" />
         <option value="$PROJECT_DIR$/javascript/basic/xoa1elementarray.html" />
-        <option value="$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss" />
-        <option value="$PROJECT_DIR$/javascript/challenge1_todo/index.html" />
         <option value="$PROJECT_DIR$/javascript/basic/xxx.html" />
         <option value="$PROJECT_DIR$/javascript/challenge1_todo/helper.js" />
+        <option value="$PROJECT_DIR$/javascript/challenge1_todo/index.html" />
+        <option value="$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss" />
         <option value="$PROJECT_DIR$/javascript/challenge1_todo/index.js" />
       </list>
     </option>
@@ -357,12 +365,13 @@
       <workItem from="1515478356926" duration="19143000" />
       <workItem from="1515548288099" duration="30456000" />
       <workItem from="1515634199966" duration="35920000" />
-      <workItem from="1515681036688" duration="76000" />
+      <workItem from="1515681036688" duration="4569000" />
+      <workItem from="1515720350086" duration="20097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347681000" />
+    <option name="totallyTimeSpent" value="372271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -374,7 +383,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="-4" width="1309" height="772" extended-state="6" />
+    <frame x="57" y="21" width="1311" height="783" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20626432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -382,19 +391,19 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281493" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -726,22 +735,6 @@
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts" />
     <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index_copy.js" />
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts" />
-    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="13" lean-forward="false" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="46" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/basic/xxx.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -760,15 +753,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="360" column="42" lean-forward="true" selection-start-line="360" selection-start-column="42" selection-end-line="360" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!block;n#getTabTodos#0" expanded="false" />
-            <element signature="e#5283#6487#0" expanded="false" />
-            <element signature="e#6557#6755#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

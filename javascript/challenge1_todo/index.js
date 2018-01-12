@@ -13,10 +13,6 @@ function getItemInLocalStorage(key)
 }
 
 
-function trimDoubleQuota(str) {
-    var total = str.length;
-    return str.substring(1, total-1);
-}
 
 function getIdNodeTodo(item) {
     var currentNode = item.parentNode;
@@ -25,7 +21,7 @@ function getIdNodeTodo(item) {
     return idTodo;
 }
 
-function reRenderTodoByActions(arrTodo) {
+function reRenderTodos(arrTodo) {
     var nodeMain = document.getElementsByClassName('main'); // NodeList : object HTMLCollectio
 
     while (nodeMain[0].firstChild) {
@@ -80,6 +76,32 @@ function hideLinkClearTodo() {
 }
 
 
+function makeHtmlTodo(todo) {
+    var isCompleted = todo.completed == true ? 'isComplete' : 'xxx';
+
+    var isChecked = todo.completed == true ? 'checked' : 'xxx';
+
+    var str =
+        '<input class="checkbox" '+isChecked+' type="checkbox" onclick = "checkCompletedTodo(this)">' +
+        '<label class='+isCompleted+' id='+todo.id+'>'+todo.title+'</label>' +
+        '<a class="destroy"  onclick="destroyATodo(this)">' +
+            '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
+        '</a>'+
+        '<a class="destroy"  onclick="destroyATodo(this)">' +
+            '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
+        '</a>';
+
+    return str;
+}
+
+
+function removeHtmlTodo(todo) {
+    var currentNode = todo.parentNode;
+    var mainNode = currentNode.parentNode;
+    mainNode.removeChild(currentNode);
+}
+
+
 function reCountTodo(needle) {
     var countTodo = getItemInLocalStorage('count') || 0;
 
@@ -98,31 +120,8 @@ function reCountTodo(needle) {
     return countTodo;
 }
 
-function makeHtmlTodo(todo) {
-    var isCompleted = todo.completed == true ? 'isComplete' : 'xxx';
 
-    var isChecked = todo.completed == true ? 'checked' : 'xxx';
-
-    var str =
-        '<input class="checkbox" '+isChecked+' type="checkbox" onclick = "isCompletedTodo(this)">' +
-        '<label class='+isCompleted+' id='+todo.id+'>'+todo.title+'</label>' +
-        '<a class="destroy"  onclick="destroyATodo(this)">' +
-        '<i class="fa fa-trash-o" aria-hidden="true"></i>' +
-        '</a>';
-
-    return str;
-}
-
-
-function removeHtmlTodo(todo) {
-    var currentNode = todo.parentNode;
-    var mainNode = currentNode.parentNode;
-    mainNode.removeChild(currentNode);
-}
-
-
-
-function toggleCompletedTodo(id) {
+function toggleStatusCompletedTodo(id) {
     var localTodos = JSON.parse(getItemInLocalStorage('todos'));
 
     var lengthLocalTodos = localTodos.length;
@@ -221,8 +220,56 @@ function getTabTodos()
 
     var tabActive = arrSplitUrl[arrSplitUrl.length-1];
 
+    setItemInLocalStorage('tabActive', tabActive);
+
     selectAction(tabActive);
 }
+
+function hideCheckboxHeader()
+{
+    var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
+
+    if (localTodos.length == 0)
+    {
+        var nodeCheckboxHeader = document.getElementById('toggle_check_all_checkbox');
+        nodeCheckboxHeader.style.display = 'none';
+    }
+}
+
+function displayCheckboxHeader()
+{
+
+    // if count localTodos > 0 then display checkbox header
+    var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
+
+    var nodeCheckboxHeader = document.getElementById('toggle_check_all_checkbox');
+
+    if (localTodos.length > 0)
+    {
+        nodeCheckboxHeader.style.display = 'inline-block';
+
+        // get status of local checkbox header
+        var localCheckAllCheckbox = getItemInLocalStorage('checkAllCheckBox');
+        var isActiveCheckAllCheckbox = localCheckAllCheckbox == 'true'  ? activeCheckAllCheckboxHeader()
+                                                                        :  unActiveCheckAllCheckboxHeader();
+    }
+}
+
+
+function activeCheckAllCheckboxHeader() {
+    var node = document.getElementById('toggle_check_all_checkbox');
+    node.checked = true;
+
+    setItemInLocalStorage('checkAllCheckBox', true);
+}
+
+function unActiveCheckAllCheckboxHeader() {
+    var node = document.getElementById('toggle_check_all_checkbox');
+    node.checked = false;
+
+    setItemInLocalStorage('checkAllCheckBox', false);
+}
+
 
 if (typeof(Storage) !== 'undefined') {
     onloadBody = () =>
@@ -230,6 +277,7 @@ if (typeof(Storage) !== 'undefined') {
         fetchListTodos();
         getTabTodos();
         countItemCompletedFromLocalStorage();
+        displayCheckboxHeader();
     };
 
     function runScript(e)
@@ -252,37 +300,38 @@ if (typeof(Storage) !== 'undefined') {
 
                 oldTodos.push(todo);
 
-                // Put the object into storage
                 setItemInLocalStorage('todos', JSON.stringify(oldTodos));
 
                 // ============Append to html================== //
-                var str = makeHtmlTodo(todo);
+                var localTabActive = getItemInLocalStorage('tabActive');
 
-                addTodoToTodos(str);
+                if (localTabActive != 'completed')
+                {
+                    var str = makeHtmlTodo(todo);
+                    addTodoToTodos(str);
+                }
 
-                // clear input to_do to empty
+                if (localTabActive == 'all' || localTabActive == '')
+                {
+                    unActiveCheckAllCheckboxHeader();
+                }
+
                 nodeInputTodo.value = '';
 
                 displayFooter();
 
-                // ========== count to_do ==========
                 reCountTodo('asc');
+
+                displayCheckboxHeader();
 
             }
             return false; // returning false will prevent the event from bubbling up.
         }
     }
 
-    // toggele checkbox
-    function toggleCheckAllCheckbox(source) {
-        var checkboxes = document.getElementsByClassName('checkbox');
 
-        for(var i=0; i<checkboxes.length; i++)
-        {
-            checkboxes[i].checked = source.checked;
-        }
 
-    }
+
 
     // event delete a to_do
     function destroyATodo(item) {
@@ -312,88 +361,217 @@ if (typeof(Storage) !== 'undefined') {
                 hideFooter();
             }
         }
+
+        hideCheckboxHeader();
     }
 
-    clearATodo = () =>
-    {
-        console.log('doing clear completed todo');
 
+
+    // toggele checkbox
+    function toggleCheckAllCheckbox(source) {
+
+        // ========== handle save to local storage ========== //
         var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
-
-        // console.log(localTodos);
 
         var lengthLocalTodos = localTodos.length;
 
-        var arrCompleteTodo = getCompletedTodo('completed');
+        var nodeViewTodo = document.getElementsByClassName('view');
 
-        //console.log(arrCompleteTodo);
-
-        var lengthArrCompleteTodo = arrCompleteTodo.length;
-
-        var indexToRemove = [];
-
-        for (var i=0; i<lengthLocalTodos; i++)
+        if (source.checked == true)
         {
-            for (var j=0; j<lengthArrCompleteTodo; j++)
+            setItemInLocalStorage('checkAllCheckBox',true);
+
+            var localTabActive = getItemInLocalStorage('tabActive');
+
+            if (localTabActive == 'active')
             {
-                if (localTodos[i].id == arrCompleteTodo[j].id )
+                var nodeMain = document.getElementsByClassName('main');
+
+                while (nodeMain[0].firstChild) {
+                    nodeMain[0].removeChild(nodeMain[0].firstChild);
+                }
+
+                for (var i=0; i<lengthLocalTodos; i++)
                 {
-                    indexToRemove.push(i);
+                    if (localTodos[i].completed != true)
+                    {
+                        localTodos[i].completed = true;
+                        reCountTodo('des');
+                    }
                 }
             }
+            else
+            {
+                for (var i=0; i<lengthLocalTodos; i++)
+                {
+                    if (localTodos[i].completed != true)
+                    {
+                        localTodos[i].completed = true;
+                        reCountTodo('des');
+                    }
+                    nodeViewTodo[i].childNodes[1].classList.add('isComplete');
+                }
+            }
+            displayLinkClearTodo();
         }
-
-        var lengthIndexToRemove = indexToRemove.length;
-
-        for(var i=0; i< lengthIndexToRemove; i++)
+        else // un check checkbox
         {
-            console.log(indexToRemove[i]);
-            var localTodos = localTodos.splice(indexToRemove[i],1);
-        }
+            var localTabActive = getItemInLocalStorage('tabActive');
 
-        console.log(localTodos);
+            setItemInLocalStorage('checkAllCheckBox',false);
+
+            if (localTabActive == 'active')
+            {
+                for (var i=0; i<lengthLocalTodos; i++)
+                {
+                    if (localTodos[i].completed == true)
+                    {
+                        localTodos[i].completed = false;
+                        reCountTodo('asc');
+                    }
+                }
+
+                reRenderTodos(localTodos);
+                //setItemInLocalStorage('todos', JSON.stringify(localTodos));
+            }
+            else
+            {
+                for (var i=0; i<lengthLocalTodos; i++)
+                {
+                    if (localTodos[i].completed == true)
+                    {
+                        localTodos[i].completed = false;
+                        reCountTodo('asc');
+                    }
+                    nodeViewTodo[i].childNodes[1].classList.remove('isComplete');
+                }
+            }
+            hideLinkClearTodo();
+        }
 
         setItemInLocalStorage('todos', JSON.stringify(localTodos));
 
-        var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
-        //var lengthLocalTodosNew = localTodos.length;
+        // ========== display checkallbox on screen ========== //
+        var checkboxes = document.getElementsByClassName('checkbox');
 
-        reRenderTodoByActions(localTodos);
+        for(var i=0; i<checkboxes.length; i++)
+        {
+            checkboxes[i].checked = source.checked;
+        }
+    }
+
+
+    removeTodosCompleted = () =>
+    {
+        var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
+
+        var lengthLocalTodos = localTodos.length;
+
+        var localTodosAfterClearCompleted = [];
+
+        for (var  i=0; i<lengthLocalTodos; i++)
+        {
+            if (!localTodos[i].completed)
+            {
+                localTodosAfterClearCompleted.push(localTodos[i]);
+            }
+        }
+
+        setItemInLocalStorage('todos', JSON.stringify(localTodosAfterClearCompleted));
+
+
+        var localTabAvtive = getItemInLocalStorage('tabActive');
+
+        if (localTabAvtive == 'completed')
+        {
+            var nodeMain = document.getElementsByClassName('main');
+
+            while (nodeMain[0].firstChild) {
+                nodeMain[0].removeChild(nodeMain[0].firstChild);
+            }
+        }
+        else
+        {
+            reRenderTodos(localTodosAfterClearCompleted);
+        }
+
+        hideLinkClearTodo();
+
+        var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
+
+        if (localTodos.length == 0)
+        {
+            hideCheckboxHeader();
+            hideFooter();
+        }
+        unActiveCheckAllCheckboxHeader();
 
     };
 
     // toggle completed a to_do
-    isCompletedTodo = (item) =>
+    checkCompletedTodo = (item) =>
     {
         var currentNode = item.parentNode; // node view
 
         var idTodo = currentNode.childNodes[1].id; // string
 
+        var localTabAvtive = getItemInLocalStorage('tabActive');
+
         if (item.checked === true)
         {
-            currentNode.childNodes[1].classList.add('isComplete');
-
-            toggleCompletedTodo(idTodo);
-
-            displayCountTodo();
-
-            reCountTodo('des');
-
             displayLinkClearTodo();
+
+            if (localTabAvtive == 'all')
+            {
+                currentNode.childNodes[1].classList.add('isComplete');
+
+                toggleStatusCompletedTodo(idTodo);
+
+                var countTodos = reCountTodo('des');
+
+                if (countTodos == 0)
+                {
+                    activeCheckAllCheckboxHeader();
+                }
+
+            }
+            else if(localTabAvtive == 'active')
+            {
+                removeHtmlTodo(item);
+
+                reCountTodo('des');
+
+                toggleStatusCompletedTodo(idTodo);
+            }
         }
         else
         {
-            currentNode.childNodes[1].classList.remove('isComplete');
-
-            toggleCompletedTodo(idTodo);
-
-            var countTodo = reCountTodo('asc');
-
-            var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
-
-            if (localTodos.length == countTodo)
+            if (localTabAvtive == 'all')
             {
-                hideLinkClearTodo();
+                currentNode.childNodes[1].classList.remove('isComplete');
+
+                toggleStatusCompletedTodo(idTodo);
+
+                var countTodo = reCountTodo('asc');
+
+                var localTodos = JSON.parse(getItemInLocalStorage('todos')) || [];
+
+                if (localTodos.length == countTodo)
+                {
+                    hideLinkClearTodo();
+                }
+
+                unActiveCheckAllCheckboxHeader();
+            }
+            else if (localTabAvtive == 'completed')
+            {
+                //currentNode.childNodes[1].classList.remove('isComplete');
+
+                removeHtmlTodo(item);
+
+                reCountTodo('asc');
+
+                toggleStatusCompletedTodo(idTodo);
             }
         }
     };
@@ -413,8 +591,10 @@ if (typeof(Storage) !== 'undefined') {
                 nodeAll[0].classList.add("selected");
                 nodeCompleted[0].classList.remove("selected");
 
+                setItemInLocalStorage('tabActive', 'all');
+
                 var allTodo = getCompletedTodo('all');
-                reRenderTodoByActions(allTodo);
+                reRenderTodos(allTodo);
             }
             else if (needle == 'active')
             {
@@ -422,8 +602,10 @@ if (typeof(Storage) !== 'undefined') {
                 nodeAll[0].classList.remove("selected");
                 nodeCompleted[0].classList.remove("selected");
 
+                setItemInLocalStorage('tabActive', 'active');
+
                 var activeTodo = getCompletedTodo('active');
-                reRenderTodoByActions(activeTodo);
+                reRenderTodos(activeTodo);
             }
             if (needle == 'completed')
             {
@@ -431,8 +613,10 @@ if (typeof(Storage) !== 'undefined') {
                 nodeAll[0].classList.remove("selected");
                 nodeCompleted[0].classList.add("selected");
 
+                setItemInLocalStorage('tabActive', 'completed');
+
                 var completedTodo = getCompletedTodo('completed');
-                reRenderTodoByActions(completedTodo);
+                reRenderTodos(completedTodo);
             }
         }
     }

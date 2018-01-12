@@ -20,14 +20,19 @@
 <div class="wrapper">
     <p class="title-todo">Todos</p>
     <div class="header">
-        <input class="checkbox toggle_check_all_checkbox"
-               type="checkbox"
-               onclick="toggleCheckAllCheckbox(this)"
-        >
-        <input class="new_todo" id="input_todo"
-               placeholder="What needs to be done?" autofocus=""
-               onkeypress="runScript(event)"
-        >
+        <div class="header_left">
+            <input class="checkbox"
+                   type="checkbox"
+                   id="toggle_check_all_checkbox"
+                   onclick="toggleCheckAllCheckbox(this)"
+            >
+        </div>
+        <div class="header_right">
+            <input class="new_todo" id="input_todo"
+                   placeholder="What needs to be done?" autofocus=""
+                   onkeypress="runScript(event)"
+            >
+        </div>
     </div>
 
     <div class="main">
@@ -40,7 +45,7 @@
             <span><a class="a_link active" href="#/active"  onclick="selectAction('active')">Active</a></span>
             <span><a class="a_link completed" href="#/completed" onclick="selectAction('completed')">Completed</a></span>
         </div>
-        <div class="clear" onclick="clearATodo()">
+        <div class="clear" onclick="removeTodosCompleted()">
             <a href="javascript:void(0)" class="a_link">Clear completed</a>
         </div>
     </div>
