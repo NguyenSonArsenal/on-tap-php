@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-DateTime</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check whether an `input` is an array or not</h2>
+
+<script>
+    function is_array(input) {
+
+        var check = Array.isArray(input);
+
+        if (check)
+        {
+            document.write(input.toString() + ' is array');
+        }
+        else
+        {
+            document.write(input.toString() + ' is not array');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    is_array('Nov 15, 2014');
+    is_array('w3resource');
+    is_array([1, 2, 4, 0]);
+
+</script>
+
+
+</body>
+</html>

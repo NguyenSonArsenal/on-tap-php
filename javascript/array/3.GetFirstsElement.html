@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-DateTime</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to get the first element of an array.
+    Passing a parameter 'n' will return the first 'n' elements of the array.</h2>
+
+<script>
+    function first(arr, n = null) {
+
+        var result = [];
+
+        document.write(n + '---');
+
+        var lengthArr = arr.length;
+
+        if (Array.isArray(arr) && Number.isInteger(n))
+        {
+            if (n == 0)
+            {
+                document.write('[]');
+            }
+            else if (n < 0 || n > lengthArr)
+            {
+                result = arr;
+            }
+            else if (n > 0 && n <= lengthArr)
+            {
+                for (var i=0; i< n; i++)
+                {
+                    result.push(arr[i]);
+                }
+            }
+            document.write(result);
+        }
+        else
+        {
+            document.write('Input is wrong');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+
+    }
+
+    first([2,9,0,7,1,9,9,5],0);
+    first([2,9,0,7,1,9,9,5],3);
+    first([2,9,0,7,1,9,9,5],5);
+    first([2,9,0,7,1,9,9,5],90);
+    first([2,9,0,7,1,9,9,5],-9);
+    first([2,9,0,7,1,9,9,5],'xxx');
+    first([2,9,0,7,1,9,9,5]);
+</script>
+
+
+</body>
+</html>
