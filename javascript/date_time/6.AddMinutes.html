@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-DateTime</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript function to add specified minutes to a Date object.</h2>
+
+<script>
+
+    function addMinutes(dt, minutes) { // ki tu phan tach
+        document.write('Init: '+dt+ '<br>');
+        document.write('Result: '+new Date(dt.getTime() + minutes*60*1000));
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    addMinutes(new Date(2014,10,2), 30);
+
+</script>
+
+
+</body>
+</html>

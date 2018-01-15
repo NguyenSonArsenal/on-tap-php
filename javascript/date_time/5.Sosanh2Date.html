@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-DateTime</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript function to compare dates</h2>
+
+<script>
+
+    function compareDate(date1, date2) { // ki tu phan tach
+        var timeDate1 = date1.getTime();
+        var timeDate2 = date2.getTime();
+
+        if (timeDate1 == timeDate2)
+        {
+            document.write('Date 1 = Date 2');
+        }
+        else if (timeDate1 > timeDate2)
+        {
+            document.write('Date 1 > Date 2');
+        }
+        else if (timeDate1 < timeDate2)
+        {
+            document.write('Date 1 < Date 2');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    compareDate(new Date('11/14/2013 00:00'),  new Date('11/14/2013 00:00'));
+    compareDate(new Date('11/14/2013 00:01'),  new Date('11/14/2013 00:00'));
+    compareDate(new Date('11/14/2013 00:00'),  new Date('11/14/2013 00:01'));
+
+</script>
+
+
+</body>
+</html>

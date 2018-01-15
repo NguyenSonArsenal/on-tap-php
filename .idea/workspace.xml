@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9147231d-9fd6-46aa-bebf-890f80b5c2ea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css" />
-      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css.map" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css.map" />
-      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss" />
-      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/index.html" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/index.html" />
-      <change beforePath="$PROJECT_DIR$/javascript/challenge1_todo/index.js" afterPath="$PROJECT_DIR$/javascript/challenge1_todo/index.js" />
+      <change beforePath="$PROJECT_DIR$/javascript/demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/javascript/ex2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/javascript/helper.js" afterPath="$PROJECT_DIR$/javascript/helper.js" />
+      <change beforePath="$PROJECT_DIR$/javascript/index.php" afterPath="$PROJECT_DIR$/javascript/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,43 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/helper.js">
+        <entry file="file://$PROJECT_DIR$/javascript/helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-              <folding>
-                <element signature="n#!!block;n#isEmpty#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="522">
+              <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss">
+      <file leaf-file-name="10.GetYesterday.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javascript/date_time/10.GetYesterday.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+            <state relative-caret-position="306">
+              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -127,25 +104,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/javascript/functions/16.UniqueStr.html" />
-        <option value="$PROJECT_DIR$/javascript/functions/15.SoMu.html" />
-        <option value="$PROJECT_DIR$/javascript/functions/17.SoLanXuatHienCuaKiTu.html" />
-        <option value="$PROJECT_DIR$/javascript/functions/19.BiggerElement.html" />
-        <option value="$PROJECT_DIR$/javascript/functions/20.RandomStr.html" />
-        <option value="$PROJECT_DIR$/javascript/functions/3.LietKeTapHopString.html" />
-        <option value="$PROJECT_DIR$/javascript/functions/21.GetSubSet.html" />
-        <option value="$PROJECT_DIR$/javascript/functions/5.FirstLetterUpperCase.html" />
-        <option value="$PROJECT_DIR$/javascript/functions/14.ChuyenTien.html" />
-        <option value="$PROJECT_DIR$/javascript/string/1.demo.html" />
-        <option value="$PROJECT_DIR$/javascript/string/1.isString.html" />
-        <option value="$PROJECT_DIR$/javascript/string/3.StrToArr.html" />
         <option value="$PROJECT_DIR$/javascript/string/4.SubStr.html" />
         <option value="$PROJECT_DIR$/javascript/string/5.TenVietTat.html" />
         <option value="$PROJECT_DIR$/javascript/string/6.HideEmail.html" />
         <option value="$PROJECT_DIR$/javascript/string/8.FirstUpperCase.html" />
         <option value="$PROJECT_DIR$/javascript/string/9.Xem bai 7.html" />
         <option value="$PROJECT_DIR$/javascript/string/7.StringParamaster.html" />
-        <option value="$PROJECT_DIR$/javascript/helper.js" />
         <option value="$PROJECT_DIR$/javascript/string/10.SwapCase.html" />
         <option value="$PROJECT_DIR$/javascript/string/11.Xem bai 7.html" />
         <option value="$PROJECT_DIR$/javascript/string/12.UncamelizeString.html" />
@@ -167,7 +131,6 @@
         <option value="$PROJECT_DIR$/javascript/string/24.Truncate.html" />
         <option value="$PROJECT_DIR$/javascript/string/29.Xem bai 18.html" />
         <option value="$PROJECT_DIR$/javascript/string/30.StringEndWith.html" />
-        <option value="$PROJECT_DIR$/javascript/index.php" />
         <option value="$PROJECT_DIR$/javascript/string/31.EscapeHtml.html" />
         <option value="$PROJECT_DIR$/javascript/challenge1_todo/css/index.css" />
         <option value="$PROJECT_DIR$/javascript/challenge1_todo/indexJquery.js" />
@@ -178,6 +141,20 @@
         <option value="$PROJECT_DIR$/javascript/challenge1_todo/index.html" />
         <option value="$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss" />
         <option value="$PROJECT_DIR$/javascript/challenge1_todo/index.js" />
+        <option value="$PROJECT_DIR$/javascript/array/1..html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/1..html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/1.isDate.html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/2.getCurrentDate.html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/3.getDaysInMonth.html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/4.MonthName.html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/5.Sosanh2Date.html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/6.AddMinutes.html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/7.isWeekend.html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/8.DateDiffIndays.html" />
+        <option value="$PROJECT_DIR$/javascript/helper.js" />
+        <option value="$PROJECT_DIR$/javascript/date_time/9.LastDay.html" />
+        <option value="$PROJECT_DIR$/javascript/date_time/10.GetYesterday.html" />
+        <option value="$PROJECT_DIR$/javascript/index.php" />
       </list>
     </option>
   </component>
@@ -212,7 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,10 +207,17 @@
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
               <item name="challenge1_todo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
+              <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="date_time" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -248,19 +231,19 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/javascript/challenge1_todo" />
-      <recent name="$PROJECT_DIR$/javascript/string" />
-      <recent name="$PROJECT_DIR$/javascript/functions" />
-      <recent name="$PROJECT_DIR$/javascript/condition_and_loop" />
-      <recent name="$PROJECT_DIR$/javascript/recursion" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/javascript" />
       <recent name="$PROJECT_DIR$/Exercises/Basic" />
       <recent name="$PROJECT_DIR$/Exercises" />
       <recent name="$PROJECT_DIR$/PHP_Fundamentals" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/javascript/date_time" />
+      <recent name="$PROJECT_DIR$/javascript/array" />
+      <recent name="$PROJECT_DIR$/javascript/challenge1_todo" />
+      <recent name="$PROJECT_DIR$/javascript/string" />
+      <recent name="$PROJECT_DIR$/javascript/functions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -366,12 +349,14 @@
       <workItem from="1515548288099" duration="30456000" />
       <workItem from="1515634199966" duration="35920000" />
       <workItem from="1515681036688" duration="4569000" />
-      <workItem from="1515720350086" duration="20097000" />
+      <workItem from="1515720350086" duration="22937000" />
+      <workItem from="1515945265054" duration="3452000" />
+      <workItem from="1515980151524" duration="2397000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372271000" />
+    <option name="totallyTimeSpent" value="380960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -401,7 +386,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -437,90 +422,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript/functions/12.Factors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/functions/3.LietKeTapHopString.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/functions/5.FirstLetterUpperCase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/functions/11.2ndMax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/functions/14.ChuyenTien.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/2.isBlank.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/3.StrToArr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/1.isString.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/5.TenVietTat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/4.SubStr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/functions/21.GetSubSet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/6.HideEmail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/string/8.FirstUpperCase.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -539,13 +440,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -689,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="135" column="0" lean-forward="true" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/string/31.EscapeHtml.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -739,25 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!block;n#isEmpty#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,14 +633,118 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/css/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/ex2.html" />
+    <entry file="file://$PROJECT_DIR$/javascript/demo.html" />
+    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/1.isDate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/2.getCurrentDate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/3.getDaysInMonth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/4.MonthName.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="59" column="41" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/5.Sosanh2Date.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="38" column="76" lean-forward="false" selection-start-line="38" selection-start-column="76" selection-end-line="38" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/6.AddMinutes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/7.isWeekend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.js">
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/8.DateDiffIndays.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+        <state relative-caret-position="340">
+          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/9.LastDay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="54" column="88" lean-forward="false" selection-start-line="54" selection-start-column="88" selection-end-line="54" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/10.GetYesterday.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding />
         </state>
       </provider>

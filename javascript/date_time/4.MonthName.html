@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-DateTime</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to get the number of days in a month</h2>
+
+<script>
+
+    function monthName(date) { // ki tu phan tach
+
+        document.write('Date: '+ date + ' has month is: ');
+
+        var date = date.trim().split('/');
+
+        var month = Number(date[1]);
+
+        switch(month)
+        {
+            case 1:
+                document.write('January');
+                break;
+            case 2:
+                document.write('February');
+                break;
+            case 3:
+                document.write('March');
+                break;
+            case 4:
+                document.write('April');
+                break;
+            case 5:
+                document.write('May');
+                break;
+            case 6:
+                document.write('June');
+                break;
+
+            case 7:
+                document.write('July');
+                break;
+            case 8:
+                document.write('August');
+                break;
+            case 9:
+                document.write('Septermber');
+                break;
+            case 10:
+                document.write('October');
+                break;
+            case 11:
+                document.write('November');
+                break;
+            case 12:
+                document.write('December');
+                break;
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    monthName('10/01/2009');
+    monthName('29/07/1995');
+
+</script>
+
+
+</body>
+</html>

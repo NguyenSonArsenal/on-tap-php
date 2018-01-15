@@ -47,6 +47,13 @@ $string = array(
     "25.SapXepAB.html", "26.RemoveFirstElement.html", "29.Xem bai 18.html", "30.StringEndWith.html",
     "31.EscapeHtml.html"
 );
+
+
+$dateTime = array(
+    "1.isDate.html", "2.getCurrentDate.html", "3.getDaysInMonth.html",
+    "4.MonthName.html", "5.Sosanh2Date.html", "6.AddMinutes.html",
+    "7.isWeekend.html", "8.DateDiffIndays.html", "9.LastDay.html", "10.GetYesterday.html"
+);
   
   function getNumberExercise($txt)
   {
@@ -134,6 +141,16 @@ $string = array(
     <br>
     <a href="javascript:()" style="color: red;">Exercise 27</a>
 
+    <h1>Date time</h1>
+        <?php
+        foreach ($dateTime as $key => $file) {
+            ?>
+            <a href="./date_time/<?=$file?>" class="link-exercise">
+                Exercise <?=getNumberExercise($file)?></a></li>
+            <?php
+        }
+        ?>
+        <br>
 
 </div>
 
