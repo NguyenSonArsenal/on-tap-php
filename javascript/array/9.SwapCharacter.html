@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Array</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program which accept a string as input and swap the case of each character.
+    For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.</h2>
+
+<script>
+
+    var str = 'The Quick BroWn Fox';
+
+    document.write('Init str: '+str +"<br>");
+
+    function swapChar(str) {
+        var length = str.length;
+        var result = '';
+
+        for (var i=0; i< length; i++)
+        {
+            if (str[i] == str[i].toLowerCase())
+            {
+                result += (str[i].toUpperCase());
+            }
+            else if (str[i] == str[i].toUpperCase())
+            {
+                result+=(str[i].toLowerCase());
+            }
+        }
+        return result;
+    }
+
+    var result = swapChar(str);
+    document.write('Result str: '+result +"<br>");
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

@@ -43,3 +43,38 @@ function isLeapYear(year) {
     }
     return false;
 }
+
+
+// remove element from array and recreate array
+function removeElement(arr, needle) {
+    var length = arr.length;
+
+    var result = [];
+
+    for (var i=0; i< length; i++)
+    {
+        if (arr[i] != needle)
+        {
+            result.push (arr[i]);
+        }
+    }
+
+    return result;
+}
+
+// create unique arr
+function removeDuplicates(arr)
+{
+    var result = [];
+
+    var total = arr.length;
+
+    for (var i=0; i<total; i++)
+    {
+        if (result.indexOf(arr[i]) == -1)
+        {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}

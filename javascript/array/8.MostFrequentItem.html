@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Array</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to find the most frequent item of an array.</h2>
+
+<script>
+
+    var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+
+    document.write('Init arr: ' + arr + '<br>');
+
+    var length = arr.length;
+
+    function countValueInArr(arr, value)
+    {
+        var count = 0;
+        var total = arr.length;
+
+        for (var i=0; i<length; i++)
+        {
+            if (value == arr[i])
+            {
+                count ++;
+            }
+        }
+        return count;
+    }
+
+    var uniqueArr = removeDuplicates(arr);
+
+    var countArr = [];
+
+    for (var i=0; i<uniqueArr.length; i++)
+    {
+        var count = countValueInArr(arr, uniqueArr[i]);
+        countArr.push(count);
+    }
+
+    for (var i=0; i<uniqueArr.length; i++)
+    {
+        document.write(uniqueArr[i] + ' xuat hien ' + countArr[i] + ' trong mang <br>');
+    }
+
+
+</script>
+
+
+</body>
+</html>

@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9147231d-9fd6-46aa-bebf-890f80b5c2ea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/javascript/demo.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/javascript/ex2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/javascript/array/1.isArray.html" afterPath="$PROJECT_DIR$/javascript/array/1.isArray.html" />
+      <change beforePath="$PROJECT_DIR$/javascript/array/2.ArrayClone.html" afterPath="$PROJECT_DIR$/javascript/array/2.ArrayClone.html" />
+      <change beforePath="$PROJECT_DIR$/javascript/array/3.GetFirstsElement.html" afterPath="$PROJECT_DIR$/javascript/array/3.GetFirstsElement.html" />
+      <change beforePath="$PROJECT_DIR$/javascript/array/4.GetLastsElement.html" afterPath="$PROJECT_DIR$/javascript/array/4.GetLastsElement.html" />
+      <change beforePath="$PROJECT_DIR$/javascript/array/5.FomatArr.html" afterPath="$PROJECT_DIR$/javascript/array/5.FomatArr.html" />
       <change beforePath="$PROJECT_DIR$/javascript/helper.js" afterPath="$PROJECT_DIR$/javascript/helper.js" />
-      <change beforePath="$PROJECT_DIR$/javascript/index.php" afterPath="$PROJECT_DIR$/javascript/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,18 +36,28 @@
       <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/javascript/helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="658">
+              <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="10.GetYesterday.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/date_time/10.GetYesterday.html">
+      <file leaf-file-name="9.SwapCharacter.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/javascript/array/9.SwapCharacter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="148">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="10.InMangDaChieu.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javascript/array/10.InMangDaChieu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="51" lean-forward="false" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -55,8 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>media/home-default.png</find>
-      <find>pagination</find>
       <find>media/footer-banner.png</find>
       <find>media/logo.jpg</find>
       <find>category-full-image</find>
@@ -85,6 +95,8 @@
       <find>20px</find>
       <find>checkCompletedTodo</find>
       <find>while</find>
+      <find>=&gt;</find>
+      <find>34</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -93,6 +105,7 @@
       <replace>removeTodosCompleted</replace>
       <replace>toggleStatusCompletedTodo</replace>
       <replace>checkCompletedTodo</replace>
+      <replace>:</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/PHP_Fundamentals</dir>
@@ -104,23 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/javascript/string/4.SubStr.html" />
-        <option value="$PROJECT_DIR$/javascript/string/5.TenVietTat.html" />
-        <option value="$PROJECT_DIR$/javascript/string/6.HideEmail.html" />
-        <option value="$PROJECT_DIR$/javascript/string/8.FirstUpperCase.html" />
-        <option value="$PROJECT_DIR$/javascript/string/9.Xem bai 7.html" />
-        <option value="$PROJECT_DIR$/javascript/string/7.StringParamaster.html" />
-        <option value="$PROJECT_DIR$/javascript/string/10.SwapCase.html" />
-        <option value="$PROJECT_DIR$/javascript/string/11.Xem bai 7.html" />
-        <option value="$PROJECT_DIR$/javascript/string/12.UncamelizeString.html" />
-        <option value="$PROJECT_DIR$/javascript/string/13.RepeatStr.html" />
-        <option value="$PROJECT_DIR$/javascript/string/14.InsertStr.html" />
-        <option value="$PROJECT_DIR$/javascript/string/15.HumanizeFormatnumber.html" />
-        <option value="$PROJECT_DIR$/javascript/string/16.TextTruncate.html" />
-        <option value="$PROJECT_DIR$/javascript/string/17.StrIntoChunks.html" />
-        <option value="$PROJECT_DIR$/javascript/string/18.CountSubStrin.html" />
-        <option value="$PROJECT_DIR$/javascript/string/19.EscapeHTML.html" />
-        <option value="$PROJECT_DIR$/javascript/string/21.Xembai13.html" />
         <option value="$PROJECT_DIR$/javascript/string/20.FormattedString.html" />
         <option value="$PROJECT_DIR$/javascript/string/22.SubStrAfterChars.html" />
         <option value="$PROJECT_DIR$/javascript/string/23.Trim.html" />
@@ -151,10 +147,27 @@
         <option value="$PROJECT_DIR$/javascript/date_time/6.AddMinutes.html" />
         <option value="$PROJECT_DIR$/javascript/date_time/7.isWeekend.html" />
         <option value="$PROJECT_DIR$/javascript/date_time/8.DateDiffIndays.html" />
-        <option value="$PROJECT_DIR$/javascript/helper.js" />
         <option value="$PROJECT_DIR$/javascript/date_time/9.LastDay.html" />
         <option value="$PROJECT_DIR$/javascript/date_time/10.GetYesterday.html" />
         <option value="$PROJECT_DIR$/javascript/index.php" />
+        <option value="$PROJECT_DIR$/javascript/array/3.GetElement.html" />
+        <option value="$PROJECT_DIR$/javascript/string/checkKeyWord.html" />
+        <option value="$PROJECT_DIR$/javascript/challenge2_check_key_word/index.html" />
+        <option value="$PROJECT_DIR$/javascript/challenge2_check_key_word/keyword.js" />
+        <option value="$PROJECT_DIR$/javascript/challenge2_check_key_word/demo.js" />
+        <option value="$PROJECT_DIR$/javascript/challenge2_check_key_word/helper.js" />
+        <option value="$PROJECT_DIR$/javascript/challenge2_check_key_word/index.js" />
+        <option value="$PROJECT_DIR$/javascript/array/1.isArray.html" />
+        <option value="$PROJECT_DIR$/javascript/array/2.ArrayClone.html" />
+        <option value="$PROJECT_DIR$/javascript/array/3.GetFirstsElement.html" />
+        <option value="$PROJECT_DIR$/javascript/array/4.GetLastsElement.html" />
+        <option value="$PROJECT_DIR$/javascript/array/5.FomatArr.html" />
+        <option value="$PROJECT_DIR$/javascript/array/6.Them-GiuaHaiSoChan.html" />
+        <option value="$PROJECT_DIR$/javascript/array/7.SortArr.html" />
+        <option value="$PROJECT_DIR$/javascript/helper.js" />
+        <option value="$PROJECT_DIR$/javascript/array/8.MostFrequentItem.html" />
+        <option value="$PROJECT_DIR$/javascript/array/9.SwapCharacter.html" />
+        <option value="$PROJECT_DIR$/javascript/array/10.InMangDaChieu.html" />
       </list>
     </option>
   </component>
@@ -163,6 +176,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/javascript/challenge2_check_key_word/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
@@ -189,6 +205,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,20 +223,18 @@
               <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="challenge1_todo" type="462c0819:PsiDirectoryNode" />
+              <item name="array" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="date_time" type="462c0819:PsiDirectoryNode" />
+              <item name="challenge2_check_key_word" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,11 +255,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/javascript/date_time" />
       <recent name="$PROJECT_DIR$/javascript/array" />
+      <recent name="$PROJECT_DIR$/javascript/challenge2_check_key_word" />
+      <recent name="$PROJECT_DIR$/javascript/date_time" />
       <recent name="$PROJECT_DIR$/javascript/challenge1_todo" />
       <recent name="$PROJECT_DIR$/javascript/string" />
-      <recent name="$PROJECT_DIR$/javascript/functions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -351,12 +367,14 @@
       <workItem from="1515681036688" duration="4569000" />
       <workItem from="1515720350086" duration="22937000" />
       <workItem from="1515945265054" duration="3452000" />
-      <workItem from="1515980151524" duration="2397000" />
+      <workItem from="1515980151524" duration="28742000" />
+      <workItem from="1516114982075" duration="3168000" />
+      <workItem from="1516152255690" duration="3007000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380960000" />
+    <option name="totallyTimeSpent" value="413480000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +389,7 @@
     <frame x="57" y="21" width="1311" height="783" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20626432" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29793736" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -422,132 +440,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript/string/8.FirstUpperCase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="74" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/9.Xem bai 7.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="87" lean-forward="false" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/7.StringParamaster.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/11.Xem bai 7.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/10.SwapCase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/14.InsertStr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/15.HumanizeFormatnumber.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="62" lean-forward="false" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/12.UncamelizeString.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/16.TextTruncate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/17.StrIntoChunks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/13.RepeatStr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/21.Xembai13.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/22.SubStrAfterChars.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/23.Trim.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="83" lean-forward="false" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/19.EscapeHTML.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/20.FormattedString.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="48" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/25.SapXepAB.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/string/26.RemoveFirstElement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="103" lean-forward="false" selection-start-line="10" selection-start-column="103" selection-end-line="10" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/string/27.AciiToHexa.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -629,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -652,24 +537,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/ex2.html" />
     <entry file="file://$PROJECT_DIR$/javascript/demo.html" />
-    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/date_time/1.isDate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/date_time/2.getCurrentDate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="28" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -705,7 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,7 +583,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -725,19 +594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascript/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="719">
           <caret line="54" column="88" lean-forward="false" selection-start-line="54" selection-start-column="88" selection-end-line="54" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -745,6 +605,166 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/date_time/2.getCurrentDate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/string/checkKeyWord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge1_todo/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge2_check_key_word/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge2_check_key_word/keyword_copy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge2_check_key_word/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="78" column="20" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge2_check_key_word/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge2_check_key_word/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge2_check_key_word/keyword.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="56" column="32" lean-forward="false" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/1.isArray.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/2.ArrayClone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/3.GetFirstsElement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/4.GetLastsElement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/5.FomatArr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/6.Them-GiuaHaiSoChan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="38" column="27" lean-forward="true" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/7.SortArr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/challenge2_check_key_word/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="38" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/8.MostFrequentItem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/9.SwapCharacter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/array/10.InMangDaChieu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="51" lean-forward="false" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
           <folding />
         </state>
       </provider>
