@@ -1,8 +1,35 @@
 var size = Object.keys(keyWords).length;
 
+// obj json
+var objChuanHoa = {
+  'CNTT' : 'công nghệ thông tin',
+  'CN' : 'công nghiệp',
+  'VT' : 'viễn thông',
+  'cơ' : 'cơ khí'
+};
+
+function chuanHoa(objChuanHoa, needle) {
+    needle = needle.trim();
+
+    for (key in objChuanHoa) {
+
+        var check = (needle.toUpperCase()).includes(key.toUpperCase()) ||
+                    (needle.toUpperCase()).includes(objChuanHoa[key].toUpperCase());
+
+        if (check)
+        {
+            return objChuanHoa[key];
+        }
+    }
+    return needle;
+}
+
+//var x = chuanHoa(objChuanHoa, 'CNTT');
+//console.log(x + '1234567890');
+
 
 var result = [];
-var arrTmp = [];
+var arrTmp = []; // chua cac gia tri duoc loc tu mang key word
 
 
 Object.keys(keyWords).forEach(key => {
@@ -41,7 +68,7 @@ for (var i=0; i<lengthArrTmp; i++)
     }
 }
 
-// trim () các phần tử trong mảng vaf delete &nbsp
+// trim () các phần tử trong mảng va delete &nbsp
 for (var i=0; i< lengthArrTmp; i++)
 {
     var tmp = arrTmp[i].content;
@@ -57,7 +84,10 @@ for (var i=0; i< lengthArrTmp; i++)
         }
     }
     //console.log(arrTmp[i].id + ': ' +tmp);
+    //console.log(tmp);
 }
+
+//console.log(arrTmp);
 
 var result;
 
@@ -72,23 +102,36 @@ for (var i=0; i<lengthArrTmp; i++)
     };
 
     result.push(node);
-
-    //result.push(getElementLikely(arrTmp, tmp[0]));
 }
 
+var resultUnique = [];
+
+var total = result.length;
+
+// result.splice(1,1); // Xoa element of array by id
+for (var i=0; i<total; i++)
+{
+    for (var j=i+1; j<total; j++)
+    {
+        if (result[i].key == result[j].key ||
+            (result[i].key).includes(result[j].key) ||
+            (result[j].key).includes(result[i].key)
+            )
+        {
+            result.splice(j, 1);
+            total--;
+        }
+    }
+
+}
 console.log(result);
 
-var length = result.length;
-
-for (var i=0; i<length; i++)
-{
-    //console.log(result[i]);
-}
-
 function getElementLikely(arr, needle) {
+    var result = [];
     var lengthArr = arr.length;
 
-    var result = [];
+    var itemChuanHoa = chuanHoa(objChuanHoa, needle);
+    //console.log(itemChuanHoa);
 
     for (var i=0; i<lengthArr; i++)
     {
@@ -98,13 +141,15 @@ function getElementLikely(arr, needle) {
 
         for (var j=0; j<lengthItem; j++)
         {
-            if (item[j].match(needle))
+            item[j] = chuanHoa(objChuanHoa, item[j]);
+            if (item[j].match(itemChuanHoa) || item[j].includes(itemChuanHoa))
             {
                 var node = {
                     id: arr[i].id,
                     key: item
                 };
                 result.push(node);
+                removeElement(arr, item[j]);
             }
         }
     }

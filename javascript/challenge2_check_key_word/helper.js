@@ -21,7 +21,7 @@ document.write(1234);
 var arr = [2,9,0,7,1,9,9,5];
 
 
-// remove element from array and recreate array
+// remove element from array follow value and recreate array
 function removeElement(arr, needle) {
     var length = arr.length;
 
