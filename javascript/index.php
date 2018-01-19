@@ -54,6 +54,15 @@ $dateTime = array(
     "4.MonthName.html", "5.Sosanh2Date.html", "6.AddMinutes.html",
     "7.isWeekend.html", "8.DateDiffIndays.html", "9.LastDay.html", "10.GetYesterday.html"
 );
+
+$arr = array(
+    "1.isArray.html", "2.ArrayClone.html", "3.GetFirstsElement.html", "4.GetLastsElement.html",
+    "5.FomatArr.html", "6.Them-GiuaHaiSoChan.html", "7.SortArr.html", "8.MostFrequentItem.html",
+    "9.SwapCharacter.html", "10.InMangDaChieu.html", "11.TongBinhPhuong.html", "12.TongVaNhan.html",
+    "14.RemoveDuplicates.html", "15.DisplayColors.html", "16.FindLeapYear.html", "17.RandomArray.html",
+    "18.FindPosition.html", "19.TongHaimang.html", "20.FindDuplicate.html", "21.FlattenArr.html",
+    "22.Union2Arr.html", "23.Difference.html", "24.FilterArray.html", "27.Xem bai 24.html", "30.Xem bai 22.html"
+);
   
   function getNumberExercise($txt)
   {
@@ -151,6 +160,18 @@ $dateTime = array(
         }
         ?>
         <br>
+
+    <h1>Array</h1>
+        <?php
+        foreach ($arr as $key => $file) {
+            ?>
+            <a href="./array/<?=$file?>" class="link-exercise">
+                Exercise <?=getNumberExercise($file)?></a></li>
+            <?php
+        }
+        ?>
+        <br>
+            <a href="javascript:()" style="color: red;">Exercise 28</a>
 
 </div>
 

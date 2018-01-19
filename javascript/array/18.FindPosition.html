@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Array</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to perform a binary search</h2>
+
+<script>
+
+    function findPosition(arr, needle) {
+
+        var len = arr.length;
+
+        var result = [];
+
+        for (var i=0; i<len; i++)
+        {
+            if (arr[i] == needle)
+            {
+                result.push(i);
+            }
+        }
+
+        return result;
+    }
+
+    var arr = [2,9,0,7,1,9,9,5];
+    var needle = 9;
+
+    document.write('Init arr: '+arr+'<br>');
+
+    var position = findPosition(arr, needle);
+    if (position.length > 0)
+    {
+        document.write('position of '+needle+' in arr is: ' + position );
+    }
+    else
+    {
+        document.write(needle+' is not exits in arr');
+    }
+
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

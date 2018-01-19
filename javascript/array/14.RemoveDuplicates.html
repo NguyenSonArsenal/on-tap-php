@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Array</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity)</h2>
+
+<script>
+
+    var arr = [2,9,0,7,1,9,9,5];
+
+    document.write('Init arr: '+arr+'<br>');
+
+    // create unique arr
+    function removeDuplicates(arr)
+    {
+        var result = [];
+
+        var total = arr.length;
+
+        for (var i=0; i<total; i++)
+        {
+            if (result.indexOf(arr[i]) == -1)
+            {
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
+
+    var result = removeDuplicates(arr);
+    document.write('Result: '+result);
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

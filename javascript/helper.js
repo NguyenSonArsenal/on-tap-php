@@ -78,3 +78,23 @@ function removeDuplicates(arr)
     }
     return result;
 }
+
+// Lấy ra tất cả giá trị của mảng n chiêu
+function flatten(arr, result = []) {
+
+    var len = arr.length;
+
+    for (var i=0; i<len; i++)
+    {
+        if (arr[i].constructor == Array)
+        {
+            flatten(arr[i], result);
+        }
+        else
+        {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+

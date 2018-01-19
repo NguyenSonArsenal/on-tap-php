@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Array</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>There are two arrays with individual values, write a JavaScript program to compute
+    the sum of each individual index value from the given arrays.</h2>
+
+<script>
+
+    function merge(arr1, arr2) {
+
+        var len1 = arr1.length;
+        var len2 = arr2.length;
+
+        var len = len1;
+
+        var result = [];
+
+        if (len1 >= len2)
+        {
+            len = len1;
+            var tmp = len1-len2;
+            for (var i=len2; i<len1; i++)
+            {
+                arr2.push(0);
+            }
+        }
+        else if (len1 < len2)
+        {
+            len = len2;
+            var tmp = len2-len1;
+            for (var i=len1; i<len2; i++)
+            {
+                arr1.push(0);
+            }
+        }
+
+        for (var i=0; i<len; i++)
+        {
+            result.push(arr1[i]+arr2[i]);
+        }
+
+        return result;
+    }
+
+    array1 = [1,0,2,3,4];
+    array2 = [3,5,6,7,8, 13, 67, 8, 9, 5];
+
+    document.write('Init arr1: '+array1+'<br>');
+    document.write('Init arr2: '+array2+'<br>');
+
+    var result = merge(array1, array2);
+
+    document.write('Result: '+result);
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

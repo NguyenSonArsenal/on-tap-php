@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Array</title>
+    <script type="text/javascript" src="../helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to fill an array with values
+    (numeric, string with one character) on supplied bounds</h2>
+
+<script>
+
+    function numStringRange(start, end, step)
+    {
+
+        var result = [];
+
+        if (typeof start == 'string' && typeof end == 'string')
+        {
+            if (start.length == 1 && end.length == 1 && Number.isInteger(step))
+            {
+                var ascStart = start.charCodeAt(0);
+                var ascEnd = end.charCodeAt(0);
+
+                if (ascStart == ascEnd)
+                {
+                    return false;
+                }
+                else if (ascStart < ascEnd)
+                {
+                    for (var i=ascStart; i<=ascEnd; i+=step)
+                    {
+                        result.push(String.fromCharCode(i));
+                    }
+                }
+                else if (ascStart > ascEnd)
+                {
+                    for (var i=ascStart; i>=ascEnd; i-=step)
+                    {
+                        result.push(String.fromCharCode(i));
+                    }
+                }
+
+            }
+
+            console.log(result);
+        }
+        else
+        {
+            document.write('This app only support input character');
+        }
+    }
+
+    numStringRange('a', 'z', 2);
+    numStringRange('Z', 'A', 3);
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>
