@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes.
+    Volume of a cylinder : V = πr2h
+    where r is the radius and h is the height of the cylinder.</h2>
+
+<script>
+
+    function volumeCylinder( diameter, height) { // duongKinh
+        var radius = diameter/2;
+
+        var volume = Math.PI * Math.pow(radius, 2) * height;
+
+        document.write(volume.toFixed(4));
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    volumeCylinder(6, 10);
+    volumeCylinder(7, 4);
+
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

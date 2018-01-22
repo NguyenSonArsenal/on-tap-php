@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to sort an array of JavaScript objects.</h2>
+
+<script>
+
+    function checkKeyInObj(arr, property) {
+        var size = arr.length;
+
+        if (size > 0)
+        {
+            for (var i=0; i< size; i++)
+            {
+                var tmpObj = arr[i];
+
+                for (key in tmpObj)
+                {
+                    if (key === property)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    var library = [
+        { title:  'The Road Ahead', author: 'Bill Gates', libraryID: 1254 },
+        { title: 'Walter Isaacson', author: 'Steve Jobs', libraryID: 4264 },
+        { title: 'Mockingjay: The Final Book of The Hunger Games', author: 'Suzanne Collins',
+          libraryID: 324}
+    ];
+
+    function compare(a,b, property) {
+        property = 'libraryID';
+        if (a[property] < b[property])
+            return -1;
+        if (a[property] > b[property])
+            return 1;
+        return 0;
+    }
+
+    library.sort(compare);
+
+    console.log(library);
+
+
+    //sortByProperty(library, 'title');
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

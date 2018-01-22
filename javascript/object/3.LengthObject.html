@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to get the length of an JavaScript object</h2>
+
+<script>
+
+    var student = {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12
+    };
+
+    //var size = Object.keys(student).length; // C1
+
+
+    // C2
+    var size = 0 ;
+
+    for (var key in student)
+    {
+        size++;
+    }
+
+    document.write('Init object student: <br>');
+    for (var key in student)
+    {
+        document.write(key + ': '+student[key] + '<br>');
+    }
+
+    document.write('Length: '+size);
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

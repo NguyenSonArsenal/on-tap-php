@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to create a Clock</h2>
+
+<script>
+
+    // function init object
+    function myClock() {
+        var currentDate = new Date();
+
+        this.hour = currentDate.getHours(); // this to assign to property
+        this.minute = currentDate.getMinutes();
+        this.second = currentDate.getSeconds();
+
+    }
+
+    // bind(): gán dữ liệu vào đối tượng this của hàm đang sử dụng
+
+    myClock.prototype.run = function () {
+        console.log('Clock is running');
+        console.log(this); // object myclock
+
+        // gan this cua myClock to ham update
+        setInterval(this.update.bind(this), 1000);
+    };
+
+    myClock.prototype.update = function () {
+        this.updateTime(1);
+        document.write(this.hour + ' : ' + this.minute + ' : ' + this.second + '<br>');
+    }
+
+    myClock.prototype.updateTime = function (seconds) {
+        this.second += seconds;
+
+        if (this.second >= 60)
+        {
+            this.minute ++;
+            this.second = 0;
+        }
+
+        if (this.minute >= 60)
+        {
+            this.hour++;
+            this.minute = 0;
+        }
+
+        if (this.hour >= 24)
+        {
+            this.hour = 0;
+        }
+    }
+
+
+    // Cach 2: su dung arrow function
+    //
+    // function myClock ()
+    // {
+    //     var date = new Date();
+    //
+    //     //console.log(date);
+    //
+    //     this.hour = date.getHours();
+    //     this.minute = date.getMinutes();
+    //     this.second = date.getSeconds();
+    // }
+    //
+    //
+    // myClock.prototype.run = () =>
+    // {
+    //     console.log('Clock is running xxx');
+    //     setInterval(this.update, 1000);
+    // }
+    //
+    // myClock.prototype.update = () =>
+    // {
+    //     console.log('Zo update');
+    //     this.updateTime(1);
+    //     document.write(this.hour + ' : ' + this.minute + ' : ' + this.second + '<br>');
+    // }
+    //
+    // myClock.prototype.updateTime = (seconds) =>
+    // {
+    //     this.second += seconds;
+    //
+    //     if (this.second >= 60)
+    //     {
+    //         this.minute ++;
+    //         this.second = 0;
+    //     }
+    //
+    //     if (this.minute >= 60)
+    //     {
+    //         this.hour++;
+    //         this.minute = 0;
+    //     }
+    //
+    //     if (this.hour >= 24)
+    //     {
+    //         this.hour = 0;
+    //     }
+    // }
+
+    var my_clock = new myClock();
+    //console.log(my_clock);
+    my_clock.run();
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript program to delete the rollno property from the following object.
+    Also print the object before or after deleting the property</h2>
+
+<script>
+
+    var student = {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12
+    };
+    document.write('Init object student: <br>');
+    for (var key in student)
+    {
+        document.write(key + ': '+student[key] + '<br>');
+    }
+
+    delete student.rollno;
+
+    document.write('Result object student: <br>');
+    for (var key in student)
+    {
+        document.write(key + ': '+student[key] + '<br>');
+    }
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

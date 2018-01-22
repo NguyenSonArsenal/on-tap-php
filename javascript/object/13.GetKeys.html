@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to retrieve all the names of object's own and inherited properties</h2>
+
+<script>
+
+    function getKeys(obj){
+        var check = isObject(obj);
+
+        if (check)
+        {
+            var keys = [];
+
+            for (key in obj)
+            {
+                keys.push(key);
+            }
+            document.write(keys);
+        }
+        else
+        {
+            document.write('Input is invalid');
+        }
+    };
+
+    var student = {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12 };
+
+    getKeys(student);
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check if an object contains given property</h2>
+
+<script>
+
+    function hasOwnProperty(obj, needle){
+        var check = isObject(obj);
+
+        if (check)
+        {
+            var keys = [];
+            var check =0;
+
+            for (key in obj)
+            {
+                keys.push(key);
+            }
+
+            for (var i=0; i<keys.length; i++)
+            {
+                if (keys[i] === needle)
+                {
+                    check = 1 ;
+                }
+            }
+
+            if (check == 1)
+            {
+                document.write('Obj has own property ' +needle + '<br>');
+            }
+            else
+            {
+                document.write('Obj has not own property ' +needle + '<br>');
+            }
+        }
+        else
+        {
+            document.write('Input is invalid');
+        }
+    };
+
+    var student = {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12 };
+
+    hasOwnProperty(student, 'name');
+    hasOwnProperty(student, 'xxx');
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

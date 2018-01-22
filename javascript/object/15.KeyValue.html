@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>.Write a JavaScript function to convert an object into a list of `[key, value]` pairs</h2>
+
+<script>
+
+    function keyValue(obj){
+        var check = isObject(obj);
+
+        if (check)
+        {
+            var result = [];
+
+            for (key in obj)
+            {
+                var node = [key, obj[key]];
+                result.push(node);
+            }
+            document.write(result);
+            document.write('<br>Open inspect to more detail');
+            console.log(result);
+        }
+        else
+        {
+            document.write('Input is invalid');
+        }
+    };
+
+    var student = {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12 };
+
+    keyValue(student);
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

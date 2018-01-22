@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to parse an URL</h2>
+
+<script>
+
+    function getUrl(){
+        var url = document.createElement('a');
+
+        var tmp = window.location.href
+
+        url.href = tmp;
+
+        document.write('Current url: '+url+'<br>');
+        document.write('Protocol: '+url.protocol+'<br>');
+        document.write('Host name: '+url.host+'<br>');
+        document.write('Port: '+url.port+'<br>');
+        document.write('Pathname: '+url.pathname+'<br>');
+    };
+
+    getUrl();
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

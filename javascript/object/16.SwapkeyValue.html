@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>.Write a JavaScript function to get a copy of the object
+    where the keys have become the values and the values the keys</h2>
+
+<script>
+
+    function swap(obj){
+        var check = isObject(obj);
+
+        if (check)
+        {
+            var size = Object.keys(obj).length;
+
+            var result = {};
+            var keys = [];
+            var values = [];
+
+            for (key in obj)
+            {
+                keys.push(key);
+                values.push(obj[key]);
+            }
+
+            document.write(size);
+            document.write('<br>Keys: '+keys);
+            document.write('<br>Values: '+values);
+
+            for (var i=0; i<size; i++)
+            {
+                result[values[i]] = keys[i];
+            }
+
+            console.log(result);
+        }
+        else
+        {
+            document.write('Input is invalid');
+        }
+    };
+
+    var student = {
+        name : "David Rayy",
+        sclass : "VI",
+        rollno : 12 };
+
+    console.log(student);
+
+    swap(student);
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

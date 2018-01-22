@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to calculate the area and perimeter of a circle</h2>
+
+<script>
+
+    function Circle (bankinh){
+        this.banKinh = bankinh;
+        if (bankinh > 0)
+        {
+            document.write('Ban kinh hinh tron la: '+this.banKinh + '<br>');
+            this.chuVi = function(){
+                var chuvi = 2 * Math.PI * (this.banKinh);
+                document.write('Chu vi hinh tron la: ' + chuvi.toFixed(2));
+            }
+
+            this.dienTich = function () {
+                var dientich = Math.PI * (this.banKinh) * (this.banKinh);
+                document.write('<br>Dien tich hinh tron la: ' + dientich.toFixed(2));
+            }
+        }
+        else
+        {
+            document.write('Input is invalid');
+        }
+    };
+
+    var circle1 = new Circle(5);
+    circle1.chuVi();
+    circle1.dienTich();
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

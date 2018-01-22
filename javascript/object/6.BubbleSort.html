@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a Bubble Sort algorithm in JavaScript</h2>
+
+<script>
+
+    function bubbleSort(a) { // duongKinh
+        document.write('Init arr: '+a+'<br>');
+
+        var lengthArr = a.length;
+
+        for (var i=0; i<lengthArr; i++)
+        {
+            for (var j=i+1; j<lengthArr; j++)
+            {
+                if (a[j] < a[i])
+                {
+                    var tmp = a[i];
+                    a[i] = a[j];
+                    a[j] = tmp;
+                }
+            }
+        }
+
+        document.write('Result: '+a);
+    }
+
+    bubbleSort([2,9,0,7,1,9,9,5,-2]);
+
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Object</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program which returns a subset of a string.</h2>
+
+<script>
+
+    function subset(str) { // duongKinh
+        document.write('Init str: ' + str + '<br>');
+
+        var result = [];
+
+        if (typeof str === 'string' || str instanceof String)
+        {
+            var size = str.trim().length;
+
+            if (size > 0)
+            {
+                for (var i=0; i<size; i++)
+                {
+                    for (var j=i+1; j<size+1; j++)
+                    {
+                        result.push(str.slice(i, j));
+                    }
+                }
+                document.write(result);
+            }
+            else
+            {
+                document.write('String must be length bigger than 0')
+            }
+        }
+        else
+        {
+            document.write('Input must be string');
+        }
+    }
+
+    subset('dog');
+
+    document.write('<br>');
+    document.write('====================');
+    document.write('<br>');
+
+</script>
+
+
+</body>
+</html>
