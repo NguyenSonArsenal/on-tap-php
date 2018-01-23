@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check whether a given value is a social security number or not.</h2>
+
+<script>
+
+    function isSSN(str) {
+        if (typeof str === 'string')
+        {
+            str = str.trim();
+
+            document.write('Init str: '+str+'<br>');
+
+            var ssnPattern = /^[\d]{3}-[\d]{2}-[\d]{4}/;
+            
+            console.log(str.match(ssnPattern));
+
+            if (str.match(ssnPattern))
+            {
+                document.write(str + ' is a social security number');
+            }
+            else
+            {
+                document.write(str + ' is not a social security number');
+            }
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = '019-90-5680';
+    var str1 = 'K8V-3Y1';
+    var str5 = '7892';
+
+    isSSN(str);
+    isSSN(str1);
+    isSSN(str5);
+
+</script>
+
+
+</body>
+</html>

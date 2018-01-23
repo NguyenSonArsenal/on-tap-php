@@ -63,6 +63,22 @@ $arr = array(
     "18.FindPosition.html", "19.TongHaimang.html", "20.FindDuplicate.html", "21.FlattenArr.html",
     "22.Union2Arr.html", "23.Difference.html", "24.FilterArray.html", "27.Xem bai 24.html", "30.Xem bai 22.html"
 );
+
+$object = array(
+    "1.ListObject.html", "2.DeleteProperty.html", "3.LengthObject.html", "4.DisplayObject.html",
+    "5.TheTichHinhTruTron.html", "6.BubbleSort.html", "7.SubsetString.html", "8.CreateOclock.html",
+    "9.ChuViDienTichHinhTron.html", "10.SortPropertis.html", "11.PrintAllMethods.html", "12.ParseURL.html",
+    "13.GetKeys.html", "14.GetValues.html", "15.KeyValue.html", "16.SwapkeyValue.html",
+    "17.hasOwnProperti.html", "18.ValueisDOMElement.html"
+);
+
+$validation_with_regular = array(
+    "1.IsFirstCharUppercase.html", "2.CheckCreditCardNumber.html", "3.MatchEmail.html",
+    "4.SearchDateInStr.html", "5.Trim.html", "6.CountWord.html", "7.isIP.html", "8.CountVowels.html",
+    "9.IsUrl.html", "10.IsNumeric.html", "11.IsTime.html", "12.IsUkZipcode.html", "13.IsUsZipcode.html",
+    "14.IsCanadaPostCode.html", "15. IsSocialSecurityNumber.html", "16.IsHexadecimalValue.html",
+    "17.IsHexcolorValue.html", "18.IsDomain.html", "19.IsHtmlValue.html", "20.KiTuPhanNghin.html"
+);
   
   function getNumberExercise($txt)
   {
@@ -172,6 +188,28 @@ $arr = array(
         ?>
         <br>
             <a href="javascript:()" style="color: red;">Exercise 28</a>
+
+    <h1>Object</h1>
+        <?php
+        foreach ($object as $key => $file) {
+            ?>
+            <a href="./object/<?=$file?>" class="link-exercise">
+                Exercise <?=getNumberExercise($file)?></a></li>
+            <?php
+        }
+        ?>
+        <br>
+
+    <h1>Validation_with_regular</h1>
+        <?php
+        foreach ($validation_with_regular as $key => $file) {
+            ?>
+            <a href="./validation_with_regular/<?=$file?>" class="link-exercise">
+                Exercise <?=getNumberExercise($file)?></a></li>
+            <?php
+        }
+        ?>
+        <br>
 
 </div>
 

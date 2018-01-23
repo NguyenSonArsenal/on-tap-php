@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to check a credit card number (( format 9999-9999-9999-9999 ))</h2>
+
+<script>
+
+    // Cach 1
+
+    function checkCreditCardNumber(str) {
+
+        var length = str.length;
+
+        if (length > 0)
+        {
+            var creditPatten = /(\d{4}\d{4}\d{4}\d{4})/;
+
+            var result = str.match(creditPatten);
+
+            if (result != null)
+            {
+                document.write(str + ' is credit card <br>');
+            }
+            else
+            {
+                document.write(str + ' is not credit card <br>');
+            }
+        }
+        else
+        {
+            document.write('Input is invalid');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = '378282246310006';
+    var str1 = '5558999989765647';
+    var str2 = '555899998976lllp';
+    var str3 = '';
+
+    checkCreditCardNumber(str);
+    checkCreditCardNumber(str1);
+    checkCreditCardNumber(str2);
+    checkCreditCardNumber(str3);
+
+
+
+</script>
+
+
+</body>
+</html>

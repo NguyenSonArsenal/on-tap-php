@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check whether a given value is IP value or not</h2>
+
+<script>
+
+    function countVowels(str) {
+        if (typeof str === 'string')
+        {
+            str = str.trim();
+            document.write('Init str: '+str+'<br>');
+            var vowelsPattern = /[ueoai]/g;
+
+            var result = str.match(vowelsPattern);
+
+            document.write('Number of vowels: ' + result.length);
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = 'nho_ve nha aaa nguoi iu oi';
+
+    countVowels(str);
+
+
+
+</script>
+
+
+</body>
+</html>

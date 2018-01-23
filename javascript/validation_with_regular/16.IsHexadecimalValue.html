@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check whether a given value is hexadecimal value or not</h2>
+
+<script>
+
+    function isHexa(str) {
+        if (typeof str === 'string')
+        {
+            str = str.trim();
+
+            document.write('Init str: '+str+'<br>');
+
+            var hexaPattern  = /^(0[xX])?[a-f0-9]+$/i;
+            
+            console.log(str.match(hexaPattern));
+
+            if (str.match(hexaPattern))
+            {
+                document.write(str + ' is a hexa value');
+            }
+            else
+            {
+                document.write(str + ' is not a hexa value');
+            }
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = '46';
+    var str1 = 'ff1234';
+    var str5 = '0x67';
+    var str2 = 'fz5500';
+
+    isHexa(str);
+    isHexa(str1);
+    isHexa(str2);
+    isHexa(str5);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program that work as a trim function (string) using regular expression</h2>
+
+<script>
+
+    // dd/mm/yyyy
+    function trimByRegExp(str) {
+
+        var length = str.length;
+
+        document.write('Init: '+str+ ' width length: '+str.length + '<br>');
+
+        if (length > 0)
+        {
+            var trimPattern = /\S.*\S/;
+
+            str = trimPattern.exec(str);
+
+            // str = str.match(trimPattern);
+
+            console.log(str);
+
+            document.write('After: '+str+ ' width length: '+str[0].length + '<br>');
+
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = ' cc sfs     ';
+    var str1 = 'xxx ';
+
+    // hoi lai mot chut ve check dieu kien
+
+    trimByRegExp(str);
+    trimByRegExp(str1);
+
+
+
+</script>
+
+
+</body>
+</html>

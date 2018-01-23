@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript function to check whether a given value is alpha numeric or not</h2>
+
+<script>
+
+    //http://www.foufos.gr/kino
+
+    function isTime(str) {
+        if (typeof str === 'string')
+        {
+            str = str.trim();
+
+            document.write('Init str: '+str+'<br>');
+
+            var timePattern= /(([01]?[0-9])|(2[0-3])):([0-5]?[0-9]):([0-5]?[0-9])/;
+
+            console.log(str.match(timePattern));
+
+            if(str.match(timePattern))
+            {
+                document.write(str + ' is the time');
+            }
+            else
+            {
+                document.write(str + ' is not a time');
+            }
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = '1:35:30';
+    var str5 = '11:35:30';
+    var str2 = '90:90:90';
+    var str3 = '9:2:50';
+    var str4 = '19:20:0';
+
+    isTime(str);
+    isTime(str2);
+    isTime(str3);
+    isTime(str4);
+    isTime(str5);
+
+</script>
+
+
+</body>
+</html>

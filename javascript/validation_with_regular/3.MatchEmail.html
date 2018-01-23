@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2> Write a pattern that matches e-mail addresses.</h2>
+
+<script>
+
+    function isEmail(str) {
+
+        str = str.trim();
+
+        var length = str.length;
+
+        if (length > 0)
+        {
+            var emailPattern = /\S+@\S+\.\S+/;
+            var check = emailPattern.exec(str);
+
+            if (check)
+            {
+                document.write(str +' is an email <br>');
+            }
+            else
+            {
+                document.write(str + ' is not an email <br>');
+            }
+        }
+        else
+        {
+            document.write('an invalid email');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = 'vanson297@gmail.com';
+    var str1 = 'xxx@yahoo.com.vn';
+    var str2 = 'vietnamvodich';
+    var str3 = '';
+
+    isEmail(str);
+    isEmail(str1);
+    isEmail(str2);
+    isEmail(str3);
+
+
+
+</script>
+
+
+</body>
+</html>

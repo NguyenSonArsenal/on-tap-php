@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check whether a given value is Canada zip code or not</h2>
+
+<script>
+
+    function isCanadaZipCode(str) {
+        if (typeof str === 'string')
+        {
+            str = str.trim();
+
+            document.write('Init str: '+str+'<br>');
+
+            //var zipCodeCanadaPattern = /^(?!.*[DFIOQU])[A-VXY][0-9][A-Z]\s?[0-9][A-Z][0-9]$/;
+            var zipCodeCanadaPattern = /^[A-VXY][0-9][A-Z]\s?[0-9][A-Z][0-9]$/;
+
+            console.log(str.match(zipCodeCanadaPattern));
+
+            if (str.match(zipCodeCanadaPattern))
+            {
+                document.write(str + ' is canada_zip_code');
+            }
+            else
+            {
+                document.write(str + ' is not canada_zip_code');
+            }
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = 'K8V3Y1';
+    var str1 = 'Z4V4X1';
+    var str5 = 'K8V 3Y1';
+
+    isCanadaZipCode(str);
+    isCanadaZipCode(str1);
+    isCanadaZipCode(str5);
+
+</script>
+
+
+</body>
+</html>

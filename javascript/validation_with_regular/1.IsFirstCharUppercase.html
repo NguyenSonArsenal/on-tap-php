@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to test the first character of a string is uppercase or not</h2>
+
+<script>
+
+    // Cach 1
+
+    function isFirstCharUppercase(str) {
+        var regExp = /[A-Z]/; // search char without A-> Z
+
+        var length = str.length;
+
+        if(length > 0)
+        {
+            var resutl = str[0].match(regExp);
+
+            document.write('Init str: ' + str + '<br>');
+
+            if (resutl)
+            {
+                document.write('First character is uppercase <br>');
+            }
+            else
+            {
+                document.write('First character is lowercase <br>');
+            }
+        }
+        else
+        {
+            document.write('input is invalid');
+        }
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    // Cach 2
+    // function isFirstCharUppercase(str){
+    //     str = str.trim();
+    //
+    //     var length = str.length;
+    //
+    //     if (length > 0)
+    //     {
+    //         document.write('Init str: ' + str + '<br>');
+    //         if (str[0] === str[0].toUpperCase())
+    //         {
+    //             document.write('First character is uppercase');
+    //         }
+    //         else
+    //         {
+    //             document.write('First character is lowercase');
+    //         }
+    //     }
+    //     else
+    //     {
+    //         document.write('Input is invalid');
+    //     }
+    //
+    //     document.write('<br>');
+    //     document.write('====================');
+    //     document.write('<br>');
+    //
+    // };
+
+    var str = 'Today is beautifu day';
+    var str1 = 'today';
+    var str2 = '';
+
+    isFirstCharUppercase(str);
+    isFirstCharUppercase(str1);
+    isFirstCharUppercase(str2);
+
+
+
+</script>
+
+
+</body>
+</html>

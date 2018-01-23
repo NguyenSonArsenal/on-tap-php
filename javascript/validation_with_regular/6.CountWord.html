@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript program to count number of words in string</h2>
+
+<script>
+
+    function countWord(str) {
+        if (typeof str === 'string')
+        {
+            str = str.trim();
+
+            var length = str.length;
+
+            document.write('Init: '+str+ '<br>');
+
+            if (length > 0)
+            {
+                var reg = /\s\s+/g;
+                var tmpStr = str.replace(reg, " ");
+
+                var result = tmpStr.split(' ').length;
+
+                document.write('Number of words: '+result);
+            }
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = ' cc    sfs   sds dsf df  ';
+    var str1 = '   xxx    sdf     123  ';
+
+    countWord(str);
+    countWord(str1);
+
+
+
+</script>
+
+
+</body>
+</html>

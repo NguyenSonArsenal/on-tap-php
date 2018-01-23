@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check whether a given value represents a domain or not</h2>
+
+<script>
+
+    function isDomain(str) {
+        if (typeof str === 'string')
+        {
+            str = str.trim();
+
+            document.write('Init str: '+str+'<br>');
+
+            var domainPattern  = /(https?:\/\/)?(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
+
+            console.log(str.match(domainPattern));
+
+            if (str.match(domainPattern))
+            {
+                document.write(str + ' is a domain value');
+            }
+            else
+            {
+                document.write(str + ' is not a domain value');
+            }
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = 'www.example.com';
+    var str1 = 'www.npm.co.uk';
+    var str5 = 'http://www.example.com';
+    var str2 = 'https://www.example.com';
+
+    isDomain(str);
+    isDomain(str1);
+    isDomain(str2);
+    isDomain(str5);
+
+</script>
+
+
+</body>
+</html>

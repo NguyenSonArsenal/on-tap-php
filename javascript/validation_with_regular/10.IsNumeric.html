@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript function to check whether a given value is alpha numeric or not</h2>
+
+<script>
+
+    //http://www.foufos.gr/kino
+
+    function isAlphaNumeric(str) {
+        if (typeof str === 'string')
+        {
+            str = str.trim();
+
+            document.write('Init str: '+str+'<br>');
+
+            var numericPattern = /[0-9]+/;
+
+            str = str.replace(/\s\s+/g, '');
+
+            var result = str.match(numericPattern);
+
+            if (result )
+            {
+                if (str.length == result.length)
+                {
+                    document.write(str + ' is all numeric');
+                }
+                else
+                {
+                    document.write(str + ' is not all numeric');
+                }
+            }
+            else
+            {
+                document.write(str + ' is not all numeric');
+            }
+        }
+        else
+        {
+            document.write('Error: invalid input');
+        }
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    var str = '123  4   5';
+    var str2 = 'min   xxx';
+    var str3 = 'min    95';
+
+    isAlphaNumeric(str);
+    isAlphaNumeric(str2);
+    isAlphaNumeric(str3);
+
+
+
+</script>
+
+
+</body>
+</html>

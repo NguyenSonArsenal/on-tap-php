@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2> Write a JavaScript function to print an integer with commas as thousands separators</h2>
+
+<script>
+
+    function thousands_separators(str) {
+
+        var str = str.toString();
+
+        document.write('Init: '+str+'<br>');
+
+        var partNum = str.split('.');
+
+        var pattern  = /^\d{1,3}(,\d{3})*(\.\d+)?$/;
+
+        var result = partNum[0].replace(partNum[0], pattern);
+
+        console.log(result);
+
+        document.write('<br>');
+        document.write('====================');
+        document.write('<br>');
+    }
+
+    thousands_separators(1000);
+    thousands_separators(10000.23);
+    thousands_separators(100000);
+
+</script>
+
+
+</body>
+</html>
