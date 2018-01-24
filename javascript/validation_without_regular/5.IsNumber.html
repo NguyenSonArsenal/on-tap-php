@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-Without-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to validate whether a given value type is number or not.</h2>
+
+<script>
+
+    function isNumber(str) {
+        if (typeof str === 'number'
+            || str instanceof Number
+            && !isNaN(str)
+        )
+        {
+            document.write(str + ' is number');
+        }
+        else
+        {
+            document.write(str + ' is not number');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    isNumber('foo');
+    isNumber(123);
+    isNumber('123f');
+
+
+</script>
+
+
+</body>
+</html>

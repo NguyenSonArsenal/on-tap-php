@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-Without-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to validate whether a given value type is Null or not.</h2>
+
+<script>
+
+    function isNull(str) {
+        str = str.trim();
+
+        if (str == '')
+        {
+            document.write(str + ' is null');
+        }
+        else
+        {
+            document.write('not null');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    isNull('foo');
+    isNull('');
+    isNull(null);
+
+</script>
+
+
+</body>
+</html>

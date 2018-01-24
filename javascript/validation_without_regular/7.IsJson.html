@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-Without-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to validate whether a given value type is json object or not.</h2>
+
+<script>
+
+    function isJson(input) {
+
+        if (toString.call(input) === '[object Object]')
+        {
+            document.write('is json object');
+        }
+        else
+        {
+            document.write('is json object');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    isJson({name: 'son'});
+    isJson('bar');
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-Without-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to validate whether a given value type is object or not.</h2>
+
+<script>
+
+    function isRegExp(input) {
+
+        if (toString.call(input) === '[object RegExp]')
+        {
+            document.write('is regexp');
+        }
+        else
+        {
+            document.write('is not regexp');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    isRegExp(/test/);
+    isRegExp('bar');
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-Without-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to validate whether a given value type is char or not.</h2>
+
+<script>
+
+    function isChar(input) {
+
+        if (toString.call(input) !== '[object String]')
+        {
+            document.write(input + ' is not char');
+        }
+        else
+        {
+            if (input && input.length == 1)
+            {
+                document.write(input + ' is char');
+            }
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    isChar('');
+    isChar('r');
+    isChar(123);
+
+
+</script>
+
+
+</body>
+</html>

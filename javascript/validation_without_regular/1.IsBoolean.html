@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-Without-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to validate whether a given value type is boolean or not</h2>
+
+<script>
+
+    function isBoolean(str) {
+        if (str === true || str === false || typeof str === 'boolean')
+        {
+            document.write('\''  + str + '\'' + ' has type boolean');
+        }
+        else
+        {
+            document.write('\''  + str + '\'' + ' has not type boolean');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    var str = 'Today is beautifu day';
+    var str1 = true;
+    var str2 = '';
+
+    isBoolean(str);
+    isBoolean(str1);
+    isBoolean(str2);
+
+</script>
+
+
+</body>
+</html>

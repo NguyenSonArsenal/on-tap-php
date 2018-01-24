@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-Without-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Write a JavaScript function to check whether given value types are same or not</h2>
+
+<script>
+
+    function isSameType(a, b) {
+
+        if (typeof a === typeof b)
+        {
+            document.write(a+ ' and ' + b + ' same type');
+        }
+        else
+        {
+            document.write(a+ ' and ' + b + ' not same type');
+        }
+
+        document.write('<br>');
+        document.write('==========');
+        document.write('<br>');
+    }
+
+    isSameType('', '');
+    isSameType('r', 'sss');
+    isSameType(123, '');
+    isSameType('xxx', '');
+    isSameType(true, false);
+    isSameType(true, 0);
+
+
+</script>
+
+
+</body>
+</html>
