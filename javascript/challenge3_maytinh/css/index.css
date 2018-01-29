@@ -1,0 +1,45 @@
+.wrapper {
+  border: 1px solid;
+  margin: 0 auto;
+  width: 430px;
+  padding: 15px 6px;
+}
+.wrapper .head {
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  margin-bottom: 10px;
+  height: 60px;
+  border-radius: 4px;
+}
+.wrapper .head .display-result {
+  float: right;
+  position: relative;
+  top: 10px;
+  font-size: 40px;
+  padding-right: 5px;
+}
+.wrapper .keyboard .item {
+  margin: 3px 0;
+}
+.wrapper .keyboard .item .btn:focus {
+  outline: none;
+}
+.wrapper .keyboard .item .btn {
+  padding: 5px;
+  width: 101px;
+  font-weight: bold;
+  color: #222;
+  font-size: 16px;
+}
+.wrapper .keyboard .item .btn-result {
+  width: 206px;
+  color: white;
+}
+.wrapper .keyboard .item .btn-red {
+  background: #d80001;
+}
+.wrapper .keyboard .item .btn-cal {
+  background: #d3d3d3;
+}
+
+/*# sourceMappingURL=index.css.map */

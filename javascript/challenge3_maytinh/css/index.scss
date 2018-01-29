@@ -1,0 +1,57 @@
+$width_btn : 101px;
+
+.wrapper
+{
+    border: 1px solid;
+    margin: 0 auto;
+    width: 430px;
+    padding: 15px 6px;
+    .head
+    {
+        border: 1px solid #d9d9d9;
+        border-top: 1px solid #c0c0c0;
+        margin-bottom: 10px;
+        height: 60px;
+        border-radius: 4px;
+        .display-result
+        {
+            float: right;
+            position: relative;
+            top: 10px;
+            font-size: 40px;
+            padding-right: 5px;
+        }
+    }
+    .keyboard
+    {
+        .item
+        {
+            margin: 3px 0;
+            .btn:focus
+            {
+                outline: none;
+            }
+            .btn
+            {
+                padding: 5px;
+                width: $width_btn;
+                font-weight: bold;
+                color: #222;
+                font-size: 16px;
+            }
+            .btn-result
+            {
+                width: 2*$width_btn+4;
+                color: white;
+            }
+            .btn-red
+            {
+                background: #d80001;
+            }
+            .btn-cal
+            {
+                background: #d3d3d3;
+            }
+        }
+    }
+}
