@@ -12,11 +12,14 @@
   border-radius: 4px;
 }
 .wrapper .head .display-result {
-  float: right;
   position: relative;
   top: 10px;
   font-size: 40px;
-  padding-right: 5px;
+  display: block;
+  width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .wrapper .keyboard .item {
   margin: 3px 0;
