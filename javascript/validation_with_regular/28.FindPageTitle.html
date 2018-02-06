@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title      >JavaScript-Validation-With-Regular</title              >
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>File page title</h2>
+<small>Open inspect to see result</small>
+<br>
+<br>
+
+<script>
+    function findPageTitle() {
+
+        var txtDocument = document.documentElement.innerHTML;
+
+        var re = /<title\s*>(.*?)<\/title\s*>/;
+
+        var title = txtDocument.match(re);
+
+        document.write('Title page is: '+title[1]);
+    }
+    findPageTitle();
+
+</script>
+
+
+</body>
+</html>

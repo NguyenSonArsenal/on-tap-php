@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Remove repeated words (case insensitive)</h2>
+
+<script>
+
+    var str = '       hom           nay la      mot ngay     dep    troi         ';
+
+    var str1 = 'aaabbcdabca';
+    var str2 = 'noonday';
+
+    var re = /(a)\1/g;
+    console.log(str1.replace(re, '$1 '));
+
+    document.write('Chua hoan thanh');
+
+    function removeRepeatedWords(str) {
+        console.log('Init str: ' + str + ' Length: '+ str.length);
+
+        var reRemoveSpaces = /(\s)+\1/g;
+
+        var reTrim = /\S.*\S/;
+
+        str = str.match(reTrim);
+
+        str = str[0].replace(reRemoveSpaces, ' ');
+
+        var reRemoveDuplicated = /(.)\1/gi;
+
+        console.log(str.match(reRemoveDuplicated));
+
+        console.log('Result: '+str+' Length str result: ' + str.length);
+
+    }
+    //removeRepeatedWords(str1);
+
+    // var str = "xaa+b+cc+1+2";
+    //     re = /(?:\b|c)([a-z])\+/g;
+    //
+    // console.log(str.match(re));
+    // console.log(str.replace(re, '$1 '));
+
+</script>
+
+
+</body>
+</html>

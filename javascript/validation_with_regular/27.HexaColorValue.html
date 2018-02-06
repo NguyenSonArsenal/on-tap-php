@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Matching hexadecimal color values</h2>
+<small>Open inspect to see result</small>
+<br>
+<br>
+
+<script>
+    var str ='#DDDDDD';
+    var str1 ='#DDD1234';
+    var str3 ='aaa';
+
+    function isHexaColor(str) {
+        console.log('Init str: ' + str );
+
+        var re = /^#?([a-f0-9]{6}|([a-f]{3}))$/i;
+
+        var check = re.test(str);
+
+        console.log(check);
+
+        if (check)
+        {
+            document.write('\'' + str + '\'' + ' is hexa color <br>');
+        }
+        else
+        {
+            document.write('\'' + str + '\'' + ' is NOT hexa color <br>');
+        }
+
+        document.write('<br>==================<br>');
+    }
+    isHexaColor(str);
+    isHexaColor(str1);
+    isHexaColor(str3);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title      >JavaScript-Validation-With-Regular</title              >
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2></h2>
+<h2>Validate ipv4</h2>
+
+<script>
+    
+    function isIpv4(str) {
+
+        var re = /^[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}\.[0-9]{1,4}$/;
+
+        var check = re.test(str);
+
+        console.log(check);
+
+        if (check)
+        {
+            document.write('\'' + str + '\'' + ' is ipv4 address<br>');
+        }
+        else
+        {
+            document.write('\'' + str + '\'' + ' is NOT ipv4 address <br>');
+        }
+
+    }
+
+    var str = '192.168.1.1';
+    var str1 = '192.168.1';
+    var str2 = '192.168.1.1192.168.1.1';
+    var str3 = '192.168..1';
+    var str4 = 'xxx123@yahoo.com.vn';
+
+    isIpv4(str);
+    isIpv4(str1);
+    isIpv4(str2);
+    isIpv4(str3);
+    isIpv4(str4);
+
+</script>
+
+
+</body>
+</html>

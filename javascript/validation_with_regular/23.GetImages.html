@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Get all images from a HTML document</h2>
+
+<script>
+
+    var str = 'https://baomoi-photo-1-td.zadn.vn/w300_r3x2/18/02/05/111/24857883/14_137323.jpg';
+    var str2 = 'http://image.24h.com.vn/upload/1-2018/images/2018-02-05/120x90/1517795982-859-15177959807852-thumbnail.jpg';
+
+    var re = /https?:\/\/.*\.(?:png|jpg|jpeg|gif|png|svg)/;
+
+    var match = str2.match(re);
+
+    var srcImages = [];
+
+    function findSrcImage(){
+        var images = document.getElementsByTagName('img');
+
+        for (var item in images)
+        {
+            srcImages.push(images[item].currentSrc);
+        }
+
+        return srcImages;
+    }
+
+    var result = findSrcImage();
+    console.log(typeof result);
+
+
+    // Cach 2
+    // var imageUrls = Array.prototype.map.call(document.images, function (i) {
+    //     return i.src;
+    // });
+    //
+    // console.log(imageUrls);
+
+</script>
+
+
+</body>
+</html>

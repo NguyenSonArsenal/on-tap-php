@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Remove repeated punctuation</h2>
+<small>Open inspect to see result</small>
+
+<script>
+
+    var str = 'test @ . / | ) this';
+    var str1 = "This., -/ is #! an $ % ^ & * example ;: {} of a = -_ string with `~)() punctuation";
+
+    function removeRepeatedPunctuatio(str) {
+        console.log('Init str: ' + str + ' Length: '+ str.length);
+
+        var re = /[~|`|!|@|#|$|%|^|&|\*|\(|\)|{|}|\[|\]|;|:|\"|'|<|,|\.|>|\?|\/|\\|\||-|_|\+|=|-]/g;
+        var spaceRe = /\s+/g;
+
+        str = str.replace(re, '').replace(spaceRe, ' ');
+
+        console.log('Result: '+str+' Length str result: ' + str.length);
+
+        console.log('=============');
+        console.log('<br>');
+        console.log('=============');
+
+    }
+    removeRepeatedPunctuatio(str);
+    removeRepeatedPunctuatio(str1);
+
+</script>
+
+
+</body>
+</html>

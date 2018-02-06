@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Matching a XML/HTML tag</h2>
+<small>Open inspect to see result</small>
+
+<script>
+    var str = 'Aenean lacinia bibendum <a href="/life">life</a> sed consectetur.' +
+        ' <a href="/work">Work</a> quis risus eget urna mollis ornare <a href="/about">about</span> leo';
+
+    function removeRepeatedPunctuatio(str) {
+        console.log('Init str: ' + str );
+
+        var re = /<(\w+)[^>]*>.*?<\/\1>/g;
+
+        str = str.match(re);
+
+        console.log(str);
+
+        console.log('==================');
+    }
+    removeRepeatedPunctuatio(str);
+
+</script>
+
+
+</body>
+</html>
