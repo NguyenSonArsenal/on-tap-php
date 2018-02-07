@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Validate Date in DD/MM/YYYY Format</h2>
+<small>Open inspec to see detail</small>
+<br>
+
+<script>
+
+    function findIdYoutube(str) {
+        document.write('Link youtube: '+str + '<br>');
+
+        var re = /\w{11}(?=&|$)/;
+
+        var id = str.match(re);
+
+        document.write('Id youtube is: ' + id + '<br>');
+
+        document.write('<br>'+'=========='+'<br>')
+    }
+
+    var str = 'https://www.youtube.com/watch?v=DgMDvophnEw';
+    findIdYoutube(str)
+
+
+</script>
+
+
+</body>
+</html>

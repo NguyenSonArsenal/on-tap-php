@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Credit card number</h2>
+
+<p>
+    Nếu chữ số đầu tiên của dãy là : 4 –>VISA. <br>
+    5 –> Master Card (MC)<br>
+    6 –> Discover<br>
+    3 –> American Express (AMEX)<br>
+</p>
+
+<br>
+
+<script>
+
+    // Là số thẻ tín dụng gồm 16 chữ số dùng để thanh toán = thẻ
+    function isCreditCardnumber(str) {
+        var reVisa = /^^4([0-9]{12})([0-9]{3})?/ // 13 or 16 digits
+
+        var reMastercard = /^(5[1-5])[\d]{14}$/; // 16 digits, starting with 51->55
+
+        var reDiscover = /^6((011)|(5[\d]{2}))[\d]{12}$/; // 16 digits, starting with 6011 or 65
+
+        var reAmericanExpress = /^(?:34|37)[\d]{13}$/; // 15 digits, starting with 34 or 37
+
+        if (reVisa.test(str))
+        {
+            document.write(str + ' is visa card number <br>');
+        }
+        else if (reMastercard.test(str))
+        {
+            document.write(str + ' is mastercard card number<br>');
+        }
+        else if (reDiscover.test(str))
+        {
+            document.write(str + ' is discover card number<br>');
+        }
+        else if (reAmericanExpress.test(str))
+        {
+            document.write(str + ' is American Express card number<br>');
+        }
+        else
+        {
+            document.write(str + ' is NOT card number<br>');
+        }
+
+        document.write('<br>===========<br>');
+    }
+
+    var str = '4720710619752814';
+
+    var str2 = '54763387329994779';
+    var str3 = '5217060306234636';
+
+    var str4 = '6011776664205373';
+    var str5 = '6511013123095520';
+
+    var str6 = '344901643346400';
+    var str7 = '378410267217912';
+
+
+    isCreditCardnumber(str)
+    isCreditCardnumber(str2)
+    isCreditCardnumber(str3)
+    isCreditCardnumber(str4)
+    isCreditCardnumber(str5)
+    isCreditCardnumber(str6)
+    isCreditCardnumber(str7)
+
+
+</script>
+
+
+</body>
+</html>

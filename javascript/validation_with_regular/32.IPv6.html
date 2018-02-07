@@ -13,11 +13,9 @@
 
 <script>
 
-    document.write('Chua Hoan thanh');
-    
     function isIpv6(str) {
 
-        var re = /^[0-9a-fA-F]{7}$/;
+        var re = /(?:[0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4})/;
 
         var check = re.test(str);
 
@@ -35,7 +33,7 @@
     }
 
     var str = '0f68:0000:0000:0000:0000:1986:69af';
-    var str1 = '192.168.1';
+    var str1 = '2001:0db8:0001:0000:0000:0ab9:C0A8:0102';
     var str2 = '192.168.1.1192.168.1.1';
     var str3 = '2001:0db8:0a0b:12f0:0000:0000:0000:0001';
     var str4 = 'xxx123@yahoo.com.vn';

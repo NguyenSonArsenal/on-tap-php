@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title      >JavaScript-Validation-With-Regular</title              >
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Get domain </h2>
+
+<script>
+
+    function getDomain(str) {
+        var reSplit = /http:\/\/|https:\/\//;
+
+        var strNoHttp = str;
+
+        if (reSplit.test(str))
+        {
+            strNoHttp = (str.split(reSplit))[1];
+        }
+
+        var reToGetDomain = /^[\w\.]+\w/;
+
+        var domain = strNoHttp.match(reToGetDomain);
+
+        document.write('Domain is: '+domain + '<br>');
+    }
+
+    function getDomainFromWebsite() {
+        var strNoHttp = window.location.href;
+
+        var reSplit = /http:\/\/|https:\/\//;
+
+        if (reSplit.test(strNoHttp))
+        {
+            strNoHttp = (strNoHttp.split(reSplit))[1];
+        }
+
+        var reToGetDomain = /^[\w\.]+\w/;
+
+        var domain = strNoHttp.match(reToGetDomain);
+
+        return domain[0];
+    }
+
+    getDomainFromWebsite();
+
+    getDomain('http://ce.php/javascript/validation_with_regular/35.PullDomainFromURL.html');
+    getDomain('https://ce.php/javascript/validation_with_regular/35.PullDomainFromURL.html');
+    getDomain('ce.php/javascript/validation_with_regular/35.PullDomainFromURL.html');
+
+</script>
+
+
+</body>
+</html>

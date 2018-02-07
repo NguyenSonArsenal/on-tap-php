@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Match a URL String</h2>
+
+<small>Open inspect to see detail</small>
+
+<br>
+
+<script>
+
+    function isUrl(str) {
+
+        var re = /^(?:(?:http[s]?(www\/)?):\/\/)?[\w.]+:([\d]{1,4})?\/[\w\/]+/;
+
+        var check = re.test(str);
+
+        if (check)
+        {
+            document.write(str + ' is url <br>');
+        }
+        else
+        {
+            document.write(str + ' is NOT url <br>');
+        }
+        document.write('<br>===========<br>');
+    }
+
+    var str = 'http://vi.wikipedia.org:80/thumuc/trang?timkiem=cauhoi#dautien'; // true
+    var str2 = 'http://google.com'; // true
+
+
+    isUrl(str);
+    isUrl(str2);
+
+</script>
+
+
+</body>
+</html>

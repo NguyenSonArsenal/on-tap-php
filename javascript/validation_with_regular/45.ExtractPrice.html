@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Extract Price</h2>
+
+<small>Open inspect to see detail</small>
+
+<br>
+
+<script>
+
+    function extractPrice(str) {
+
+        document.write('Init: '+str+ '<br>');
+
+        var re = /\$[\d.]+/g;
+
+        var prices = str.match(re);
+
+        document.write('Extract price: ');
+
+        for(var key in prices)
+        {
+            document.write('&nbsp&nbsp&nbsp' + prices[key]);
+        }
+
+        document.write('<br>===========<br>');
+    }
+
+    var str = 'Our Prices are $355.00 and $550, down form $999.00'; // true
+
+
+    extractPrice(str);
+
+</script>
+
+
+</body>
+</html>

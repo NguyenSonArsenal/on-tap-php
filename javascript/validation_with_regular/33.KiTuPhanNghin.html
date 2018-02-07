@@ -12,21 +12,44 @@
 
 <script>
 
-    // 34523453.345 => 34,523,453.345
+    function formatNumber(str, thousandSeparator = ',') {
 
-    function formatNumber(str) {
+        document.write('Init: '+str+ '<br>');
 
-        console.log('Init: '+str);
+        var result = '', partAfterDot = '';
 
+        var tmp = (str.split('.'));
+
+        var threeLastCharAfterSplit = tmp[0].slice(-3);
+
+        if (str.indexOf('.') > 0)
+        {
+            partAfterDot = '.'+tmp[1];
+        }
+
+        var re = /\d{1,3}(?=(\d{3})+(?!\d))/g;
+
+        tmp = tmp[0].match(re);
+
+        for (var key in tmp) {
+            result += tmp[key] + thousandSeparator;
+        }
+
+        result += (threeLastCharAfterSplit+partAfterDot);
+
+        document.write('Fomat number: '+result+ '<br>');
+
+        document.write('<br>' + '==========' + '<br>');
     }
-
-    var str = '34523453.345';
+    var str = '53423453.345';
     var str1 = '1921681';
+    var str2 = '29071995';
+    var str3 = '1234567890987654321.12345';
 
     formatNumber(str);
-    formatNumber(str1);
-    // formatNumber(str2);
-    // formatNumber(str3);
+    formatNumber(str1, '-');
+    formatNumber(str2);
+    formatNumber(str3);
     // formatNumber(str4);
 
 </script>

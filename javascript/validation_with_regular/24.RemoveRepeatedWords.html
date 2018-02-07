@@ -12,41 +12,58 @@
 
 <script>
 
-    var str = '       hom           nay la      mot ngay     dep    troi         ';
-
+    var str = 'Category One Clothes Category One One Category Category Category';
     var str1 = 'aaabbcdabca';
     var str2 = 'noonday';
 
-    var re = /(a)\1/g;
-    console.log(str1.replace(re, '$1 '));
+    function removeDuplicates(arr)
+    {
+        var result = [];
 
-    document.write('Chua hoan thanh');
+        var total = arr.length;
+
+        for (var i=0; i<total; i++)
+        {
+            if (result.indexOf(arr[i]) == -1)
+            {
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
 
     function removeRepeatedWords(str) {
-        console.log('Init str: ' + str + ' Length: '+ str.length);
+        document.write('Init str: ' + str + ' Length: '+ str.length + '<br>');
 
-        var reRemoveSpaces = /(\s)+\1/g;
+        var reCountWord = /\w+/gm;
 
-        var reTrim = /\S.*\S/;
+        var result = '';
 
-        str = str.match(reTrim);
+        var arrWords = str.match(reCountWord);
 
-        str = str[0].replace(reRemoveSpaces, ' ');
+        var length = arrWords.length;
 
-        var reRemoveDuplicated = /(.)\1/gi;
+        if (length == 1)
+        {
+            arrWords = str.match(/\w/gi);
+        }
 
-        console.log(str.match(reRemoveDuplicated));
+        var arrUniqueWord = removeDuplicates(arrWords);
 
-        console.log('Result: '+str+' Length str result: ' + str.length);
+        for(key in arrUniqueWord)
+        {
+            result += (' '+arrUniqueWord[key]);
+        }
+
+        document.write('Result: '+result);
+
+        document.write('<br>'+'=========='+'<br>')
 
     }
-    //removeRepeatedWords(str1);
 
-    // var str = "xaa+b+cc+1+2";
-    //     re = /(?:\b|c)([a-z])\+/g;
-    //
-    // console.log(str.match(re));
-    // console.log(str.replace(re, '$1 '));
+    removeRepeatedWords(str);
+    removeRepeatedWords(str1);
+
 
 </script>
 

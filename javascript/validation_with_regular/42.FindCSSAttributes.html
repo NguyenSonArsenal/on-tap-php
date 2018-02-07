@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript-Validation-With-Regular</title>
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Find CSS Attributes</h2>
+
+<small>Open inspect to see detail</small>
+
+<br>
+
+<script>
+
+    function findCssAttributes(str) {
+
+        var re = /{[\s\S]*(?=})/;
+
+        var match = str.match(re);
+
+        str = match[0].substring(1, match[0].length).trim();
+
+        var cssAttr = str.split(';');
+
+        var length = cssAttr.length-1;
+
+        document.write('Css attributes is: ');
+
+        for (var i=0; i<length; i++)
+        {
+            document.write('&nbsp&nbsp' + cssAttr[i])
+        }
+
+        document.write('<br>===========<br>');
+    }
+
+    var str = '.expl { position: absolute; background-color: rgb(204, 204, 204); max-width: 150px; }';
+
+    findCssAttributes(str);
+
+
+</script>
+
+
+</body>
+</html>

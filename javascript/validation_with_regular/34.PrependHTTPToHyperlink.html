@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title      >JavaScript-Validation-With-Regular</title              >
+    <script type="text/javascript" src="helper.js"></script>
+</head>
+<body>
+
+<h2>Prepend HTTP to Hyperlink</h2>
+
+<script>
+
+    function formatNumber(str) {
+
+        var prefix = 'http://';
+
+        var re = /^(http:\/\/)/;
+
+        var check = re.test(str);
+
+        if (check)
+        {
+            document.write(str + ' is Hyperlink <br>');
+        }
+        else
+        {
+            str = prefix+str;
+            document.write('Hyperlink: '+ str + '<br>');
+        }
+
+    }
+    var str = '34523453.345';
+    var str1 = 'http://1921681';
+    var str2 = '29071995';
+    var str3 = '1234567890987654321.12345';
+
+    formatNumber(str);
+    formatNumber(str1, '-');
+    formatNumber(str2);
+    formatNumber(str3);
+
+</script>
+
+
+</body>
+</html>
