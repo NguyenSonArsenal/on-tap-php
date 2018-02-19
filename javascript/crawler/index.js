@@ -1,7 +1,5 @@
-var results = [];
-
 var cities = {
-    1: 'Ha noi', 20: 'Hai Phong', 32: 'Da Nang', 50: 'Ho Chi Minh', 59: 'Can Tho', 27: 'Nghe An',
+    1: 'Ha noi', 20: 'Quang binh/ hai phong', 32: 'Da Nang', 50: 'Ho Chi Minh', 59: 'Can Tho', 27: 'Nghe An',
     57: 'An Giang', 49: 'Ba Ria Vung Tau', 15: 'Bac Giang', 4: 'Bac Can', 62: 'Bac Lieu',
     18: 'Bac Ninh', 53: 'Ben Tre', 35: 'Binh Dinh', 47: 'Binh Duong', 45: 'Binh Phuoc', 39: 'Binh Thuan',
     63: 'Ca Mau', 3: 'Cao Bang', 42: 'Dac Lac', 43: 'Dac Nong', 7: 'Dien Bien', 48: 'Dong Nai',
@@ -14,6 +12,7 @@ var cities = {
     54: 'Tra Vinh', 5: 'Tuyen Quang', 55: 'Vinh Long', 17: 'Vinh Phuc', 10: 'Yen Bai'
 };
 
+var results = [];
 
 function inArray(arr, needle) {
     for (key in arr)
@@ -24,11 +23,8 @@ function inArray(arr, needle) {
         }
     }
     return false;
-};
-
-
-
-var restaurants =(response ) => {
+}
+var restaurants =(response) => {
     var restaurant = {};
 
     var id, name, full, district, city, website, phoneNumber;
@@ -43,7 +39,7 @@ var restaurants =(response ) => {
 
             if (tmp)
             {
-                city = tmp.address.city;
+                city = (tmp.address.city);
                 district = tmp.address.district;
                 full = tmp.address.full;
                 name = tmp.name;
@@ -51,12 +47,12 @@ var restaurants =(response ) => {
                 phoneNumber = tmp.phoneNumber;
                 id = tmp.id;
 
-                console.log(inArray(results, id));
+                // console.log(inArray(results, id));
 
                 if (!inArray(results, id))
                 {
                     restaurant = {id, city, district, full, name, website, phoneNumber};
-                    results.push(restaurant);
+                    results.push(restaurant); // arr of objects
                 }
                 else
                 {
@@ -64,9 +60,9 @@ var restaurants =(response ) => {
                 }
             }
         }
+        console.log(results);
     }
 };
-
 
 function loadDoc(url, callback) {
     var xhttp = new XMLHttpRequest();
@@ -88,9 +84,42 @@ function loadDoc(url, callback) {
     xhttp.send();
 }
 
-
 for (key in cities)
 {
     loadDoc("/newsfeed/merchants?t=popular&cityId="+key+"&districtId=-1&cats=35", restaurants);
 }
 
+loadDoc("/newsfeed/merchants?t=popular&cityId=10&districtId=-1&cats=35", restaurants);
+
+
+function objToString (obj) {
+    var str = [];
+    for (var key in obj)
+    {
+        str += '{'
+            + '\"id\"'         +':'    + '\"'+  obj[key].id + '\"'+ ','
+            + '\"name\"'       +':'    + '\"'+  obj[key].name + '\"'+ ','
+            + '\"city\"'       +':'    + '\"'+  obj[key].city + '\"'+ ','
+            + '\"district\"'       +':'    + '\"'+  obj[key].district + '\"'+ ','
+            + '\"full\"'       +':'    + '\"'+  obj[key].full + '\"'+ ','
+            + '\"phoneNumber\"'       +':'    + '\"'+  obj[key].phoneNumber + '\"'+ ','
+            + '\"website\"'       +':'    + '\"'+  obj[key].website + '\"'
+            +'},';
+    }
+
+    str = str.substring(0, str.length - 2);
+
+    return str;
+}
+
+objToString(results);
+
+function openNewTab(results)
+{
+    //console.log(typeof results);
+    var aFileParts = [results];
+    var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob
+    window.open(URL.createObjectURL(oMyBlob), '_blank');
+}
+
+openNewTab(results);
