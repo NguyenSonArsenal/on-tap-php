@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9147231d-9fd6-46aa-bebf-890f80b5c2ea" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/javascript/index.php" afterPath="$PROJECT_DIR$/javascript/index.php" />
+      <change beforePath="$PROJECT_DIR$/javascript/challenge4_crawler/index.php" afterPath="$PROJECT_DIR$/javascript/challenge4_crawler/index.php" />
+      <change beforePath="$PROJECT_DIR$/javascript/crawler/index.html" afterPath="$PROJECT_DIR$/javascript/crawler/index.html" />
+      <change beforePath="$PROJECT_DIR$/javascript/crawler/index.js" afterPath="$PROJECT_DIR$/javascript/crawler/index.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="20.KiTuPhanNghin.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/20.KiTuPhanNghin.html">
+      <file leaf-file-name="6.UpdateValueCell.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/javascript/BOM/6.UpdateValueCell.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="49" />
+            <state relative-caret-position="46">
+              <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -42,19 +44,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>media/246-thickbox_default.jpg</find>
-      <find>swa</find>
-      <find>setItem</find>
-      <find>completedTodo</find>
-      <find>iscompletedTodo</find>
-      <find>removeHtmlTodo</find>
-      <find>makeHtmlTodo</find>
-      <find>w</find>
-      <find>reRender</find>
-      <find>reRenderTodoByActions</find>
-      <find>clearATodo</find>
-      <find>removeTodoCompleted</find>
-      <find>show</find>
       <find>display</find>
       <find>is</find>
       <find>toggleCompletedTodo</find>
@@ -70,8 +59,21 @@
       <find>34</find>
       <find>626</find>
       <find>493</find>
-      <find>isEmail</find>
       <find>isUsZipcode</find>
+      <find>row</find>
+      <find>getItem()</find>
+      <find>textResultScreen</find>
+      <find>eval</find>
+      <find>equalsto</find>
+      <find>pow2</find>
+      <find>response.data[i]</find>
+      <find>isEmail</find>
+      <find>isPassword</find>
+      <find>\d</find>
+      <find>isIpv4</find>
+      <find>isPhoneNumber</find>
+      <find>findUrlProfileFacebook</find>
+      <find>isParticularFiletype</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -83,6 +85,17 @@
       <replace>:</replace>
       <replace>isDate</replace>
       <replace>isSSN</replace>
+      <replace>item</replace>
+      <replace>getItem(this)</replace>
+      <replace>textValueScreen</replace>
+      <replace>evil</replace>
+      <replace>tmp</replace>
+      <replace>isPassword</replace>
+      <replace>isEmail</replace>
+      <replace>isIpv6</replace>
+      <replace>isDateDMYFormat</replace>
+      <replace>isUrlProfileFacebook</replace>
+      <replace>appendToLink</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/PHP_Fundamentals</dir>
@@ -94,57 +107,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/javascript/array/23.Difference.html" />
-        <option value="$PROJECT_DIR$/javascript/array/24.FilterArray.html" />
-        <option value="$PROJECT_DIR$/javascript/array/29.NumStringRange.html" />
-        <option value="$PROJECT_DIR$/javascript/array/28.XauConChungDaiNhat.html" />
-        <option value="$PROJECT_DIR$/javascript/array/26.TwoSum.html" />
-        <option value="$PROJECT_DIR$/javascript/object/1.object.html" />
-        <option value="$PROJECT_DIR$/javascript/object/1.ListObject.html" />
-        <option value="$PROJECT_DIR$/javascript/object/2.DeleteProperty.html" />
-        <option value="$PROJECT_DIR$/javascript/object/3.LengthObject.html" />
-        <option value="$PROJECT_DIR$/javascript/object/5.GetVolumeCylinder.html" />
-        <option value="$PROJECT_DIR$/javascript/object/5.TheTichHinhTruTron.html" />
-        <option value="$PROJECT_DIR$/javascript/object/4.DisplayObject.html" />
-        <option value="$PROJECT_DIR$/javascript/object/6.BubbleSort.html" />
-        <option value="$PROJECT_DIR$/javascript/object/7.SubsetString.html" />
-        <option value="$PROJECT_DIR$/javascript/object/9.ChuViDienTichHinhTron.html" />
-        <option value="$PROJECT_DIR$/javascript/object/11.PrintAllProperties.html" />
-        <option value="$PROJECT_DIR$/javascript/object/11.PrintAllMethods.html" />
-        <option value="$PROJECT_DIR$/javascript/object/12.ParseURL.html" />
-        <option value="$PROJECT_DIR$/javascript/object/helper.js" />
-        <option value="$PROJECT_DIR$/javascript/object/13.GetKeys.html" />
-        <option value="$PROJECT_DIR$/javascript/object/14.GetValues.html" />
-        <option value="$PROJECT_DIR$/javascript/object/15.KeyValue.html" />
-        <option value="$PROJECT_DIR$/javascript/object/16.SwapkeyValue.html" />
-        <option value="$PROJECT_DIR$/javascript/object/17.hasOwnProperti.html" />
-        <option value="$PROJECT_DIR$/javascript/object/18.ValueisDOMElement.html" />
-        <option value="$PROJECT_DIR$/javascript/object/10.SortPropertis.html" />
-        <option value="$PROJECT_DIR$/javascript/object/8.CreateOclock.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/1..html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/helper.js" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/1.IsFirstCharUppercase.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/2.CheckCreditCardNumber.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/3.MatchEmail.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/4.SearchDateInStr.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/5.Trim.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/6.CountWord.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/7.isIP.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/8.CountVowels.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/9.IsUrl.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/10.IsNumeric.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/11.IsTime.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/13.IsUkZipcode.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/12.IsUsZipcode.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/12.IsUkZipcode.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/14.IsCanadaPostCode.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/15. IsSocialSecurityNumber.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/16.IsHexadecimalValue.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/17.IsHexcolorValue.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/18.IsDomain.html" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/19.IsHtmlValue.html" />
-        <option value="$PROJECT_DIR$/javascript/index.php" />
-        <option value="$PROJECT_DIR$/javascript/validation_with_regular/20.KiTuPhanNghin.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/21.Username.html" />
+        <option value="$PROJECT_DIR$/javascript/challenge3_maytinh/demo.html" />
+        <option value="$PROJECT_DIR$/javascript/challenge3_maytinh/css/index.scss" />
+        <option value="$PROJECT_DIR$/javascript/challenge3_maytinh/index.html" />
+        <option value="$PROJECT_DIR$/javascript/challenge3_maytinh/helper.js" />
+        <option value="$PROJECT_DIR$/javascript/challenge3_maytinh/index.js" />
+        <option value="$PROJECT_DIR$/javascript/crawler/xxx.js" />
+        <option value="$PROJECT_DIR$/javascript/crawler/helper.js" />
+        <option value="$PROJECT_DIR$/javascript/crawler/index.php" />
+        <option value="$PROJECT_DIR$/javascript/crawler/index.html" />
+        <option value="$PROJECT_DIR$/javascript/crawler/index.js" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/23.GetImages.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/25.RemoveRepeatedPunctuation.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/26.MathXML-HTMLTag.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/28.FindPageTitle.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/27.HexaColorValue.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/22.Password.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/29.Password.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/30.Email.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/31.IPv6.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/31.IPv4.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/34.PrependHTTPToHyperlink.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/35.PullDomainFromURL.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/33.KiTuPhanNghin.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/38.PhoneNumber.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/39.DateDMY.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/40.IDYoutube.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/41.CreditCardNumber.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/43.StripHTMLComments.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/44.FacebookProfileURL.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/45.ExtractPrice.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/46.MatchURLString.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/47.MatchParticularFiletype.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/48.AppendToLink.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/49.MediaQueryMatch.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/42.FindCSSAttributes.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/36.SortKeywordsByWordCount.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/24.RemoveRepeatedWords.html" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/32.IPv6.html" />
+        <option value="$PROJECT_DIR$/javascript/index1.php" />
+        <option value="$PROJECT_DIR$/javascript/validation_with_regular/37.FindBase64.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/49.MediaQueryMatch.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/1.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/2.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/3.SetBackGround.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/2.GetFirstAndLastName.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/4.GetValueAttributes.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/0.preventDefault.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/4.GetValueAttr.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/5.AddRowToTable.html" />
+        <option value="$PROJECT_DIR$/javascript/BOM/6.UpdateValueCell.html" />
       </list>
     </option>
   </component>
@@ -159,10 +172,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="57" />
-    <option name="y" value="21" />
-    <option name="width" value="1307" />
-    <option name="height" value="711" />
+    <option name="x" value="66" />
+    <option name="y" value="5" />
+    <option name="width" value="1309" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -182,6 +195,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,13 +212,12 @@
               <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="validation_with_regular" type="462c0819:PsiDirectoryNode" />
+              <item name="BOM" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -226,11 +239,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/javascript/BOM" />
+      <recent name="$PROJECT_DIR$/javascript" />
       <recent name="$PROJECT_DIR$/javascript/validation_with_regular" />
+      <recent name="$PROJECT_DIR$/javascript/validation_without_regular" />
       <recent name="$PROJECT_DIR$/javascript/object" />
-      <recent name="$PROJECT_DIR$/javascript/array" />
-      <recent name="$PROJECT_DIR$/javascript/challenge2_check_key_word" />
-      <recent name="$PROJECT_DIR$/javascript/date_time" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -347,12 +360,30 @@
       <workItem from="1516410843501" duration="9879000" />
       <workItem from="1516509123760" duration="3129000" />
       <workItem from="1516601747404" duration="15816000" />
-      <workItem from="1516670686480" duration="12528000" />
+      <workItem from="1516670686480" duration="12702000" />
+      <workItem from="1516757910037" duration="1534000" />
+      <workItem from="1516775991902" duration="13180000" />
+      <workItem from="1516807781638" duration="1892000" />
+      <workItem from="1516892754181" duration="886000" />
+      <workItem from="1517189101001" duration="32051000" />
+      <workItem from="1517236560206" duration="2683000" />
+      <workItem from="1517275543824" duration="11570000" />
+      <workItem from="1517287772472" duration="1033000" />
+      <workItem from="1517292908800" duration="18537000" />
+      <workItem from="1517311777298" duration="6000" />
+      <workItem from="1517621564148" duration="291000" />
+      <workItem from="1517795283123" duration="27484000" />
+      <workItem from="1517842945715" duration="5000" />
+      <workItem from="1517881928844" duration="8617000" />
+      <workItem from="1517967544440" duration="26264000" />
+      <workItem from="1518833348428" duration="2798000" />
+      <workItem from="1518870684617" duration="5543000" />
+      <workItem from="1518915888692" duration="6905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="484127000" />
+    <option name="totallyTimeSpent" value="645580000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -364,10 +395,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="21" width="1311" height="783" extended-state="6" />
-    <editor active="true" />
+    <frame x="66" y="5" width="1311" height="783" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29793736" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2964095" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -418,377 +448,348 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascript/array/30.Xem bai 22.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/array/21.FlattenArr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/array/23.Difference.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/array/27.Xem bai 24.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/challenge2_check_key_word/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/array/24.FilterArray.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/array/29.NumStringRange.html">
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/21.Username.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
-          <caret line="40" column="54" lean-forward="false" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/array/28.XauConChungDaiNhat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/array/26.TwoSum.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="1" lean-forward="false" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/1.ListObject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/2.DeleteProperty.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/5.TheTichHinhTruTron.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/3.LengthObject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/4.DisplayObject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="59" column="66" lean-forward="false" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/6.BubbleSort.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/7.SubsetString.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/9.ChuViDienTichHinhTron.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/11.PrintAllMethods.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/12.ParseURL.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/13.GetKeys.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="98" lean-forward="false" selection-start-line="10" selection-start-column="98" selection-end-line="10" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/14.GetValues.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="84" lean-forward="false" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="60" lean-forward="false" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/15.KeyValue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/16.SwapkeyValue.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="38" column="44" lean-forward="true" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/17.hasOwnProperti.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="37" column="53" lean-forward="false" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/18.ValueisDOMElement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="30" column="50" lean-forward="false" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/10.SortPropertis.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="43" column="31" lean-forward="false" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/object/8.CreateOclock.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/1.IsFirstCharUppercase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="556">
           <caret line="42" column="31" lean-forward="false" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/2.CheckCreditCardNumber.html">
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/6.CountWord.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="46">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/3.MatchEmail.html">
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/26.MathXML-HTMLTag.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="62" lean-forward="false" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/7.isIP.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/9.IsUrl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/10.IsNumeric.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="27" column="51" lean-forward="true" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/11.IsTime.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="23" column="71" lean-forward="false" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/13.IsUsZipcode.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="54" lean-forward="false" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/12.IsUkZipcode.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/14.IsCanadaPostCode.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="10" column="72" lean-forward="false" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/15. IsSocialSecurityNumber.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="73" lean-forward="false" selection-start-line="31" selection-start-column="73" selection-end-line="31" selection-end-column="73" />
-          <folding />
+        <state relative-caret-position="471">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/17.IsHexcolorValue.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding />
+          <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/16.IsHexadecimalValue.html">
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/28.FindPageTitle.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/18.IsDomain.html">
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/27.HexaColorValue.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="158">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/19.IsHtmlValue.html">
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/22.Password.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="47" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="260">
+          <caret line="20" column="78" lean-forward="false" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/8.CountVowels.html">
+    <entry file="file://$PROJECT_DIR$/javascript/challenge4_crawler/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/4.SearchDateInStr.html">
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/3.MatchEmail.html" />
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/30.Email.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="54" column="42" lean-forward="false" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="110">
+          <caret line="19" column="81" lean-forward="false" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/index.php">
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/29.Password.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="85" column="19" lean-forward="true" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/6.CountWord.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="233">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/5.Trim.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+        <state relative-caret-position="136">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/34.PrependHTTPToHyperlink.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/35.PullDomainFromURL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/33.KiTuPhanNghin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/38.PhoneNumber.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/39.DateDMY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/40.IDYoutube.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/41.CreditCardNumber.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/43.StripHTMLComments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/44.FacebookProfileURL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/45.ExtractPrice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/9.IsUrl.html" />
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/46.MatchURLString.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="40" column="9" lean-forward="false" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/47.MatchParticularFiletype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/48.AppendToLink.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/49.MediaQueryMatch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/31.IPv4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="26" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/42.FindCSSAttributes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/25.RemoveRepeatedPunctuation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/15.GenerateUniqueRandomNumbers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/42.FindUniqueValues.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2601">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/Array/41.ArrayNotUnique.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/36.SortKeywordsByWordCount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/32.IPv6.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/24.RemoveRepeatedWords.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="79" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercises/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/37.FindBase64.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/index1.php" />
+    <entry file="file://$PROJECT_DIR$/javascript/BOM/helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/validation_with_regular/20.KiTuPhanNghin.html">
+    <entry file="file://$PROJECT_DIR$/javascript/BOM/1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="24" column="49" lean-forward="false" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="49" />
+        <state relative-caret-position="476">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/BOM/3.SetBackGround.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/BOM/2.GetFirstAndLastName.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/BOM/0.preventDefault.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/BOM/4.GetValueAttr.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="39" column="26" lean-forward="true" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/BOM/5.AddRowToTable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/BOM/6.UpdateValueCell.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
           <folding />
         </state>
       </provider>

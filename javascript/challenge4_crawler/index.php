@@ -36,8 +36,6 @@ for ($i=0; $i<$size; $i++) {
             VALUES ('$name', '$city', '$district', '$full', '$phoneNumber', '$website')";
 
 
-    $query = $conn->query($sql);
-
-    var_dump($query);
+    //$query = $conn->query($sql);
 
 }

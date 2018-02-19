@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM-DOM</title>
+    <script type="text/javascript" src="helper.js"></script>
+    <style></style>
+</head>
+<body>
+
+<span>Write a JavaScript function that accept row, column, (to identify a particular cell)
+    and a string to update the content of that cell</span>
+<br>
+
+<table id="myTable" border="1">
+    <tr>
+        <td>Row1 cell1</td>
+        <td>Row1 cell2</td>
+    </tr>
+    <tr>
+        <td>Row2 cell1</td>
+        <td>Row2 cell2</td>
+    </tr>
+    <tr>
+        <td>Row3 cell1</td>
+        <td>Row3 cell2</td>
+    </tr>
+</table>
+
+<form>
+    <input type="button" onclick="changeContent()" value="Change content">
+</form>
+
+<br>
+<small>Open inspect to more detail</small>
+
+<script>
+
+    function changeContent() {
+        var tableElement = document.getElementById('myTable');
+
+        var rows = tableElement.rows;
+
+        var rowToChange = prompt('Enter ROW need to change');
+        var cellToChange = prompt('Enter CELL need to change');
+        var value = prompt('Enter VALUE need to change');
+
+        if (rowToChange && cellToChange &&
+            Number(rowToChange) >= 0 && Number(cellToChange) >= 0 &&
+            Number(rowToChange) <= rows.length)
+        {
+            rowToChange = Number(rowToChange) - 1;
+            cellToChange = Number(cellToChange) - 1;
+
+            var trTarget = rows[rowToChange];
+
+            var lengthCell = trTarget.cells.length;
+
+            if (Number(cellToChange) < lengthCell)
+            {
+                var cellTarget = trTarget.cells[cellToChange];
+                cellTarget.innerHTML = value;
+            }
+            else
+            {
+                alert('Something in wrong');
+            }
+        }
+        else
+        {
+            alert('Something in wrong');
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

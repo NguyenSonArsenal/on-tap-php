@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM-DOM</title>
+    <script type="text/javascript" src="helper.js"></script>
+    <style></style>
+</head>
+<body>
+
+<span>Write a JavaScript function to get the values of First and Last name of the following form.</span>
+<br>
+
+<p onclick="parentEventHandler()">
+    <a id="a" href="www.hoclaptrinh.org">Trang chủ</a>
+</p>
+
+<small>Open inspect to more detail</small>
+<script>
+
+    function parentEventHandler()
+    {
+        alert('bạn đã nhấp chuột vào phần tử p');
+    }
+
+    function childStopPropagation(e)
+    {
+        alert('clicked a link');
+
+        //e.stopPropagation(); // Ngăn k cho sảy ra sự kiện ở phần tử mẹ
+        //e.preventDefault(); // Ngăn k cho chuyển tới link
+    }
+
+    document.getElementById('a').addEventListener('click', childStopPropagation);
+
+</script>
+
+
+</body>
+</html>
