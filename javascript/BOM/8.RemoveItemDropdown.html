@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM-DOM</title>
+    <script type="text/javascript" src="helper.js"></script>
+    <style type="text/css">
+        body {margin: 30px;}
+    </style>
+</head>
+<body>
+
+<span>Remove items from a dropdown list</span>
+<br>
+
+<form>
+    <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+    </select>
+    <input type="button" onclick="removecolor()" value="Select and Remove">
+</form>
+
+<br>
+<small>Open inspect to more detail</small>
+
+<script>
+
+    function removecolor() {
+        var selectElement = document.getElementById('colorSelect');
+
+        var selected = selectElement.options[selectElement.selectedIndex];
+
+        if (selected)
+        {
+            selectElement.removeChild(selected);
+        }
+        else
+        {
+            console.log('Nothing to remove from select');
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

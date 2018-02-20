@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM-DOM</title>
+    <script type="text/javascript" src="helper.js"></script>
+    <style type="text/css">
+        body {margin: 30px;}
+    </style>
+</head>
+<body>
+
+<span>Write a JavaScript function that accept row, column, (to identify a particular cell)
+    and a string to update the content of that cell</span>
+<br>
+
+<table id="myTable" border="1">
+</table>
+<form>
+    <input type="button" onclick="createTable()" value="Create the table">
+</form>
+
+<br>
+<small>Open inspect to more detail</small>
+
+<script>
+
+    function createTable() {
+        var row = prompt('Enter row number');
+        var cell = prompt('Enter cell number');
+
+        if (row && cell && Number(row) > 0 && Number(row) > 0)
+        {
+            for (var i=0; i<row; i++)
+            {
+                var x = document.getElementById('myTable').insertRow(i);
+
+                for (var j=0; j<cell; j++)
+                {
+                    var y = x.insertCell(j);
+                    y.innerHTML = 'Row' + (1+i) + ' Cell'+(1+j);
+                }
+            }
+        }
+        else
+        {
+            alert('Some thing in wrong');
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

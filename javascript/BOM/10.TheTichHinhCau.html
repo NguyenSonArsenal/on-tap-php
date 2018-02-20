@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM-DOM</title>
+    <script type="text/javascript" src="helper.js"></script>
+    <style type="text/css">
+        body {margin: 30px;}
+    </style>
+</head>
+<body>
+
+<span>Write a JavaScript program to calculate the volume of a sphere</span>
+<br>
+
+<form>
+    Ban kinh: <br>
+    <input type="text" id="radius" value="">
+    <br><br>
+    <input id="caculate" type="submit" onclick="cal()">
+</form>
+
+<br>
+<small>Open inspect to more detail</small>
+
+<script>
+
+    // The tich hinh cau: (4/3)PI*R^3
+
+    function cal() {
+        var radius = document.getElementById('radius').value;
+
+        if (radius && Number(radius) > 0)
+        {
+            var thetich = (4/3)*3.14*Math.pow(Number(radius), 3);
+            alert('The tich hinh cau la: '+thetich);
+            console.log('The tich hinh cau la: '+thetich);
+        }
+        else
+        {
+            console.log('SOmething in wrong');
+            alert('SOmething in wrong');
+        }
+    }
+
+</script>
+
+
+</body>
+</html>

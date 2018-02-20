@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM-DOM</title>
+    <script type="text/javascript" src="helper.js"></script>
+    <style type="text/css">
+        body {margin: 30px;}
+    </style>
+</head>
+<body>
+
+<span> Write a JavaScript program to display a random image
+    (clicking on a button) from the following list</span>
+<br>
+
+<img src="./image/btnNext.png" alt="image name" id="img"><br>
+
+<button id="random" onclick="ramdomImg()">Random Image</button>
+<br>
+<small>Open inspect to more detail</small>
+
+<script>
+
+    var listImage = [
+        'btnNext.png', 'btnNext_1.png', 'btnPrevious.png', 'btnPrevious_1.png',
+        'loader.gif', 'loader_1.gif', 'sprite.png', 'sprite_1.png'
+    ];
+
+    var length = listImage.length;
+
+    // Math.random() * (b - a) + a; => random (a, b)
+
+    function ramdomImg() {
+        var random = Math.floor(Math.random()*length); // 0<=random<1
+
+        document.getElementById('img').src = './image/'+listImage[random];
+    }
+
+</script>
+
+
+</body>
+</html>

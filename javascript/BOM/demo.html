@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM-DOM</title>
+    <script type="text/javascript" src="helper.js"></script>
+    <style></style>
+</head>
+<body>
+
+<div id="div1">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+    var para = document.createElement('p');
+    var node = document.createTextNode('This is new text');
+
+    para.appendChild(node);
+
+    var divElement = document.getElementById('div1');
+    divElement.appendChild(para);
+</script>
+
+
+</body>
+</html>

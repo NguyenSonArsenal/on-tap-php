@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>BOM-DOM</title>
+    <script type="text/javascript" src="helper.js"></script>
+    <style type="text/css">
+        body {margin: 30px;}
+    </style>
+</head>
+<body>
+
+<span>Count and display items of a dropdown list</span>
+<br>
+
+<form>
+    Select your favorite Color :
+    <select id="mySelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+        <option>White</option>
+    </select>
+    <input type="button" onclick="getOptions()" value="Count and Output all items">
+</form>
+
+<br>
+<small>Open inspect to more detail</small>
+
+<script>
+
+    function getOptions() {
+        var selectElement = document.getElementById('mySelect');
+
+        var length = selectElement.length;
+        
+        var valueSelected = '';
+
+        for (var i=0; i<length; i++)
+        {
+            valueSelected += selectElement.options[i].value + ' ';
+        }
+
+        console.log(length);
+        console.log(valueSelected);
+        
+        alert('Count: '+length + '\nValue is: '+valueSelected);
+    }
+
+</script>
+
+
+</body>
+</html>
