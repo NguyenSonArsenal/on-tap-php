@@ -1,0 +1,32 @@
+input[type=checkbox] {
+    margin: 8px 2px 0 15px;
+    margin-top: 1px\9;
+    line-height: normal;
+}
+
+.error
+{
+    color: red;
+    position: relative;
+    top: 5px;
+    left: 3px;
+}
+
+.wrapper {
+    padding: 30px;
+    border: 1px solid red;
+    .content-wrapper {
+        .content {
+            .box {
+                .form-horizontal {
+                    .box-body {
+                        .form-group {
+                            margin-bottom: 25px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

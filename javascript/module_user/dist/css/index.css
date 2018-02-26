@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 30px;
+}
+.wrapper .header {
+  padding: 20px 0;
+}
+.wrapper .header .btnAdd {
+  margin-right: 25px;
+}
+
+/*# sourceMappingURL=index.css.map */
