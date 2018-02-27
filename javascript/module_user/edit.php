@@ -11,8 +11,8 @@ $arrHobbies = ['eat', 'play', 'code', 'sleep', 'music'];
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/add.css">
 </head>
-<body>
-<div class="wrapper">
+<body onload="onloadEditUser()">
+<div class="wrapper" id="wrapper">
     <div class="content">
         <div class="row">
             <!-- /.col -->
@@ -20,7 +20,7 @@ $arrHobbies = ['eat', 'play', 'code', 'sleep', 'music'];
                 <div class="box box-primary">
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form class="form-horizontal tab-content" onsubmit="event.preventDefault(); return eventHandleAddUser()" id="form_add_user" action="#" method="POST">
+                    <form class="form-horizontal tab-content" onsubmit="event.preventDefault(); return eventHandleEditUser()" id="form_edit_user" action="#" method="POST">
                         <div class="">
                             <div class="form-group">
                                 <label for="" class="col-md-3 control-label">Name:</label>
@@ -93,19 +93,11 @@ $arrHobbies = ['eat', 'play', 'code', 'sleep', 'music'];
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="" class="col-md-3 control-label">Redirect:</label>
-                                <div class="col-md-9">
-                                    <span>
-                                        <input type="checkbox" name="redirect" id="redirect"> Redirect to home page
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label class="col-md-3"></label>
                                 <div class="col-md-8">
                                     <button type="submit" class="btn btn-primary">
                                         <i class="fa fa-save" aria-hidden="true"></i>
-                                        Add user
+                                        Save
                                     </button>
                                 </div>
                             </div>
@@ -122,7 +114,7 @@ $arrHobbies = ['eat', 'play', 'code', 'sleep', 'music'];
 </div>
 
 <script src="./helper.js"></script>
-<script src="./add.js"></script>
+<script src="./edit.js"></script>
 
 
 </body>

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/css/index.css">
 </head>
-<body>
+<body onload="onloadListUser()">
 <div class="wrapper">
     <div class="header">
         <div class="row">
@@ -33,68 +33,18 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Hobbies</th>
-                <th>Programs</th>
+                <th>Gender</th>
                 <th>Actions</th>
             </tr>
             </thead>
-            <tbody>
-            <?php for ($i = 0; $i < 5; $i++) { ?>
-                <tr>
-                    <td>
-                        <div>
-                            <label>
-                                1
-                            </label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <label>
-                                <span>Nguyen Van Son</span>
-                            </label>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <span>vanson297.nguyen@gmail.com</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <span>eat, sleep, code, soccer</span>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="content">
-                            <span>Php, laravel, js</span>
-                        </div>
-                    </td>
-                    <td>
-                        <a class="btn btn-primary btn-xs">
-                            <i class="fa fa-edit"></i>
-                            Chỉnh sửa
-                        </a>
-                        <a class="btn btn-info btn-xs">
-                            <i class="fa-copy fa"></i>
-                            Copy
-                        </a>
-                        <a class="btn btn-danger btn-xs">
-                            <i class="fa-trash fa"></i>
-                            Xóa
-                        </a>
-                    </td>
-                </tr>
-
-                <?php
-            }
-            ?>
-
-            </tbody>
+            <tbody id="tbodyUser"></tbody>
         </table>
     </div>
 </div>
-    <!-- ./wrapper -->
-
 </div>
+
+<script src="./helper.js"></script>
+<script src="./handle.js"></script>
+
 </body>
 </html>

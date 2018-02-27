@@ -1,5 +1,78 @@
-function eventHandleAddUser()
+function fetchAUser() {
+    var userId = getIdFromUrl(location.href);
+
+    var users = JSON.parse(getItemInLocalStorage('module_user')) || [];
+    var length = users.length;
+
+    var arrUserId = [];
+
+    if (length > 0)
+    {
+
+        for (var i=0; i<length; i++)
+        {
+            arrUserId.push(users[i].id);
+        }
+
+        if (arrUserId.indexOf(userId) >=0 )
+        {
+            for (var i=0; i<length; i++)
+            {
+                var user = users[i];
+                if (userId == user.id)
+                {
+                    var nameElement = document.getElementById('name');
+                    nameElement.setAttribute('value', user.name);
+
+                    var emailElement = document.getElementById('email');
+                    emailElement.setAttribute('value', user.email);
+
+                    var passwordElement = document.getElementById('password');
+                    passwordElement.setAttribute('value', user.password);
+
+                    var confirmPasswordElement = document.getElementById('confirm_password');
+                    confirmPasswordElement.setAttribute('value', user.password);
+
+                    var genderElement = document.getElementsByName('gender');
+                    var lengthGenderElement = genderElement.length;
+                    for (var i=0; i<lengthGenderElement; i++)
+                    {
+                        if (genderElement[i].value == user.gender)
+                        {
+                            genderElement[i].setAttribute('checked', true);
+                        }
+                    }
+
+                    var hobbieElement = document.getElementsByName('hobbie[]');
+                    var lengthHobbieElement = hobbieElement.length;
+                    for(var i=0; i<lengthHobbieElement; i++)
+                    {
+                        var hobbies = (user.hobbies).split(',');
+                        console.log();
+
+                        if (hobbies.indexOf(hobbieElement[i].value) >= 0)
+                        {
+                            hobbieElement[i].setAttribute('checked', true);
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            document.getElementById("wrapper").innerHTML = "Id is not exits";
+        }
+    }
+}
+
+function onloadEditUser() {
+    fetchAUser();
+}
+
+function eventHandleEditUser()
 {
+    var userId = getIdFromUrl(location.href);
+
     var namePattern = /^[a-zA-Záàảạãăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệiíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ\s+]{6,30}/; // ok // dung cho ca password va confirm password
     var emailPattern = /[A-Za-z_0-9]{3,20}@[[A-Za-z]+?\.[A-Za-z]{2,4}(.[\w]{2,4}){0,1}$/; // ok
     var passwordPattern = /[A-Za-z]{6,24}/;
@@ -76,27 +149,27 @@ function eventHandleAddUser()
         && gender
     )
     {
-        var user = {
-            id:createUniqueTime(),
-            name,
-            email,
-            password,
-            gender,
-            hobbies: standardHobbie(hobbiesValue)
-        };
-
         var oldUsers =  JSON.parse(getItemInLocalStorage('module_user')) || []; // obj
 
-        oldUsers.push(user);
+        var length = oldUsers.length;
 
-        // Put the object into storage
+        for (var i=0; i< length; i++)
+        {
+            var user = oldUsers[i];
+            if (user.id == userId)
+            {
+                user.name = name;
+                user.email = email;
+                user.password = password;
+                user.gender = gender;
+                user.hobbies = standardHobbie(hobbiesValue);
+            }
+        }
+
         setItemInLocalStorage('module_user', JSON.stringify(oldUsers));
 
-        alert('A new user added successfully');
+        alert('A new user edited successfully');
 
-        if (redirect)
-        {
-            location.href = "http://ce.php/javascript/module_user/";
-        }
+        location.href = "http://ce.php/javascript/module_user/";
     }
-}
+};
