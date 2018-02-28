@@ -20,7 +20,7 @@ $arrHobbies = ['eat', 'play', 'code', 'sleep', 'music'];
                 <div class="box box-primary">
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form class="form-horizontal tab-content" onsubmit="event.preventDefault(); return eventHandleEditUser()" id="form_edit_user" action="#" method="POST">
+                    <form class="form-horizontal tab-content" onsubmit="event.preventDefault(); return handleEditUser()" id="form_edit_user" action="#" method="POST">
                         <div class="">
                             <div class="form-group">
                                 <label for="" class="col-md-3 control-label">Name:</label>
@@ -114,7 +114,7 @@ $arrHobbies = ['eat', 'play', 'code', 'sleep', 'music'];
 </div>
 
 <script src="./helper.js"></script>
-<script src="./edit.js"></script>
+<script src="./handle.js"></script>
 
 
 </body>

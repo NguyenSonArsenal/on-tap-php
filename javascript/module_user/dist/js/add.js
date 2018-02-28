@@ -1,7 +1,7 @@
 function eventHandleAddUser()
 {
     var namePattern = /^[a-zA-Záàảạãăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệiíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđ\s+]{6,30}/; // ok // dung cho ca password va confirm password
-    var emailPattern = /[A-Za-z_0-9]{3,20}@[[A-Za-z]+?\.[A-Za-z]{2,4}(.[\w]{2,4}){0,1}$/; // ok
+    var emailPattern = /^[A-Za-z_0-9]{1,20}@[[A-Za-z]+?\.[A-Za-z]{2,4}(.[\w]{2,4}){0,1}$/; // ok
     var passwordPattern = /[A-Za-z]{6,24}/;
 
     var errors = {

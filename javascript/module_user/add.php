@@ -122,7 +122,7 @@ $arrHobbies = ['eat', 'play', 'code', 'sleep', 'music'];
 </div>
 
 <script src="./helper.js"></script>
-<script src="./add.js"></script>
+<script src="./handle.js"></script>
 
 
 </body>

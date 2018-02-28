@@ -1,3 +1,23 @@
+<?php
+$currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+$limit = 3;
+
+$totalPage = ceil(20 / $limit);
+
+echo 'Current page: ' . $currentPage . '<br>';
+echo 'Total page: ' . $totalPage;
+
+// Giới hạn current_page trong khoảng 1 đến total_page
+if ($currentPage > $totalPage)
+    $currentPage = $totalPage;
+else if ($currentPage < 1)
+    $currentPage = 1;
+
+// Tim start
+$start = ($currentPage - 1) * $limit;
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,16 +29,17 @@
 <div class="wrapper">
     <div class="header">
         <div class="row">
-            <div class="col-md-2">
-                <input type="text" class="form-control" placeholder="Tìm kiếm">
+            <div class="col-md-3">
+                <input type="text" class="form-control" onkeyup="searchUser()"
+                       placeholder="Tìm kiếm" id="keyToSearch" >
             </div>
-            <div class="col-md-1">
-                <button class="btn btn-success">
-                    <i class="fa fa-search-minus" aria-hidden="true"></i>
-                    Search</button>
+            <div class="col-md-1 btnAllUsers" onclick="fetchListTodos()">
+                <a class="btn btn-primary">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    All user</a>
             </div>
             <div class="col-md-1 pull-right btnAdd">
-                <a class="btn btn-success" href="./add.php">
+                <a class="btn btn-primary" href="./add.php">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     Add user</a>
             </div>
@@ -39,6 +60,10 @@
             </thead>
             <tbody id="tbodyUser"></tbody>
         </table>
+
+        <!-- Paginate -->
+        <?php include './inc_paginate.php' ?>
+        <!-- End paginate -->
     </div>
 </div>
 </div>
