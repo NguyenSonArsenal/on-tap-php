@@ -1,45 +1,47 @@
 <?php
 
-interface Task {
-    public function runTask();
-    public function anotherMethod();
+interface DongVat{
+    // Chỉ được khai báo phương thức chứ không được định nghĩa chúng
+    public function getName();
+
+    // Chỉ được khai báo hằng mà không được khai báo biến
+    const AGE = 11;
+    // public tai; // sai
 }
 
-abstract class TaskImpl implements Task {
-    public function runTask() {
-        // TODO: Implement runTask() method.
-        echo $this->anotherMethod();
+// interface co the ke thua lan nhau
+interface ConNghe extends DongVat {
+    public function checkSung();
+}
+
+// Các lớp impliment interfaces thì phải định nghĩa lại các phương thức
+class ConBo implements DongVat, ConNghe {
+    private $name;
+    const SUNG = false;
+
+
+    function getName()
+    {
+        // TODO: Implement getName() method.
+        return $this->name;
+    }
+
+    function checkSung()
+    {
+        // TODO: Implement checkSung() method.
+        return self::SUNG;
     }
 }
 
-class TaskImpl2 extends TaskImpl {
+class ConCho implements DongVat {
+    private $name;
 
-    public function anotherMethod() {
-        // TODO: Implement anotherMethod() method.
-        return 'another method running task';
+    function getName()
+    {
+        // TODO: Implement getName() method.
+        return $this->name;
     }
 }
 
-$task = new TaskImpl2();
-$task->runTask();
-
-/*interface Task {
-    public function runTask();
-    public function anotherMethod();
-}
-
-abstract class TaskImpl implements Task {
-    public function runTask() {
-        echo $this->anotherMethod();
-    }
-}
-
-class TaskImpl2 extends TaskImpl {
-    public function anotherMethod() {
-        return "another method running task ";
-    }
-}
-
-$task = new TaskImpl2();
-$task->runTask();
-*/?>
+// Không thể khởi tạo một interface
+// $obj = new DongVat(); // Sai
