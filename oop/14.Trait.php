@@ -1,21 +1,21 @@
 <?php
-
+// PHP > 5.4
 namespace oop;
 
 trait Database {
-    function listUsers()
+    public function listUsers()
     {
         return 'This is function list users';
     }
 
-    function sayHello()
+    public function sayHello()
     {
         return 'hello';
     }
 }
 
 trait Word {
-    function sayWord()
+    public function sayWord()
     {
         return 'Word';
     }
@@ -24,7 +24,7 @@ trait Word {
 class Users{
     use Database;
 
-    function getUser()
+    public function getUser()
     {
         return $this->listUsers();
     }
@@ -33,7 +33,7 @@ class Users{
 class Report {
     use Database;
 
-    function makeReport()
+    public function makeReport()
     {
         return $this->listUsers();
     }
@@ -42,7 +42,7 @@ class Report {
 class HelloWord {
     use Database, Word;
 
-    function sayHelloWord()
+    public function sayHelloWord()
     {
         return ($this->sayHello() . $this->sayWord() . '!');
     }

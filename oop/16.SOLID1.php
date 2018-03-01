@@ -24,7 +24,7 @@ class Tester implements Workable
 
 class Projectmanager
 {
-    public function process(Tester $name)
+    public function process(Workable $name)
     {
         return $name->work();
     }
