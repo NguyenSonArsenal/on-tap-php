@@ -1,0 +1,27 @@
+.wrapper {
+    margin: auto;
+    margin-top: 20px;
+    width:35%;
+    border: 1px solid green;
+    padding: 5px;
+    -webkit-box-shadow: 0px 0px 15px 0px #D6D6D6;
+    font-size: 14px;
+    .link_login {
+        float: right;
+    }
+    .show_img {
+        width: 200px;
+        margin: 10px auto;
+        >img {
+            width: 100%;
+        }
+        &:hover {
+            border: 1px solid green;
+            cursor: pointer;
+        }
+    }
+    .btn_mua_hang {
+        margin: auto;
+        display: block;
+    }
+}

@@ -1,6 +1,6 @@
 <?php
 
-namespace session_and_cookie\exercise;
+namespace session_and_cookie\app;
 
 class Session
 {
@@ -141,62 +141,3 @@ class Session
 
     }
 }
-
-$_SESSION['user'] = 'Nguyen van son';
-$_SESSION['email'] = 'vanson297.nguyen@gmail.com';
-$_SESSION['gender'] = 'boy';
-$number = [2,9,0,7,1,9,9,5];
-$_SESSION['number'] = $number;
-$_SESSION['test'] = null;
-
-$allSession = Session::all();
-echo '<pre>';
-print_r($allSession);
-
-echo '<br>==========<br>';
-
-$get = Session::get('user');
-echo 'Get a session <br>';
-echo 'SESSION[\'user\']: ' . $get;
-
-echo '<br>==========<br>';
-echo 'Check item in session and value # null by using has()<br>';
-echo 'SESSION[\'user\']: ';
-var_dump(Session::has('user'));
-
-echo 'SESSION[\'test\']: ';
-var_dump(Session::has('test'));
-
-echo '<br>==========<br>';
-
-echo 'Check item in session and value = null or not by using exits()<br>';
-
-echo '<br>==========<br>';
-echo 'Store a session by put() <br>';
-Session::put('age', 23);
-echo '<pre>';
-print_r(Session::all());
-
-echo '<br>==========<br>';
-echo "push a new value to value session that is an array <br>";
-Session::push('number', 29);
-echo '<pre>';
-print_r(Session::all());
-
-echo '<br>==========<br>';
-echo 'Remove a item from session by fogot()<br>';
-Session::forget('age');
-echo '<pre>';
-print_r(Session::all());
-
-echo '<br>==========<br>';
-echo 'Remove a item from session by pull()<br>';
-Session::pull('gender', 'boy');
-echo '<pre>';
-print_r(Session::all());
-
-//echo '<br>==========<br>';
-//echo 'Remove all items from session <br>';
-//Session::flush();
-//echo '<pre>';
-//print_r(Session::all());

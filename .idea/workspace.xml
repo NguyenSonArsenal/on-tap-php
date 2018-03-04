@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9147231d-9fd6-46aa-bebf-890f80b5c2ea" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/oop/call_user_function/2.php" />
+      <change beforePath="$PROJECT_DIR$/oop/25.call_user_func.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/oop/autoload/Animal.php" afterPath="$PROJECT_DIR$/oop/autoload/Animal.php" />
+      <change beforePath="$PROJECT_DIR$/oop/autoload/Autoload.php" afterPath="$PROJECT_DIR$/oop/autoload/Autoload.php" />
+      <change beforePath="$PROJECT_DIR$/oop/autoload/Cow.php" afterPath="$PROJECT_DIR$/oop/autoload/xxx/Cow.php" />
+      <change beforePath="$PROJECT_DIR$/oop/autoload/Ruminant.php" afterPath="$PROJECT_DIR$/oop/autoload/Ruminant.php" />
+      <change beforePath="$PROJECT_DIR$/oop/autoload/test.php" afterPath="$PROJECT_DIR$/oop/autoload/test.php" />
+      <change beforePath="$PROJECT_DIR$/oop/name_space_demo/Person.php" afterPath="$PROJECT_DIR$/oop/people/Person.php" />
+      <change beforePath="$PROJECT_DIR$/oop/name_space_demo/test.php" afterPath="$PROJECT_DIR$/oop/people/test.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,28 +34,7 @@
     <favorites_list name="on-tap-php" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="campaign_construction.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/javascript/module_user/campaign_construction.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="268" column="41" lean-forward="true" selection-start-line="268" selection-start-column="41" selection-end-line="268" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="campaign_construction.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/javascript/module_user/dist/scss/campaign_construction.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -204,6 +191,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,42 +199,15 @@
               <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
               <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="module_user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="module_user" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="on-tap-php" type="b2602c69:ProjectViewProjectNode" />
-              <item name="on-tap-php" type="462c0819:PsiDirectoryNode" />
-              <item name="javascript" type="462c0819:PsiDirectoryNode" />
-              <item name="module_user" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -410,11 +371,12 @@
       <workItem from="1519287247489" duration="3000" />
       <workItem from="1519625268027" duration="970000" />
       <workItem from="1519626647874" duration="714000" />
+      <workItem from="1520003427204" duration="290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="657997000" />
+    <option name="totallyTimeSpent" value="658287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,7 +390,7 @@
   <component name="ToolWindowManager">
     <frame x="-31" y="21" width="1311" height="783" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28724217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28724217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -801,14 +763,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/module_user/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/module_user/index.html" />
     <entry file="file://$PROJECT_DIR$/javascript/module_user/dist/scss/campaign_construction.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -817,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/module_user/campaign_construction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="268" column="41" lean-forward="true" selection-start-line="268" selection-start-column="41" selection-end-line="268" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/module_user/campaign_construction.php" />
   </component>
 </project>
