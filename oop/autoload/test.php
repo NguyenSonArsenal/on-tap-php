@@ -1,11 +1,15 @@
 <?php
 
-// require 'Autoload.php';
+namespace oop\autoload;
 
-spl_autoload_register(function($class){
-    echo 1;
-    require_once $class . ".php";
-});
+require 'Autoload.php';
 
-$animal = new Cow();
-$animal->eats('grass');
+use oop\autoload\Autoload;
+use oop\autoload\xxx\Cow;
+use oop\people\Person;
+
+new Autoload();
+
+$animal = new Person();
+//$animal->eats('grass');
+echo $animal->getName();

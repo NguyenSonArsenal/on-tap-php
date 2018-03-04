@@ -1,5 +1,7 @@
 <?php
 
+namespace oop\autoload;
+
 class Animal
 {
     public function eats($food)

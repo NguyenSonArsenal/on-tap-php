@@ -1,6 +1,6 @@
 <?php
 
-namespace oop\name_space_demo;
+namespace oop\people;
 
 class Person
 {

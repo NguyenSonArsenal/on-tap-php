@@ -1,5 +1,7 @@
 <?php
 
+namespace oop\autoload;
+
 class Ruminant extends Animal
 {
     public function eats($food)

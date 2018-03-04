@@ -1,6 +1,6 @@
 <?php
 
-namespace oop\autoload;
+namespace oop\autoload\xxx;
 
 class Cow extends Ruminant
 {

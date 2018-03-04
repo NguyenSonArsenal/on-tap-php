@@ -2,7 +2,7 @@
 
 include 'Person.php';
 
-use \oop\name_space_demo\Person as Person;
+use \oop\people\Person as Person;
 
 $person = new Person();
 echo $person->getName();
