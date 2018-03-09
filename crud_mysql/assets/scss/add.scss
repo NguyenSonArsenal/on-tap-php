@@ -1,0 +1,18 @@
+.wrapper {
+    width: 35%;
+    margin: 0 auto;
+    border: 1px solid red;
+    .add_label {
+        text-align: center;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .form_add_hotel {
+        .form-group {
+            #show_errors {
+                //display: none;
+                color: red;
+            }
+        }
+    }
+}

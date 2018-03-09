@@ -1,0 +1,15 @@
+.wrapper {
+  width: 35%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.wrapper .add_label {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px 0;
+}
+.wrapper .form_add_hotel .form-group #show_errors {
+  color: red;
+}
+
+/*# sourceMappingURL=add.css.map */

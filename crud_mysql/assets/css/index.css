@@ -1,0 +1,45 @@
+.btn:focus {
+  outline: none !important;
+  border: none;
+}
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.wrapper .notification {
+  background: #df0067;
+  color: #fff;
+  font-weight: bold;
+}
+.wrapper .notification .notification_content {
+  display: inline-flex;
+  margin-left: 10px;
+}
+.wrapper .notification .notification_destroy {
+  display: inline-flex;
+  margin-right: 10px;
+  padding: 0px 6px;
+  border-radius: 4px;
+}
+.wrapper .notification .notification_destroy:hover {
+  cursor: pointer;
+}
+.wrapper .add_item .btn_add_item {
+  margin: 10px 0 15px 0;
+}
+.wrapper .table {
+  border: 1px solid #ddd;
+}
+.wrapper .table .tr .td_action {
+  display: inline-flex;
+}
+.wrapper .table .tr .td_action .btn {
+  display: inline-block;
+}
+.wrapper .table .tr .td_action .btn_edit {
+  margin-right: 3px;
+}
+
+/*# sourceMappingURL=index.css.map */
