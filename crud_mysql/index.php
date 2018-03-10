@@ -5,12 +5,16 @@ use crud_mysql\Library\Session;
 
 $message_add    = Session::flash('add');
 $message_delete = Session::flash('delete');
+$message_update = Session::flash('update');
 
 $count = 1;
 
 $sql = "SELECT * FROM hotel";
 
 $result = $conn->query($sql);
+
+if (!$result)
+    die('Some thing in wrong');
 
 ?>
 
@@ -41,6 +45,18 @@ $result = $conn->query($sql);
         <span class="notification_content pull-left"><?=$message_add?></span>
         <div class="clearfix"></div>
     </div>
+    <?php endif; ?>
+
+    <?php if (isset($message_update)): ?>
+        <div class="notification" id="notification">
+        <span class="notification_destroy pull-right"
+              id="notification_destroy"
+        >
+        x
+        </span>
+            <span class="notification_content pull-left"><?=$message_update?></span>
+            <div class="clearfix"></div>
+        </div>
     <?php endif; ?>
 
     <?php if (isset($message_delete)): ?>
@@ -75,7 +91,8 @@ $result = $conn->query($sql);
                     <td class="td"><?php echo $row['address'] ?></td>
                     <td class="td"><?php echo $row['star'] ?></td>
                     <td class="td td_action">
-                        <a href="edit.php" class="btn btn-info btn-xs btn_edit">Edit</a>
+                        <a href="edit.php?id=<?=$row['id']?>"
+                           class="btn btn-info btn-xs btn_edit">Edit</a>
                         <a href="delete.php?id=<?=$row['id']?>"
                            class="btn btn-danger btn-xs btn_delete"
                            onclick="return confirm('Are you sure?')"

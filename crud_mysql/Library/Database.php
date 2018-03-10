@@ -8,6 +8,8 @@ class Database
 {
     private $servername, $username, $password, $dbname;
     public $conn;
+    public $result;
+    public $error;
 
     const SERVERNAME = 'localhost';
     const USERNAME = 'root';
@@ -31,7 +33,19 @@ class Database
 
     function query($sql)
     {
-        return $this->conn->query($sql);
+        $this->result = $this->conn->query($sql);
+        return $this->result;
+    }
+
+    function num_rows()
+    {
+        return $this->result->num_rows;
+    }
+
+    function error()
+    {
+        $this->error = $this->conn->error;
+        return $this->error;
     }
 }
 
