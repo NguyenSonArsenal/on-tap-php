@@ -1,0 +1,10 @@
+.pagination {
+  float: right;
+}
+.pagination .pagination_link {
+  border: 1px solid;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+/*# sourceMappingURL=pagination.css.map */

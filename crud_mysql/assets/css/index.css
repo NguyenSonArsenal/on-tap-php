@@ -9,9 +9,10 @@
   margin-top: 10px;
 }
 .wrapper .notification {
-  background: #df0067;
+  background: #d9534f;
   color: #fff;
   font-weight: bold;
+  padding: 5px 0;
 }
 .wrapper .notification .notification_content {
   display: inline-flex;
@@ -21,10 +22,12 @@
   display: inline-flex;
   margin-right: 10px;
   padding: 0px 6px;
-  border-radius: 4px;
+  border: 1px solid;
 }
 .wrapper .notification .notification_destroy:hover {
   cursor: pointer;
+  background: #fefefe;
+  color: #d9534f;
 }
 .wrapper .add_item .btn_add_item {
   margin: 10px 0 15px 0;

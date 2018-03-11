@@ -2,20 +2,15 @@
 require './Autoload.php';
 
 use crud_mysql\Library\Session;
+use crud_mysql\App\Controllers\Pagination;
 
 $message_add    = Session::flash('add');
 $message_delete = Session::flash('delete');
 $message_update = Session::flash('update');
 
-$count = 1;
-
-$sql = "SELECT * FROM hotel";
-
-$result = $conn->query($sql);
-
-if (!$result)
-    die('Some thing in wrong');
-
+$currentPage    = Pagination::getCurrentPage();
+$totalRecords   = Pagination::setTotalRecords($conn, 'hotel');
+$recordOnPage   = Pagination::getRecordsEachPage($conn, 'hotel');
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +25,7 @@ if (!$result)
     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/pagination.css">
 
 </head>
 <body>
@@ -74,7 +70,6 @@ if (!$result)
     <div class="add_item">
         <a href="add.php" class="btn btn-primary pull-right btn_add_item" title="add hotel">Add</a>
     </div>
-    <div style="clear:both;"></div>
     <table class="table table-hover">
         <tr class="tr">
             <th class="th">STT</th>
@@ -83,25 +78,26 @@ if (!$result)
             <th class="th">Star</th>
             <th class="th">Action</th>
         </tr>
-        <?php if ($result->num_rows > 0): ?>
-            <?php while($row = $result->fetch_assoc()) : ?>
-                <tr class="tr">
-                    <td class="td"><?php echo $count++; ?></td>
-                    <td class="td"><?php echo $row['name'] ?></td>
-                    <td class="td"><?php echo $row['address'] ?></td>
-                    <td class="td"><?php echo $row['star'] ?></td>
-                    <td class="td td_action">
-                        <a href="edit.php?id=<?=$row['id']?>"
-                           class="btn btn-info btn-xs btn_edit">Edit</a>
-                        <a href="delete.php?id=<?=$row['id']?>"
-                           class="btn btn-danger btn-xs btn_delete"
-                           onclick="return confirm('Are you sure?')"
-                        >Delete</a>
-                    </td>
-                </tr>
-            <?php endwhile; ?>
-        <?php endif; ?>
+        <?php $stt = 1; ?>
+        <?php while($row = $recordOnPage->fetch_assoc()) : ?>
+            <tr class="tr">
+                <td class="td"><?php echo $stt++; ?></td>
+                <td class="td"><?php echo $row['name'] ?></td>
+                <td class="td"><?php echo $row['address'] ?></td>
+                <td class="td"><?php echo $row['star'] ?></td>
+                <td class="td td_action">
+                    <a href="edit.php?id=<?=$row['id']?>"
+                       class="btn btn-info btn-xs btn_edit">Edit</a>
+                    <a href="delete.php?page=<?=$currentPage?>&&id=<?=$row['id']?>"
+                       class="btn btn-danger btn-xs btn_delete"
+                       onclick="return confirm('Are you sure?')"
+                    >Delete</a>
+                </td>
+            </tr>
+        <?php endwhile; ?>
     </table>
+
+    <?php echo Pagination::render($totalRecords)?>
 
 </div>
 
@@ -110,7 +106,6 @@ if (!$result)
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        
         function removeMessageNotification() {
             var nodeWrapper = document.getElementsByClassName('wrapper')[0];
             var nodeRemoveNotification = document.getElementById('notification_destroy');
@@ -121,14 +116,8 @@ if (!$result)
                 })
             }
         }
-        
-        function deleteAHotel(id) {
-            
-        }
 
         removeMessageNotification();
-        
-
     });
 </script>
 
