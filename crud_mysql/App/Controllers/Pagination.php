@@ -50,24 +50,16 @@ class Pagination
 
         $from = ($currentPage-1)*self::LIMIT;
 
-        if ($from < $totalRecords)
-        {
-            $sql = "SELECT * FROM $table LIMIT $from, " . self::LIMIT;
-            $recordOnPage = $conn->query($sql);
+        $sql = "SELECT * FROM $table LIMIT $from, " . self::LIMIT;
+        $recordOnPage = $conn->query($sql);
 
-            return $recordOnPage;
-        }
-        else
-        {
-            header('Location: /Library/404.php');
-        }
+        return $recordOnPage;
     }
 
 
     public static function render($totalRecords)
     {
         self::$totalPage = ceil($totalRecords/self::LIMIT);
-
         Pagination::renderPaginationHtml(self::$totalPage);
     }
 

@@ -72,16 +72,13 @@ $recordOnPage   = Pagination::getRecordsEachPage($conn, 'hotel');
     </div>
     <table class="table table-hover">
         <tr class="tr">
-            <th class="th">STT</th>
             <th class="th">Name</th>
             <th class="th">Address</th>
             <th class="th">Star</th>
             <th class="th">Action</th>
         </tr>
-        <?php $stt = 1; ?>
         <?php while($row = $recordOnPage->fetch_assoc()) : ?>
             <tr class="tr">
-                <td class="td"><?php echo $stt++; ?></td>
                 <td class="td"><?php echo $row['name'] ?></td>
                 <td class="td"><?php echo $row['address'] ?></td>
                 <td class="td"><?php echo $row['star'] ?></td>
