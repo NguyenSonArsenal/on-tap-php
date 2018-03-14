@@ -5,20 +5,9 @@ require '../../../bootstrap/Autoload.php';
 // get all hobbies
 $sqlAllHobbies = "SELECT id, name FROM hobbies";
 $selectAllHobbies = $conn->query($sqlAllHobbies);
-
 //get list programs
 $sqlAllPrograms = "SELECT id, name FROM program";
 $selectAllPrograms = $conn->query($sqlAllPrograms);
-
-
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-
-    return $data;
-}
 
 $nameErr = $hobbiesErr = $programErr = "";
 $name = $hobbies = $program = "";
@@ -29,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if (empty($_POST['name']))
         $nameErr = 'Name is required';
     else
-        $name = test_input($_POST['name']);
+        $name = validate_input($_POST['name']);
 
     if (empty($_POST['hobbies']))
         $hobbiesErr = 'Hobbies is required';
@@ -45,20 +34,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         $program = $_POST['program'];
     }
 
-    $gender = test_input($_POST['gender']);
+    $gender = validate_input($_POST['gender']);
 
     if(sizeof($name) > 0 && $hobbies && $program)
     {
         $created_at = $update_at = date("Y-m-d H:i:s");
+
         $sql = "INSERT INTO user(name, gender, created_at)
                         VALUE ('$name', '$gender', '$created_at')";
-
         $query = $conn->query($sql);
 
         if ($query)
         {
             $last_id = $conn->getLastId();
-
         }
         else
         {
@@ -68,11 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         foreach ($hobbies as $hobbie_id)
         {
-            $sql = "INSERT INTO tag_user (tag_id, user_id, type, created_at)
-                             VALUE('$hobbie_id', '$last_id', '1', '$created_at')";
-
+            $sql = "INSERT INTO tag_user (tag_id, user_id, type)
+                             VALUE('$hobbie_id', '$last_id', '1')";
             $query = $conn->query($sql);
-
             if (!$query)
             {
                 echo "Error: " . $conn->error();
@@ -82,11 +68,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         foreach ($program as $program_id)
         {
-            $sql = "INSERT INTO tag_user (tag_id, user_id, type, created_at)
-                             VALUE('$program_id', '$last_id', '2', '$created_at')";
-
+            $sql = "INSERT INTO tag_user (tag_id, user_id, type)
+                             VALUE('$program_id', '$last_id', '2')";
             $query = $conn->query($sql);
-
             if (!$query)
             {
                 echo "Error: " . $conn->error();
@@ -115,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     <!-- select2 -->
     <link rel="stylesheet" href="/bower_components/select2/dist/css/select2.min.css">
 
-    <link rel="stylesheet" href="/assets/css/admin/user/index.css">
+    <link rel="stylesheet" href="/assets/css/admin/module/user/add.css">
 
 </head>
 <body>

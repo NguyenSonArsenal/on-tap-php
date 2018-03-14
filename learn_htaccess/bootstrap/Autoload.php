@@ -21,6 +21,11 @@ class Autoload
                echo 'File is not exits';
                 return false;
         });
+
+        // autoload file
+        foreach(glob(ROOT. "helper/*.php") as $helper){
+            require $helper;
+        }
     }
 }
 

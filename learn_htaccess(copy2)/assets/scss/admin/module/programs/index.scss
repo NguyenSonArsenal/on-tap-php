@@ -1,0 +1,70 @@
+.wrapper {
+    .content-wrapper {
+        .content {
+            .box {
+                .form-horizontal {
+                    padding-top: 10px;
+                    .box-body {
+                        .form-group {
+                            .col-md-3 {
+
+                            }
+                            .col-md-8 {
+                                .col-md-11 {
+                                    padding-left: 0;
+                                    .input-group {
+                                        width: 104%;
+                                    }
+                                    #input-add-domain {
+                                         display: none;
+                                        .input-group-addon {
+                                            background: #ccc;
+                                            width: 10%;
+                                            justify-content: center;
+                                            display: flex;
+                                            align-items: center;
+                                        }
+                                        .btn-process-domain {
+                                            display: inline-block;
+                                            position: absolute;
+                                            top: 0;
+                                            right: 10px;
+                                            z-index: 9;
+                                            height: 30px;
+                                            line-height: 30px;
+                                            .fa-check-circle {
+                                                color: green;
+                                            }
+                                            .fa-times-circle {
+                                                color: red;
+                                            }
+                                            .fa {
+                                                padding: 4px;
+                                                &:hover {
+                                                    background: rgba(204, 204, 204, 0.45);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .col-md-1 {
+                                    padding-right: 0;
+                                    >a {
+                                        >i {
+                                            font-size: 22px;
+                                            position: relative;
+                                            top: 5px;
+                                        }
+                                        &:hover {
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

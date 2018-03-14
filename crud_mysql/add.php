@@ -4,7 +4,7 @@ require './Autoload.php';
 
 use crud_mysql\Library\Session;
 
-function test_input($data)
+function validate_input($data)
 {
     $data = trim($data);
     $data = stripslashes($data);
@@ -18,27 +18,27 @@ $name = $address = "";
 $star = 1;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty(test_input($_POST['name'])))
+    if (empty(validate_input($_POST['name'])))
     {
         $nameErr = 'Name is required';
     }
     else
     {
-        $name = test_input($_POST['name']);
+        $name = validate_input($_POST['name']);
     }
 
-    if (empty(test_input($_POST['address'])))
+    if (empty(validate_input($_POST['address'])))
     {
         $addressErr = 'Address is required';
     }
     else
     {
-        $address = test_input($_POST['address']);
+        $address = validate_input($_POST['address']);
     }
 
-    $star = (int)(test_input($_POST['star']));
+    $star = (int)(validate_input($_POST['star']));
 
-    if (sizeof($name) > 0 && sizeof($address) > 0 )
+    if (sizeof($name) > 0 && sizeof($address) > 0)
     {
         $sql = "INSERT INTO hotel (name, address, star) 
                 VALUES ('$name', '$address', '$star')";
