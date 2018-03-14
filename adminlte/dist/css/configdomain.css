@@ -1,0 +1,50 @@
+.wrapper .content-wrapper .content .box .form-horizontal {
+  padding-top: 10px;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 {
+  padding-left: 0;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 .input-group {
+  width: 104%;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 #input-add-domain {
+  display: none;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 #input-add-domain .input-group-addon {
+  background: #ccc;
+  width: 10%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 #input-add-domain .btn-process-domain {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  z-index: 9;
+  height: 30px;
+  line-height: 30px;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 #input-add-domain .btn-process-domain .fa-check-circle {
+  color: green;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 #input-add-domain .btn-process-domain .fa-times-circle {
+  color: red;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 #input-add-domain .btn-process-domain .fa {
+  padding: 4px;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-11 #input-add-domain .btn-process-domain .fa:hover {
+  background: rgba(204, 204, 204, 0.45);
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-1 {
+  padding-right: 0;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-8 .col-md-1 > a > i {
+  font-size: 22px;
+  position: relative;
+  top: 5px;
+}
+
+/*# sourceMappingURL=configdomain.css.map */

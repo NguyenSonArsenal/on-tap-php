@@ -1,0 +1,495 @@
+/*
+    This file to style for include files
+*/
+
+
+// active li on sidebar
+.wrapper {
+    .main-sidebar {
+        .sidebar {
+            .sidebar-menu {
+                .menu-active {
+                    background: #1e282c;
+                }
+            }
+        }
+    }
+}
+
+//paginate page
+.paginate_page {
+    margin: 20px 10px 15px 10px;
+    .dataTables_info {
+        position: relative;
+        top: 6px;
+    }
+    .dataTables_paginate {
+        .pagination {
+            margin: 0px;
+            position: relative;
+            left: -23px;
+        }
+    }
+}
+
+// Search and filter
+.box-header {
+    .search-filter {
+        display: inline-flex;
+        .advance_filter {
+            position: relative;
+            top: 6px;
+            > a {
+                &:hover {
+                    color: #f66f00;
+                }
+            }
+        }
+        .marginRight {
+            margin-right: 15px;
+        }
+    }
+}
+
+/*Modal add product*/
+
+$heightPreviewImage : 200px;
+$widthPreviewImage : 150px;
+
+.wrapper{
+    #modal-add-product{
+        .modal-dialog{
+            .modal-content{
+                background-color: #fafafa;
+                .modal-body{
+                    .row {
+                        .col-md-4 {
+                            text-align: center;
+                            padding-top: 50px;
+                            .preview-image {
+                                border: 1px dashed #d2d6de;
+                                margin-top: 10px;
+                                padding-top: 60px;
+                                height: $heightPreviewImage;
+                                width: $widthPreviewImage;
+                                .center {
+                                    color: #9e9e9e;
+                                }
+                                &:hover {
+                                    border: 1px solid #3c8dbc;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .col-md-8 {
+                            label {
+                                position: relative;
+                                top: 8px;
+                            }
+                            input {
+                                border: none;
+                                border-bottom: 1px solid #9e9e9e;
+                                background-color: #fafafa;
+                                padding: 1px;
+                            }
+                            input:focus {
+                                border-bottom: 1px solid #3c8dbc;
+                                box-shadow: none;
+                            }
+                            select {
+                                background: #fafafa;
+                                border: 1px solid #9e9e9e;
+                                option {
+                                    border: 1px solid #9e9e9e;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*Modal edit product*/
+.wrapper{
+    #modal-edit-product{
+        .modal-dialog{
+            .modal-content{
+                background-color: #fafafa;
+                .modal-body{
+                    .row {
+                        .col-md-4 {
+                            text-align: center;
+                            padding-top: 50px;
+                            .preview-image {
+                                border: 1px dashed #d2d6de;
+                                margin-top: 10px;
+                                height: $heightPreviewImage;
+                                >img {
+                                    height: $heightPreviewImage - 2px;
+                                    width: $widthPreviewImage - 2px;
+                                }
+                                .center {
+                                    color: #9e9e9e;
+                                }
+                                &:hover {
+                                    border: 1px solid #3c8dbc;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .col-md-8 {
+                            label {
+                                position: relative;
+                                top: 8px;
+                            }
+                            input {
+                                border: none;
+                                border-bottom: 1px solid #9e9e9e;
+                                background-color: #fafafa;
+                                padding: 1px;
+                            }
+                            input:focus {
+                                border-bottom: 1px solid #3c8dbc;
+                                box-shadow: none;
+                            }
+                            select {
+                                background: #fafafa;
+                                border: 1px solid #9e9e9e;
+                                option {
+                                    border: 1px solid #9e9e9e;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Modal add customer goal*/
+.wrapper{
+    #modal-add-customer-goal{
+        .modal-dialog{
+            .modal-content{
+                background-color: #fafafa;
+                .modal-body{
+                    position: relative;
+                    bottom: 11px;
+                    .form-group {
+                        line-height: 30px;
+                        >label {
+                            margin-bottom: 0;
+                        }
+                        .lbl-fix {
+                            position: relative;
+                            top:9px;
+                        }
+                        >input {
+                            border: none;
+                            border-bottom: 1px solid #9e9e9e;
+                            background-color: #fafafa;
+                        }
+                        input:focus {
+                            border-bottom: 1px solid #3c8dbc;
+                            box-shadow: none;
+                        }
+
+                        .radio-inline input[type=radio] {
+                            position: relative;
+                            top: 2px;
+                            margin-right: 6px;
+                        }
+
+                        .slider {
+                            position: relative;
+                            top: 10px;
+                            .noUi-horizontal {
+                                padding: 1px 12px;
+                            }
+                        }
+                    }
+                    .form-margin {
+                        margin-bottom: 25px;
+                    }
+                    .div_select2 {
+                        line-height: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// lib select2 to choose address
+.select2 {
+    .selection {
+        .select2-selection--multiple {
+            border: none;
+            background: #fafafa;
+            border-bottom: 1px solid #9e9e9e;
+            border-radius: 0;
+            .select2-selection__rendered {
+                .select2-selection__choice {
+                    background-color: #367fa9;
+                    border-color: #367fa9;
+                    padding: 1px 10px;
+                    color: #fff;
+                    .select2-selection__choice__remove {
+                        color: white;
+                        padding-right: 2px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// set bg for noUi lib
+// noUI to choose age
+.noUi-connect {
+    background-color: #3c8dbc;
+}
+
+.noUi-handle.noUi-handle-lower {
+    outline: none;
+}
+
+.noUi-handle.noUi-handle-upper {
+    outline: none;
+}
+
+.noUi-horizontal .noUi-handle {
+    top: -12px;
+}
+
+.noUi-tooltip {
+    padding: 2px;
+}
+
+.noUi-horizontal {
+    height: 8px;
+}
+
+/*End modal add customer goal*/
+
+
+
+/*Modal add customer_history*/
+.wrapper{
+    #modal_history_customer_goal{
+        .modal-dialog{
+            width: 80%;
+            .modal-content{
+                .modal-body {
+                    .box-body {
+                        .table-responsive {
+                            .table {
+                                >thead {
+                                    >tr {
+                                        >th {
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                                >tbody {
+                                    > tr {
+                                        > td {
+                                            text-align: center;
+                                            vertical-align: middle;
+                                            .text-data {
+                                                text-align: left;
+                                                >b {
+                                                    font-size: 16px;
+                                                }
+                                                >span {
+                                                    display: block;
+                                                    font-size: 11px;
+                                                    color: #212121;
+                                                    margin: 4px 0 -2px 0;
+                                                    font-weight: bold;
+                                                }
+                                                >small {
+                                                    font-size: 9px;
+                                                    > a {
+                                                        color: #33b5e5;
+                                                    }
+                                                }
+                                            }
+                                            > a {
+                                                .color-black {
+                                                    color: #333;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Modal add channel*/
+.wrapper{
+    #modal-add-channel{
+        .modal-dialog{
+            .modal-content{
+                background-color: #fafafa;
+                .modal-body{
+                    .col-md-4 {
+                        text-align: center;
+                        padding-top: 50px;
+                        .preview-image {
+                            display: inline-block;
+                            margin-top: 10px;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .col-md-8 {
+                        label {
+                            position: relative;
+                            top: 8px;
+                            >strong {
+                                color:red;
+                            }
+                        }
+                        input {
+                            border: none;
+                            border-bottom: 1px solid #9e9e9e;
+                            background-color: #fafafa;
+                            padding: 1px;
+                        }
+                        input:focus {
+                            border-bottom: 1px solid #3c8dbc;
+                            box-shadow: none;
+                        }
+                        select {
+                            background: #fafafa;
+                            border: 1px solid #9e9e9e;
+                            option {
+                                border: 1px solid #9e9e9e;
+                            }
+                        }
+                        .form-inline {
+                            margin: 30px 0px 10px 0;
+                            >label {
+                                position: relative;
+                                top:0px;
+                                margin-right: 25px;
+                            }
+                            .radio-inline {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*Modal edit campain */
+.wrapper{
+    #modal-edit-campain {
+        .modal-dialog{
+            .modal-content{
+                background-color: #fafafa;
+                .modal-body{
+                    position: relative;
+                    bottom: 11px;
+                    .form-group {
+                        line-height: 30px;
+                        >label {
+                            margin-bottom: 0;
+                        }
+                        .lbl-fix {
+                            position: relative;
+                            top:9px;
+                        }
+                        >input {
+                            border: none;
+                            border-bottom: 1px solid #9e9e9e;
+                            background-color: #fafafa;
+                        }
+                        input:focus {
+                            border-bottom: 1px solid #3c8dbc;
+                            box-shadow: none;
+                        }
+
+                        .radio-inline input[type=radio] {
+                            position: relative;
+                            top: 2px;
+                            margin-right: 6px;
+                        }
+
+                        .slider {
+                            position: relative;
+                            top: 10px;
+                            .noUi-horizontal {
+                                padding: 1px 12px;
+                            }
+                        }
+                    }
+                    .form-margin {
+                        margin-bottom: 25px;
+                    }
+                    .div_select2 {
+                        line-height: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Modal detail campain */
+.wrapper {
+    #modal-detail-campain {
+        .modal-dialog{
+            .modal-content{
+                .modal-body {
+                    >table {
+                        >tbody {
+                            >tr {
+                                margin: 10px 0;
+                                display: block;
+                                .lbl {
+                                    text-align: right;
+                                    padding-right: 10px;
+                                    width: 200px;
+                                }
+                                .info {
+                                    width: 300px;
+                                    >label {
+                                        font-weight:normal
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+

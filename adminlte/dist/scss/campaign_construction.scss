@@ -1,0 +1,43 @@
+.wrapper {
+    .content-wrapper {
+        .content {
+            .box {
+                .form-horizontal {
+                    .box-body {
+                        .form-group {
+                            margin-bottom: 25px;
+                            .col-md-9 {
+                                .item-channel {
+                                    .fix-col {
+                                        margin-bottom: 10px;
+                                        padding-left: 0;
+                                    }
+                                }
+                                .fix-col {
+                                    margin-bottom: 10px;
+                                    padding-left: 0;
+                                    >span {
+                                        display: inline-block;
+                                        margin-right: 15px;
+                                        position: relative;
+                                        top: 5px;
+                                    }
+                                    .col-md-4 {
+                                        padding-right: 0;
+                                        margin-right: 3px;
+                                    }
+                                    .paddingLeft0 {
+                                        padding-left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    #manage-embedded-code, #seo-google {
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

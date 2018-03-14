@@ -1,0 +1,29 @@
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group {
+  margin-bottom: 25px;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-9 .item-channel .fix-col {
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-9 .fix-col {
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-9 .fix-col > span {
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+  top: 5px;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-9 .fix-col .col-md-4 {
+  padding-right: 0;
+  margin-right: 3px;
+}
+.wrapper .content-wrapper .content .box .form-horizontal .box-body .form-group .col-md-9 .fix-col .paddingLeft0 {
+  padding-left: 0;
+}
+.wrapper .content-wrapper .content .box .form-horizontal #manage-embedded-code, .wrapper .content-wrapper .content .box .form-horizontal #seo-google {
+  padding-top: 10px;
+}
+
+/*# sourceMappingURL=campaign_construction.css.map */

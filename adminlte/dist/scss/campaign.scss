@@ -1,0 +1,41 @@
+
+.wrapper {
+    .content-wrapper {
+        .content {
+            .row {
+                .col-md-12 {
+                    .box {
+                        .box-header {
+                            .search-filter {
+                                .input-group {
+                                    width: 200px;
+                                }
+                            }
+                        }
+                        .box-body {
+                            .table-responsive {
+                                .table {
+                                    >thead {
+                                        >tr {
+                                            >th {
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                    > tbody {
+                                        > tr {
+                                            > td {
+                                                vertical-align: middle;
+                                                text-align: center;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

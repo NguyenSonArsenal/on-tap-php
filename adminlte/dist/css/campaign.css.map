@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AASgC,+FAAa;EACT,KAAK,EAAE,KAAK;;AASJ,4GAAI;EACA,UAAU,EAAE,MAAM;;AAMtB,4GAAK;EACD,cAAc,EAAE,MAAM;EACtB,UAAU,EAAE,MAAM",
+"sources": ["../scss/campaign.scss"],
+"names": [],
+"file": "campaign.css"
+}

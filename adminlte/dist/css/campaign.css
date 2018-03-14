@@ -1,0 +1,12 @@
+.wrapper .content-wrapper .content .row .col-md-12 .box .box-header .search-filter .input-group {
+  width: 200px;
+}
+.wrapper .content-wrapper .content .row .col-md-12 .box .box-body .table-responsive .table > thead > tr > th {
+  text-align: center;
+}
+.wrapper .content-wrapper .content .row .col-md-12 .box .box-body .table-responsive .table > tbody > tr > td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*# sourceMappingURL=campaign.css.map */
