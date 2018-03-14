@@ -2,6 +2,7 @@
 
 require './Autoload.php';
 use crud_mysql\Library\Session;
+use crud_mysql\App\Controllers\Pagination;
 
 function test_input($data)
 {
@@ -15,6 +16,9 @@ function test_input($data)
 $nameErr = $addressErr = "";
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
+$currentPage    = Pagination::getCurrentPage();
+
+echo $id;
 
 $sql = "SELECT * FROM hotel WHERE id = $id";
 
@@ -68,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result)
         {
-            header('Location: index.php');
+            header("Location: index.php?page=$currentPage");
             Session::flash('update', 'Update successfully');
         }
         else

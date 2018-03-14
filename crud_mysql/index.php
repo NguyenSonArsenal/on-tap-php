@@ -83,7 +83,7 @@ $recordOnPage   = Pagination::getRecordsEachPage($conn, 'hotel');
                 <td class="td"><?php echo $row['address'] ?></td>
                 <td class="td"><?php echo $row['star'] ?></td>
                 <td class="td td_action">
-                    <a href="edit.php?id=<?=$row['id']?>"
+                    <a href="edit.php?alias=<?=$row['name']?>&&id=<?=$row['id']?>&&page=<?=$currentPage?>"
                        class="btn btn-info btn-xs btn_edit">Edit</a>
                     <a href="delete.php?page=<?=$currentPage?>&&id=<?=$row['id']?>"
                        class="btn btn-danger btn-xs btn_delete"

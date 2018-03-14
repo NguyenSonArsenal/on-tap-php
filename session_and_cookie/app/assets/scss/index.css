@@ -1,5 +1,29 @@
 .wrapper {
-  border: 1px solid red;
+  margin: auto;
+  margin-top: 20px;
+  width: 35%;
+  border: 1px solid green;
+  padding: 5px;
+  -webkit-box-shadow: 0px 0px 15px 0px #D6D6D6;
+  font-size: 14px;
+}
+.wrapper .link_login {
+  float: right;
+}
+.wrapper .show_img {
+  width: 200px;
+  margin: 10px auto;
+}
+.wrapper .show_img > img {
+  width: 100%;
+}
+.wrapper .show_img:hover {
+  border: 1px solid green;
+  cursor: pointer;
+}
+.wrapper .btn_mua_hang {
+  margin: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=index.css.map */

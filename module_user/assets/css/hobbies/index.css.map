@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACL,MAAM,EAAE,MAAM;EACd,MAAM,EAAE,cAAc",
+"sources": ["../../scss/hobbies/index.scss"],
+"names": [],
+"file": "index.css"
+}
