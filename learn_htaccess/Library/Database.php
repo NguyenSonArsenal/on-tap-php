@@ -2,10 +2,10 @@
 namespace Library;
 
 use mysqli;
+use Exception;
 
 class Database
 {
-    private $servername, $username, $password, $dbname;
     public $conn;
     public $result;
     public $error;
@@ -15,14 +15,11 @@ class Database
     const PASSWORD = '';
     const DBNAME = 'module_user';
 
+    private $sql = '';
+
     function __construct()
     {
-        $this->servername  = Database::SERVERNAME;
-        $this->username    = Database::USERNAME;
-        $this->password    = Database::PASSWORD;
-        $this->dbname      = Database::DBNAME;
-
-        $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+        $this->conn = new mysqli(self::SERVERNAME, self::USERNAME, self::PASSWORD, self::DBNAME);
 
         if ($this->conn->connect_error)
             die("Connection failed: " . $this->conn->connect_error);
@@ -30,26 +27,69 @@ class Database
         return $this->conn;
     }
 
-    function query($sql)
+    public static function query($sql)
     {
-        $this->result = $this->conn->query($sql);
-        return $this->result;
+        $self = new self();
+
+        // $self->sql = $sql;
+
+        $self->result = $self->conn->query($sql);
+
+//        var_dump($self->result->fetch_row());
+//        die();
+
+        if ($self->result && $self->result->num_rows > 0)
+        {
+            return $self;
+        }
+        else if ($self->result && $self->result->num_rows == 0)
+        {
+            echo "Record is not exits";
+            die();
+        }
+        else{
+            die('Error: ' . mysqli_error($self->conn));
+            throw new Exception(mysqli_error($self->conn));
+        }
+
     }
 
-    function num_rows()
+    public function toSql()
     {
-        return $this->result->num_rows;
+        return $this->sql;
     }
 
-    function error()
+    public function count()
+    {
+        if (is_object($this->result))
+        {
+            return ($this->result->fetch_row())[0]; // ???
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public function error()
     {
         $this->error = $this->conn->error;
         return $this->error;
     }
 
-    function getLastId()
+    public function getLastId()
     {
         return $this->conn->insert_id;
+    }
+
+    public function fetchAll()
+    {
+        $result = [];
+        while($row = mysqli_fetch_assoc($this->result))
+        {
+            array_push($result, $row);
+        }
+        return $result;
     }
 }
 

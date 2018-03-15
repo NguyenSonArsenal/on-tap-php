@@ -1,0 +1,85 @@
+.wrapper {
+    font-weight: normal;
+    .navbar {
+        background: #2e85be;
+        .title {
+            color: #fff;
+            font-size: 18px;
+            &:hover {
+                color: #5e5e5e;
+                background-color: transparent;
+                cursor: pointer;
+            }
+        }
+    }
+    .page_wrapper {
+        display: flex;
+        .sidebar {
+            background: #222d32;
+            width: 250px;
+            .list_group_item {
+                .link {
+                    padding: 20px;
+                    display: block;
+                    color: #fff;
+                    text-decoration: none;
+                    &:hover {
+                        color: #e43;
+                    }
+                }
+                &:hover {
+                    background: #1e282c;
+                }
+            }
+            .active {
+                background: #1e282c;
+            }
+        }
+        .main {
+            width: 100%;
+            background: #ebeff5;
+            padding: 0 100px;
+            .main_head {
+                padding: 30px 0px 5px 0px;
+                .title {
+                    font-size: 24px;
+                }
+            }
+
+            .main_content {
+                border-top: 3px solid #3c8dbc;
+                border-radius: 3px;
+                padding-top: 20px;
+                // index.php
+                .table {
+                    border: 1px solid #ccc;
+                    background: #fff;
+                    .control {
+                        .tr {
+                            >td, th {
+                                padding: 7px 14px;
+                            }
+                            .text_right {
+                                text-align: right;
+                                .link_action {
+                                    padding: 0px 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // add.php
+                .form {
+                    .form-group {
+                        margin-bottom: 15px;
+                        .error {
+                            color: #e43;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

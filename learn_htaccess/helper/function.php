@@ -1,19 +1,39 @@
 <?php
 
-function asset($file)
+if (!function_exists('asset'))
 {
-    return base_url().'/'.ltrim($file, '/');
+    function asset($file)
+    {
+        return base_url() . '/' . ltrim($file, '/');
+    }
 }
 
-function base_url()
+
+if (!function_exists('base_url'))
 {
-    return 'http://final.php';
+    function base_url()
+    {
+        return 'http://final.php';
+    }
 }
 
-function validate_input($data)
+
+if (!function_exists('validate_input'))
 {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
+    function validate_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+}
+
+
+if (!function_exists('redirect'))
+{
+    function redirect($param)
+    {
+        return header("Location: $param.php");
+    }
 }

@@ -1,0 +1,74 @@
+.wrapper {
+  font-weight: normal;
+}
+.wrapper .navbar {
+  background: #2e85be;
+}
+.wrapper .navbar .title {
+  color: #fff;
+  font-size: 18px;
+}
+.wrapper .navbar .title:hover {
+  color: #5e5e5e;
+  background-color: transparent;
+  cursor: pointer;
+}
+.wrapper .page_wrapper {
+  display: flex;
+}
+.wrapper .page_wrapper .sidebar {
+  background: #222d32;
+  width: 250px;
+}
+.wrapper .page_wrapper .sidebar .list_group_item .link {
+  padding: 20px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.wrapper .page_wrapper .sidebar .list_group_item .link:hover {
+  color: #e43;
+}
+.wrapper .page_wrapper .sidebar .list_group_item:hover {
+  background: #1e282c;
+}
+.wrapper .page_wrapper .sidebar .active {
+  background: #1e282c;
+}
+.wrapper .page_wrapper .main {
+  width: 100%;
+  background: #ebeff5;
+  padding: 0 100px;
+}
+.wrapper .page_wrapper .main .main_head {
+  padding: 30px 0px 5px 0px;
+}
+.wrapper .page_wrapper .main .main_head .title {
+  font-size: 24px;
+}
+.wrapper .page_wrapper .main .main_content {
+  border-top: 3px solid #3c8dbc;
+  border-radius: 3px;
+  padding-top: 20px;
+}
+.wrapper .page_wrapper .main .main_content .table {
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.wrapper .page_wrapper .main .main_content .table .control .tr > td, .wrapper .page_wrapper .main .main_content .table .control .tr th {
+  padding: 7px 14px;
+}
+.wrapper .page_wrapper .main .main_content .table .control .tr .text_right {
+  text-align: right;
+}
+.wrapper .page_wrapper .main .main_content .table .control .tr .text_right .link_action {
+  padding: 0px 5px;
+}
+.wrapper .page_wrapper .main .main_content .form .form-group {
+  margin-bottom: 15px;
+}
+.wrapper .page_wrapper .main .main_content .form .form-group .error {
+  color: #e43;
+}
+
+/*# sourceMappingURL=hobbies.css.map */

@@ -2,9 +2,6 @@
 
 session_start();
 
-use Library\Database;
-use Library\Session;
-
 define('ROOT', $_SERVER['DOCUMENT_ROOT']);
 
 class Autoload
@@ -30,5 +27,3 @@ class Autoload
 }
 
 new Autoload();
-$conn = new Database(Database::SERVERNAME, Database::USERNAME, Database::PASSWORD, Database::DBNAME);
-//new Session();
