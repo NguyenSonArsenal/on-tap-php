@@ -18,9 +18,9 @@ if (!function_exists('base_url'))
 }
 
 
-if (!function_exists('validate_input'))
+if (!function_exists('clear_input'))
 {
-    function validate_input($data)
+    function clear_input($data)
     {
         $data = trim($data);
         $data = stripslashes($data);
@@ -34,6 +34,8 @@ if (!function_exists('redirect'))
 {
     function redirect($param)
     {
+        if (strpos($param, '?'))
+            return header("Location: $param");
         return header("Location: $param.php");
     }
 }

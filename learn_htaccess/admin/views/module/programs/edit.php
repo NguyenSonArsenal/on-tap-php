@@ -3,27 +3,19 @@
 require '../../../../bootstrap/Autoload.php';
 use admin\Controllers\ProgramController;
 
-$id = isset($_GET['id']) ? (int)$_GET['id'] : '';
+$listPrograms = ProgramController::findOneById();
 
-$selectProgram = ProgramController::selectById($id);
-
-$program = $selectProgram[0]['name'];
+if ($listPrograms)
+    $program = $listPrograms[0]['name'];
+else
+{
+    die('404.php');
+}
 
 // validate
 $errors = [];
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-    $program = isset($_POST['program']) ? validate_input($_POST['program']) : '';
-
-    if ($program == '')
-        $errors['hobbies'] = 'Hobbies is required';
-
-    if (empty($errors))
-    {
-        ProgramController::update($id, $program);
-    }
-}
+$errors = ProgramController::update();
 
 ?>
 

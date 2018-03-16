@@ -9,6 +9,6 @@
         <a class="link" href="<?=asset('admin/views/module/hobbies')?>">Hobbies</a>
     </div>
     <div class="list_group_item">
-        <a class="link" href="<?=asset('admin/views/module/program')?>">Program</a>
+        <a class="link" href="<?=asset('admin/views/module/programs')?>">Program</a>
     </div>
 </div>

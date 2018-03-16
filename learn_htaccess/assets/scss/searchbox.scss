@@ -1,0 +1,12 @@
+.searchbox {
+    margin-bottom: 20px;
+    .form-inline {
+        .form-control {
+            border-radius: 0;
+        }
+        .btn {
+            border-radius: 0;
+            padding: 7px 10px;
+        }
+    }
+}

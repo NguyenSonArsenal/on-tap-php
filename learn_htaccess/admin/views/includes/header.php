@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="<?= asset('/admin/views/assets/css/hobbies.css') ?>">
     <link rel="stylesheet" href="<?= asset('/assets/css/pagination.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/assets/css/searchbox.css') ?>">
 
 </head>
 <body>

@@ -7,6 +7,7 @@ use Library\Pagination;
 
 $programC = new ProgramController;
 $programs = $programC->listProgram();
+//$search = $programC->search();
 
 $message_add    = Session::flash('add');
 $message_update = Session::flash('update');
@@ -39,23 +40,32 @@ $message_delete = Session::flash('delete');
             </div>
 
             <div class="main_content">
+
+                <?php require '../../includes/searchbox.php';?>
+
+                <?php if($programs['keysearch'] && $programs['total'] == 0) : ?>
+                    <p>Not found</p>
+                <?php endif ; ?>
+
                 <table class="table table-hover">
                     <thead class="control">
-                    <tr class="tr">
-                        <th class="td">#</th>
-                        <th style="width: 80%">Programs</th>
-                        <th class="text_right">Action</th>
-                    </tr>
+                        <tr class="tr">
+                            <th class="td">#</th>
+                            <th style="width: 80%">Programs</th>
+                            <th class="text_right">Action</th>
+                        </tr>
                     </thead>
-                    <tbody class="control">
+
+                    <tbody class="control list_program">
+
                     <?php $stt = 1;?>
+
                     <?php foreach ($programs['items'] as $program) : ?>
-                        <?php $program ?>
                         <tr class="tr">
                             <td><?=$stt++?></td>
                             <td><?=$program['name']?></td>
                             <td class="text_right">
-                                <a href="edit.php?id=<?=$program['id']?>"
+                                <a href="edit.php?id=<?=$program['id']?>&page=<?=$programs['current_page']?>"
                                    class="link_action link_edit btn btn-info">
                                     <i class="fa fa-edit"></i>
                                 </a>
@@ -67,12 +77,16 @@ $message_delete = Session::flash('delete');
                                 </a>
                             </td>
                         </tr>
+
                     <?php endforeach; ?>
+
                     </tbody>
+
+
                 </table>
             </div>
 
-            <?php Pagination::render($programs); ?>
+            <?php echo Pagination::renderLikeGoogle($programs); ?>
 
         </div>
 
@@ -81,4 +95,6 @@ $message_delete = Session::flash('delete');
 </div>
 
 <?php require '../../includes/footer.php';?>
+
+
 

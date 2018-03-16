@@ -3,22 +3,7 @@
 require '../../../../bootstrap/Autoload.php';
 use admin\Controllers\ProgramController;
 
-// validate
-$errors = [];
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-
-    $program = isset($_POST['program']) ? validate_input($_POST['program']) : '';
-
-    if ($program == '')
-        $errors['program'] = 'Program is required';
-
-    if (empty($errors))
-    {
-        ProgramController::insert($program);
-    }
-}
+$errors = ProgramController::insert();
 
 ?>
 

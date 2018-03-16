@@ -11,34 +11,75 @@ class ProgramController extends Controller
     public function __construct()
     {
         $this->db = new Database();
+
+
     }
 
-    public static function insert($value)
+    public static function insert()
     {
-        $sql = "INSERT INTO program (name) VALUE ('$value')";
-        $query = Database::query($sql);
+        $errors = [];
 
-        Session::flash('add', 'add successfully');
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $program = isset($_POST['program']) ? clear_input($_POST['program']) : '';
 
-        return redirect('index');
+            if ($program == '')
+                $errors['program'] = 'Program is required';
+
+            if (empty($errors))
+            {
+                $sql = "INSERT INTO program (name) VALUE ('$program')";
+
+                $query = Database::query($sql);
+
+                Session::flash('add', 'add successfully');
+
+                return redirect('index');
+            }
+            else
+            {
+                return $errors;
+            }
+        }
     }
 
-    public static function update($id, $value)
+    public static function update()
     {
-        $sql = "UPDATE program SET name = '$value' WHERE id = $id ";
+        $errors = [];
 
-        $query = Database::query($sql);
+        $id = isset($_GET['id']) ? clear_input((int)($_GET['id'])) : '';
+        $page = isset($_GET['page']) ? clear_input((int)($_GET['page'])) : '';
 
-        var_dump($query);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $program = isset($_POST['program']) ? clear_input($_POST['program']) : '';
 
-        Session::flash('update', 'update successfully');
+            if ($program == '')
+                $errors['hobbies'] = 'Hobbies is required';
 
-        return redirect('index');
+            if (empty($errors))
+            {
+                $sql = "UPDATE program SET name = '$program' WHERE id = $id";
+
+                $query = Database::query($sql);
+
+                Session::flash('update', 'update successfully');
+
+                return redirect("index.php?page=$page");
+            }
+            else
+            {
+                return $errors;
+            }
+        }
     }
 
-    public static function delete($id)
+    public static function delete()
     {
+        $id = isset($_GET['id']) ? (int)$_GET['id'] : -1;
+
         $sql = "DELETE FROM program WHERE id = $id";
+
         $query = Database::query($sql);
 
         Session::flash('delete', 'Delete successfully');
@@ -49,12 +90,16 @@ class ProgramController extends Controller
     public static function selectAll()
     {
         $sql = "SELECT * FROM program ORDER BY id desc";
+
         $listAllprogram = Database::query($sql);
+
         return $listAllprogram->fetchAll();
     }
 
-    public static function selectById($id)
+    public static function findOneById()
     {
+        $id = isset($_GET['id']) ? (int)$_GET['id'] : -1;
+
         $sql = "SELECT * FROM program WHERE id = $id";
 
         $query = Database::query($sql);
@@ -64,15 +109,24 @@ class ProgramController extends Controller
 
     public function listProgram()
     {
+        $where = '';
+
+        $search = isset($_GET['search']) ? $_GET['search'] : '';
+
         $page  = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
         $limit = 2;
 
         $from = ($page -1 )*$limit;
 
-        $sql = "SELECT * FROM program ORDER BY id DESC LIMIT $from, $limit";
+        if ($search != '')
+        {
+            $where .= "WHERE name LIKE '%$search%'";
+        }
 
-        $countSql = "SELECT count(*) FROM program";
+        $sql = "SELECT * FROM program " . $where . " ORDER BY id DESC LIMIT $from, $limit";
+
+        $countSql = "SELECT count(*) FROM program " . $where;
 
         $result = $this->db->query($sql);
 
@@ -86,6 +140,7 @@ class ProgramController extends Controller
             'current_page'  =>  $page,
             'limit'         =>  $limit,
             'total'         =>  $resultCount,
+            'keysearch'     =>  $search
         ];
     }
 }

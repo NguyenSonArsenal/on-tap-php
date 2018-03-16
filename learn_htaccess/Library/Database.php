@@ -31,24 +31,13 @@ class Database
     {
         $self = new self();
 
-        // $self->sql = $sql;
-
         $self->result = $self->conn->query($sql);
 
-//        var_dump($self->result->fetch_row());
-//        die();
-
-        if ($self->result && $self->result->num_rows > 0)
+        if ($self->result)
         {
             return $self;
         }
-        else if ($self->result && $self->result->num_rows == 0)
-        {
-            echo "Record is not exits";
-            die();
-        }
         else{
-            die('Error: ' . mysqli_error($self->conn));
             throw new Exception(mysqli_error($self->conn));
         }
 

@@ -1,0 +1,12 @@
+.searchbox {
+  margin-bottom: 20px;
+}
+.searchbox .form-inline .form-control {
+  border-radius: 0;
+}
+.searchbox .form-inline .btn {
+  border-radius: 0;
+  padding: 7px 10px;
+}
+
+/*# sourceMappingURL=searchbox.css.map */
