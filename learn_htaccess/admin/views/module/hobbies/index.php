@@ -8,6 +8,9 @@ use Library\Pagination;
 $hobbiesC = new HobbiesController;
 $hobbies = $hobbiesC->listHobbies();
 
+if ($hobbies['items'])
+    $hobby = $hobbies['items'];
+
 ?>
 
 <?php require '../../includes/header.php';?>
@@ -39,43 +42,60 @@ $hobbies = $hobbiesC->listHobbies();
 
                 <?php require '../../includes/searchbox.php';?>
 
-                <?php if($hobbies['keysearch'] && $hobbies['total'] == 0) : ?>
+                <?php if($hobbies['keysearch'] && $hobbies['total'] == 0)  : ?>
                     <p>Not found</p>
                 <?php endif ; ?>
 
                 <table class="table table-hover">
                     <thead class="control">
                         <tr class="tr">
-                            <th class="td">#</th>
-                            <th style="width: 80%">Hobbies</th>
-                            <th class="text_right">Action</th>
+                            <th class="td" width="10%">#</th>
+                            <th style="width: 40%">Hobbies</th>
+                            <?php if(isset($hobby[0]['count_user'])) : ?>
+                                <th style="width: 40%">Users_use</th>
+                            <?php endif ; ?>
+                            <th class="text_right" width="10%">Action</th>
                         </tr>
                     </thead>
+
                     <tbody class="control">
-                    <?php $stt = 1;?>
-                    <?php foreach ($hobbies['items'] as $hobby) : ?>
-                        <tr class="tr">
-                            <td><?=$stt++?></td>
-                            <td><?=$hobby['name']?></td>
-                            <td class="text_right">
-                                <a href="edit.php?id=<?=$hobby['id']?>&page=<?=$hobbies['current_page']?>"
-                                   class="link_action link_edit btn btn-info">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a href="delete.php?id=<?=$hobby['id']?>&page=<?=$hobbies['current_page']?>"
-                                   class="link_action link_trash btn btn-danger"
-                                   onclick="return confirm('Are you sure')"
-                                >
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
+
+                        <?php $stt = 1;?>
+
+                        <?php foreach ($hobbies['items'] as $hobby) : ?>
+
+                            <tr class="tr">
+                                <td><?=$stt++?></td>
+                                <td><?=$hobby['name']?></td>
+
+                                <?php if(isset($hobby['count_user'])) : ?>
+                                    <td><?=$hobby['count_user']?></td>
+                                <?php endif ; ?>
+
+                                <td class="text_right">
+                                    <a href="edit.php?id=<?=$hobby['id']?>&page=<?=$hobbies['current_page']?>"
+                                       class="link_action link_edit btn btn-info">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="delete.php?id=<?=$hobby['id']?>&page=<?=$hobbies['current_page']?>"
+                                       class="link_action link_trash btn btn-danger"
+                                       onclick="return confirm('Are you sure')"
+                                    >
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                        <?php endforeach; ?>
+
                     </tbody>
+
                 </table>
             </div>
 
-            <?php Pagination::renderLikeGoogle($hobbies); ?>
+            <?php if(!isset($hobby['count_user'])) : ?>
+                <?php echo Pagination::renderLikeGoogle($hobbies); ?>
+            <?php endif ; ?>
 
         </div>
         <div class="clearfix"></div>

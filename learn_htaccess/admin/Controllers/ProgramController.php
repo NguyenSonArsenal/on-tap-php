@@ -8,8 +8,9 @@ class ProgramController extends Controller
 {
     private $db;
 
-    const TYPE_HOBBY    = 1;
-    const TYPE_PROGRAM  = 2;
+    const TYPE_HOBBY        = 1;
+    const TYPE_PROGRAM      = 2;
+    const LIMIT_TOP_PROGRAM = 5;
 
     public function __construct()
     {
@@ -121,19 +122,22 @@ class ProgramController extends Controller
     public function listProgram()
     {
         $where = '';
+        $resultTopDESC5 = [];
+        $resultTopASC5  = [];
 
         $search = isset($_GET['search']) ? $_GET['search'] : '';
-
-        $page   = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-
-        $limit = 2;
-
-        $from = ($page -1 )*$limit;
-
         if ($search != '')
         {
             $where .= "WHERE name LIKE '%$search%'";
         }
+
+        $page   = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+        $topDESC5   = isset($_GET['topDESC5'])  ? $_GET['topDESC5'] : '';
+        $topASC5    = isset($_GET['topASC5'])   ? $_GET['topASC5']  : '';
+
+        $limit = 2;
+        $from = ($page -1 )*$limit;
 
         $sql = "SELECT * FROM program " . $where . " ORDER BY id DESC LIMIT $from, $limit";
 
@@ -146,12 +150,60 @@ class ProgramController extends Controller
         $resultCount = $this->db->query($countSql);
         $resultCount = $resultCount->count();
 
+        // get top 5 program
+        if ($topDESC5 != '')
+        {
+            $type = self::TYPE_PROGRAM;
+            $limitTopProgram = self::LIMIT_TOP_PROGRAM;
+            $sqlTopDESC5 = "SELECT program.id, program.name, count(tag_user.user_id) as count_user
+                        FROM program
+                        INNER JOIN tag_user
+                        ON tag_user.tag_id = program.id
+                        WHERE tag_user.type = $type
+                        GROUP BY program.id
+                        ORDER BY count_user DESC LIMIT $limitTopProgram";
+
+            $resultTopDESC5 = $this->db->query($sqlTopDESC5);
+            $resultTopDESC5 = $resultTopDESC5->fetchAll();
+        }
+
+
+        // get bad 5 program
+        if ($topASC5 != '')
+        {
+            $type = self::TYPE_PROGRAM;
+            $limitTopProgram = self::LIMIT_TOP_PROGRAM;
+            $sqlTopASC5 = "SELECT program.id, program.name, count(tag_user.user_id) as count_user
+                        FROM program
+                        INNER JOIN tag_user
+                        ON tag_user.tag_id = program.id
+                        WHERE tag_user.type = $type
+                        GROUP BY program.id
+                        ORDER BY count_user ASC LIMIT $limitTopProgram";
+
+            $resultTopASC5 = $this->db->query($sqlTopASC5);
+            $resultTopASC5 = $resultTopASC5->fetchAll();
+        }
+
+
+        if (sizeof($resultTopDESC5) > 0)
+        {
+            $result         =   $resultTopDESC5;
+            $resultCount    =   sizeof($resultTopDESC5);
+        }
+
+        if (sizeof($resultTopASC5) > 0)
+        {
+            $result         =   $resultTopASC5;
+            $resultCount    =   sizeof($resultTopASC5);
+        }
+
         return [
             'items'         =>  $result,
             'current_page'  =>  $page,
             'limit'         =>  $limit,
             'total'         =>  $resultCount,
-            'keysearch'     =>  $search
+            'keysearch'     =>  $search,
         ];
     }
 
@@ -185,5 +237,10 @@ class ProgramController extends Controller
             echo '404.php';
             return false;
         }
+    }
+
+    public static function getTopProgram($needle)
+    {
+
     }
 }

@@ -7,6 +7,10 @@ use Library\Pagination;
 
 $programC = new ProgramController;
 $programs = $programC->listProgram();
+
+if ($programs['items'])
+    $program = $programs['items'];
+
 ?>
 
 <?php require '../../includes/header.php';?>
@@ -38,6 +42,10 @@ $programs = $programC->listProgram();
 
                 <?php require '../../includes/searchbox.php';?>
 
+                <form action="#" method="get">
+
+                </form>
+
                 <?php if($programs['keysearch'] && $programs['total'] == 0) : ?>
                     <p>Not found</p>
                 <?php endif ; ?>
@@ -45,35 +53,43 @@ $programs = $programC->listProgram();
                 <table class="table table-hover">
                     <thead class="control">
                         <tr class="tr">
-                            <th class="td">#</th>
-                            <th style="width: 80%">Programs</th>
-                            <th class="text_right">Action</th>
+                            <th class="td" width="10%">#</th>
+                            <th style="width: 40%">Programs</th>
+                            <?php if(isset($program[0]['count_user'])) : ?>
+                                <th style="width: 40%">Users_use</th>
+                            <?php endif ; ?>
+                            <th class="text_right" width="10%">Action</th>
                         </tr>
                     </thead>
 
                     <tbody class="control list_program">
 
-                    <?php $stt = 1;?>
+                        <?php $stt = 1;?>
 
-                    <?php foreach ($programs['items'] as $program) : ?>
-                        <tr class="tr">
-                            <td><?=$stt++?></td>
-                            <td><?=$program['name']?></td>
-                            <td class="text_right">
-                                <a href="edit.php?id=<?=$program['id']?>&page=<?=$programs['current_page']?>"
-                                   class="link_action link_edit btn btn-info">
-                                    <i class="fa fa-edit"></i>
-                                </a>
-                                <a href="delete.php?id=<?=$program['id']?>"
-                                   class="link_action link_trash btn btn-danger"
-                                   onclick="return confirm('Are you sure')"
-                                >
-                                    <i class="fa fa-trash"></i>
-                                </a>
-                            </td>
-                        </tr>
+                        <?php foreach ($programs['items'] as $program) : ?>
+                            <tr class="tr">
+                                <td><?=$stt++?></td>
+                                <td><?=$program['name']?></td>
 
-                    <?php endforeach; ?>
+                                <?php if(isset($program['count_user'])) : ?>
+                                    <td><?=$program['count_user']?></td>
+                                <?php endif ; ?>
+
+                                <td class="text_right">
+                                    <a href="edit.php?id=<?=$program['id']?>&page=<?=$programs['current_page']?>"
+                                       class="link_action link_edit btn btn-info">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="delete.php?id=<?=$program['id']?>"
+                                       class="link_action link_trash btn btn-danger"
+                                       onclick="return confirm('Are you sure')"
+                                    >
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                        <?php endforeach; ?>
 
                     </tbody>
 
@@ -81,7 +97,9 @@ $programs = $programC->listProgram();
                 </table>
             </div>
 
-            <?php echo Pagination::renderLikeGoogle($programs); ?>
+            <?php if(!isset($program['count_user'])) : ?>
+                <?php echo Pagination::renderLikeGoogle($programs); ?>
+            <?php endif ; ?>
 
         </div>
 

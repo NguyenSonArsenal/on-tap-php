@@ -8,6 +8,10 @@ class HobbiesController extends Controller
 {
     private $db;
 
+    const TYPE_HOBBY        = 1;
+    const TYPE_PROGRAM      = 2;
+    const LIMIT_TOP_HOBBY   = 5;
+
     public function __construct()
     {
         $this->db = new Database();
@@ -51,8 +55,8 @@ class HobbiesController extends Controller
         $errors = [];
         $updated_at = timestamp();
 
-        $id = isset($_GET['id']) ? clear_input((int)($_GET['id'])) : '';
-        $page = isset($_GET['page']) ? clear_input((int)($_GET['page'])) : '';
+        $id     = isset($_GET['id'])    ?   clear_input((int)($_GET['id']))     :   '';
+        $page   = isset($_GET['page'])  ?   clear_input((int)($_GET['page']))   :   '';
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
@@ -120,6 +124,14 @@ class HobbiesController extends Controller
     {
         $where = '';
 
+        $type = self::TYPE_HOBBY;
+
+        $resultTopDESC5 = [];
+        $resultTopASC5  = [];
+
+        $topDESC5   = isset($_GET['topDESC5'])  ? $_GET['topDESC5'] : '';
+        $topASC5    = isset($_GET['topASC5'])   ? $_GET['topASC5']  : '';
+
         $search = isset($_GET['search']) ? $_GET['search'] : '';
 
         $page   = isset($_GET['page']) ? (int)$_GET['page'] : 1;
@@ -144,6 +156,54 @@ class HobbiesController extends Controller
         $resultCount = $this->db->query($countSql);
         $resultCount = $resultCount->count();
 
+        // get top 5 hobbies
+        if ($topDESC5 != '')
+        {
+            $limitTopProgram = self::LIMIT_TOP_HOBBY;
+
+            $sqlTopDESC5 = "SELECT program.id, program.name, count(tag_user.user_id) as count_user
+                        FROM program
+                        INNER JOIN tag_user
+                        ON tag_user.tag_id = program.id
+                        WHERE tag_user.type = $type
+                        GROUP BY program.id
+                        ORDER BY count_user DESC LIMIT $limitTopProgram";
+
+            $resultTopDESC5 = $this->db->query($sqlTopDESC5);
+            $resultTopDESC5 = $resultTopDESC5->fetchAll();
+        }
+
+
+        // get bad 5 hobbies
+        if ($topASC5 != '')
+        {
+            $limitTopProgram = self::LIMIT_TOP_HOBBY;
+
+            $sqlTopASC5 = "SELECT program.id, program.name, count(tag_user.user_id) as count_user
+                        FROM program
+                        INNER JOIN tag_user
+                        ON tag_user.tag_id = program.id
+                        WHERE tag_user.type = $type
+                        GROUP BY program.id
+                        ORDER BY count_user ASC LIMIT $limitTopProgram";
+
+            $resultTopASC5 = $this->db->query($sqlTopASC5);
+            $resultTopASC5 = $resultTopASC5->fetchAll();
+        }
+
+
+        if (sizeof($resultTopDESC5) > 0)
+        {
+            $result         =   $resultTopDESC5;
+            $resultCount    =   sizeof($resultTopDESC5);
+        }
+
+        if (sizeof($resultTopASC5) > 0)
+        {
+            $result         =   $resultTopASC5;
+            $resultCount    =   sizeof($resultTopASC5);
+        }
+
         return [
             'items'         =>  $result,
             'current_page'  =>  $page,
@@ -156,6 +216,8 @@ class HobbiesController extends Controller
 
     public static function getListHobbiesOfUser($user_id = -1)
     {
+        $type = self::TYPE_HOBBY;
+
         if ($user_id == -1)
             $id = isset($_GET['id']) ? (int)$_GET['id'] : -1;
         else
@@ -169,7 +231,7 @@ class HobbiesController extends Controller
                 ON tag_user.user_id = user.id
                 INNER JOIN hobbies
                 ON tag_user.tag_id = hobbies.id
-                WHERE tag_user.type = 1 AND user.id = $id";
+                WHERE tag_user.type = $type AND user.id = $id";
 
             $query = Database::query($sql);
 
