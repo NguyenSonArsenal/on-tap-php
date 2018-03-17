@@ -1,101 +1,122 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Do_an</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<?php
+require '../../../../bootstrap/Autoload.php';
 
-    <link href="/bower_components/bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--font awesome -->
-    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+use admin\Controllers\UserController;
+use admin\Controllers\ProgramController;
+use admin\Controllers\HobbiesController;
+use Library\Pagination;
 
-    <link rel="stylesheet" href="/assets/css/admin/module/user/index.css">
+$users = UserController::listUser();
 
-</head>
-<body>
+?>
+
+<?php require '../../includes/header.php';?>
+
 
 <div class="wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="side_bar">
-                    <div class="item item_user">
-                        <a href="">User</a>
-                    </div>
-                    <div class="item item_hobbies">
-                        <a href="">Hobbeis</a>
-                    </div>
-                    <div class="item item_program">
-                        <a href="">Program</a>
-                    </div>
-                </div>
+    <div class="navbar">
+        <span class="title">PHP final</span>
+    </div>
+    <div class="page_wrapper">
+
+        <?php require '../../includes/sidebar.php';?>
+
+        <div class="main pull-right">
+
+            <?php require '../../includes/notification.php'; ?>
+
+            <div class="main_head">
+                <h2 class="title pull-left">List user</h2>
+                <a href="add.php" role="button"
+                   class="link_add_hobbies pull-right btn btn-success btn-sm"
+                >
+                    <i class="fa fa-plus"></i>
+                    Add</a>
+                <div class="clearfix"></div>
             </div>
-            <div class="col-sm-9">
-                <div class="main">
-                    <div class="header">
-                        <h1 class="content_header pull-left">Danh sach user</h1>
-                        <a href="add.php" class="pull-right">Add</a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="content">
-                        <table class="table">
-                            <thead class="thead">
-                                <tr class="tr">
-                                    <th class="th">STT</th>
-                                    <th class="th">Name</th>
-                                    <th class="th">Hobbies</th>
-                                    <th class="th">Program</th>
-                                    <th class="th">Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="tr">
-                                    <td class="td">1</td>
-                                    <td class="td">Nguyen Son</td>
-                                    <td class="td">Code, sleep, eat</td>
-                                    <td class="td">Php</td>
-                                    <td class="td">
-                                        <a class="btn btn-primary btn-xs">
-                                            <i class="fa fa-edit fa-lg"></i>
-                                            Chỉnh sửa
-                                        </a>
-                                        <a class="btn btn-danger btn-xs">
-                                            <i class="fa-trash fa fa-lg"></i>
-                                            Xóa
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr class="tr">
-                                    <td class="td">1</td>
-                                    <td class="td">Nguyen Son</td>
-                                    <td class="td">Code, sleep, eat</td>
-                                    <td class="td">Php</td>
-                                    <td class="td">
-                                        <a class="btn btn-primary btn-xs">
-                                            <i class="fa fa-edit fa-lg"></i>
-                                            Chỉnh sửa
-                                        </a>
-                                        <a class="btn btn-danger btn-xs">
-                                            <i class="fa-trash fa fa-lg"></i>
-                                            Xóa
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+
+            <div class="main_content">
+
+                <?php require '../../includes/searchbox.php';?>
+
+                <?php if($users['keysearch'] && $users['total'] == 0) : ?>
+                    <p>Not found</p>
+                <?php endif ; ?>
+
+                <table class="table table-hover">
+                    <thead class="control">
+                    <tr class="tr">
+                        <th class="td" style="width: 10%">#</th>
+                        <th style="width: 20%">Name</th>
+                        <th style="width: 30%">Program</th>
+                        <th style="width: 30%">Hobbies</th>
+                        <th class="text_right" width="10%">Action</th>
+                    </tr>
+                    </thead>
+
+                    <tbody class="control list_program">
+
+                    <?php $stt = 1;?>
+
+                    <?php foreach ($users['items'] as $user) : ?>
+                        <tr class="tr">
+                            <td><?=$stt++?></td>
+                            <td><?=$user['name']?></td>
+                            <td>
+
+                                <?php $listProgramOfUser = ProgramController::getListProgramsOfUser($user['id']); ?>
+
+                                <?php foreach($listProgramOfUser as $program) : ?>
+                                    <a href="">
+                                        <?=$program['name'] . ' - '?>
+                                    </a>
+                                <?php endforeach ; ?>
+
+                            </td>
+
+                            <td>
+
+                                <?php $listHobbiesOfUser = HobbiesController::getListHobbiesOfUser($user['id']); ?>
+
+                                <?php foreach($listHobbiesOfUser as $hobby) : ?>
+                                    <a href="">
+                                        <?=$hobby['name'] . ' - '?>
+                                    </a>
+                                <?php endforeach ; ?>
+
+                            </td>
+
+                            <td class="text_right">
+                                <a href="edit.php?id=<?=$user['id']?>&page=<?=$users['current_page']?>"
+                                   class="link_action link_edit btn btn-info">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="delete.php?id=<?=$user['id']?>&page=<?=$users['current_page']?>"
+                                   class="link_action link_trash btn btn-danger"
+                                   onclick="return confirm('Are you sure')"
+                                >
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                    <?php endforeach; ?>
+
+                    </tbody>
+
+
+                </table>
             </div>
+
+            <?php echo Pagination::renderLikeGoogle($users); ?>
+
         </div>
+
+        <div class="clearfix"></div>
     </div>
 </div>
 
-<script src="/bower_components/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
-<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<?php require '../../includes/footer.php';?>
 
-<!-- Select2 -->
-<script src="bower_components/select2/dist/js/select2.full.min.js"></script>
-</body>
-</html>
+
+

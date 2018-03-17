@@ -9,10 +9,11 @@
 
     <link href="<?= asset('bower_components/bootstrap-4.0.0/dist/css/bootstrap.min.css') ?>"
           rel="stylesheet">
+
+    <link href="<?= asset('bower_components/select2/dist/css/select2.min.css') ?>"
+          rel="stylesheet">
     <!--font awesome -->
     <link href="<?= asset('/bower_components/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
     <link rel="stylesheet" href="<?= asset('/admin/views/assets/css/hobbies.css') ?>">
     <link rel="stylesheet" href="<?= asset('/assets/css/pagination.css') ?>">

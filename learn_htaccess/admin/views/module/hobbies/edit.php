@@ -1,29 +1,21 @@
 <?php
 
-require '../../../bootstrap/Autoload.php';
-use Library\Hobbies;
+require '../../../../bootstrap/Autoload.php';
+use admin\Controllers\HobbiesController;
 
-$id = isset($_GET['id']) ? $_GET['id'] : '';
+$hobby = HobbiesController::findOneById();
 
-$selectHobby = Hobbies::selectById($id);
-
-$hobby = $selectHobby[0]['name'];
+if ($hobby)
+    $hobby = $hobby[0]['name'];
+else
+{
+    die('404.php');
+}
 
 // validate
 $errors = [];
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-    $hobby = isset($_POST['hobbies']) ? validate_input($_POST['hobbies']) : '';
-
-    if ($hobby == '')
-        $errors['hobbies'] = 'Hobbies is required';
-
-    if (empty($errors))
-    {
-        Hobbies::update($id, $hobby);
-    }
-}
+$errors = HobbiesController::update();
 
 ?>
 
@@ -85,11 +77,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 
 <?php require '../../includes/footer.php';?>
-
-<script>
-    $(document).ready(function() {
-        //select2
-        //$("#select2_program").select2();
-        //$("#select2_hobbies").select2();
-    });
-</script>

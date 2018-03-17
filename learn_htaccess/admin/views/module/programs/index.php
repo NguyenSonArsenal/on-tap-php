@@ -7,11 +7,6 @@ use Library\Pagination;
 
 $programC = new ProgramController;
 $programs = $programC->listProgram();
-//$search = $programC->search();
-
-$message_add    = Session::flash('add');
-$message_update = Session::flash('update');
-$message_delete = Session::flash('delete');
 ?>
 
 <?php require '../../includes/header.php';?>

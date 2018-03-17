@@ -11,34 +11,23 @@ class Pagination
         $search = isset($_GET['search']) ? $_GET['search'] : '';
 
         $currentPage = $items['current_page'];
-        $total = $items['total']; // co 5 records
-        $limit = $items['limit']; // limit =10
-        $totalPage = ceil($total / $limit); // tong page = 3
+        $total = $items['total'];
+        $limit = $items['limit'];
+        $totalPage = ceil($total / $limit);
+
+        echo 'total pages: ' . $totalPage;
+        echo 'page: ' . $currentPage;
 
         if ($totalPage > 0)
         {
-            echo 'totalPages = ' . $totalPage . '<br>';
-
-            echo 'current page: ' . $currentPage ;
-
             $space = 2;
 
-            $start_tmp  = $currentPage - $space;
-            $end_tmp    = $currentPage + $space;
+            $start_tmp  = ($currentPage - $space  > 0 ) ? $currentPage - $space : 1; // -1
+            $end_tmp    = ($currentPage + $space < $totalPage) ?
+                            $currentPage + $space :
+                            $totalPage;
 
-            if ($start_tmp <=0 )
-            {
-                $end_tmp -= ($start_tmp -1);
-                $start_tmp = 1;
-            }
-
-            if ($end_tmp >= $totalPage)
-            {
-                $start_tmp = $totalPage - 2*$space;
-                $end_tmp = $totalPage;
-            }
-
-            echo "Start: $start_tmp --- End: $end_tmp <br>";
+            echo "start: " . $start_tmp . " end: "  . $end_tmp;
 
             echo "<div class = 'pagination'>";
 
@@ -127,6 +116,7 @@ class Pagination
 
     }
 
+
     public static function renderPrePage($currentPage, $totalPage)
     {
         if ($currentPage > 1 && $currentPage <= $totalPage) {
@@ -149,6 +139,7 @@ class Pagination
             return '';
         }
     }
+
 
     public static function renderMiddle($start, $end, $currentPage, &$html)
     {

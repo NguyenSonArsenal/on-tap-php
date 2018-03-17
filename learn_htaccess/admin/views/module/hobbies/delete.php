@@ -1,14 +1,8 @@
 <?php
 
-require '../../../bootstrap/Autoload.php';
-use Library\Session;
-use Library\Hobbies;
-use Library\Database;
+require '../../../../bootstrap/Autoload.php';
+use admin\Controllers\HobbiesController;
 
-$db = new Database();
-
-$id = isset($_GET['id']) ? $_GET['id'] : '';
-
-Hobbies::delete($id);
+HobbiesController::delete();
 
 

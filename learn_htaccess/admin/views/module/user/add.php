@@ -1,222 +1,180 @@
 <?php
 
-require '../../../bootstrap/Autoload.php';
+require '../../../../bootstrap/Autoload.php';
+use admin\Controllers\UserController;
+use admin\Controllers\ProgramController;
+use admin\Controllers\HobbiesController;
 
-// get all hobbies
-$sqlAllHobbies = "SELECT id, name FROM hobbies";
-$selectAllHobbies = $conn->query($sqlAllHobbies);
-//get list programs
-$sqlAllPrograms = "SELECT id, name FROM program";
-$selectAllPrograms = $conn->query($sqlAllPrograms);
+$users = UserController::insert();
 
-$nameErr = $hobbiesErr = $programErr = "";
-$name = $hobbies = $program = "";
-$gender = 1;
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
+if ($users)
 {
-    if (empty($_POST['name']))
-        $nameErr = 'Name is required';
-    else
-        $name = validate_input($_POST['name']);
-
-    if (empty($_POST['hobbies']))
-        $hobbiesErr = 'Hobbies is required';
-    else
-    {
-        $hobbies = $_POST['hobbies'];
-    }
-
-    if (empty($_POST['program']))
-        $programErr = 'Program is required';
-    else
-    {
-        $program = $_POST['program'];
-    }
-
-    $gender = validate_input($_POST['gender']);
-
-    if(sizeof($name) > 0 && $hobbies && $program)
-    {
-        $created_at = $update_at = date("Y-m-d H:i:s");
-
-        $sql = "INSERT INTO user(name, gender, created_at)
-                        VALUE ('$name', '$gender', '$created_at')";
-        $query = $conn->query($sql);
-
-        if ($query)
-        {
-            $last_id = $conn->getLastId();
-        }
-        else
-        {
-            echo "Error: " . $conn->error();
-            die();
-        }
-
-        foreach ($hobbies as $hobbie_id)
-        {
-            $sql = "INSERT INTO tag_user (tag_id, user_id, type)
-                             VALUE('$hobbie_id', '$last_id', '1')";
-            $query = $conn->query($sql);
-            if (!$query)
-            {
-                echo "Error: " . $conn->error();
-                die();
-            }
-        }
-
-        foreach ($program as $program_id)
-        {
-            $sql = "INSERT INTO tag_user (tag_id, user_id, type)
-                             VALUE('$program_id', '$last_id', '2')";
-            $query = $conn->query($sql);
-            if (!$query)
-            {
-                echo "Error: " . $conn->error();
-                die();
-            }
-        }
-    }
+    $errors = $users['errors'];
 }
+
+$programs = ProgramController::selectAll();
+$hobbies  = HobbiesController::selectAll();
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Do_an</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1,
-     maximum-scale=1, user-scalable=no" name="viewport">
+<?php require '../../includes/header.php';?>
 
-    <link href="/bower_components/bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!--font awesome -->
-    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <div class="wrapper">
+        <div class="navbar">
+            <span class="title">PHP final</span>
+        </div>
+        <div class="page_wrapper">
 
-    <!-- select2 -->
-    <link rel="stylesheet" href="/bower_components/select2/dist/css/select2.min.css">
+            <?php require '../../includes/sidebar.php';?>
 
-    <link rel="stylesheet" href="/assets/css/admin/module/user/add.css">
+            <div class="main pull-right">
 
-</head>
-<body>
-<div class="wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="side_bar">
-                    <div class="item item_user">
-                        <a href="">User</a>
-                    </div>
-                    <div class="item item_hobbies">
-                        <a href="">Hobbeis</a>
-                    </div>
-                    <div class="item item_program">
-                        <a href="">Program</a>
-                    </div>
+                <div class="main_head">
+                    <h2 class="title pull-left">Add user</h2>
+                    <div class="clearfix"></div>
                 </div>
-            </div>
-            <div class="col-sm-9">
-                <div class="main">
-                    <div class="header">
-                        <h1 class="content_header">Them user</h1>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="content">
-                        <form action="#" method="post">
-                            <div class="row form-group">
-                                <label class="col-sm-2" for="">Name</label>
-                                <input class="input input_name" type="text" name="name"
-                                       value="<?=$name?>">
-                                <span class="show_error"><?=$nameErr;?></>
-                            </div>
 
-                            <div class="form-group row">
-                                <label class="col-sm-2">Hobbies</label>
+                <div class="main_content">
+                    <form action="#" method="post" class="form">
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="control-label ">Name</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control input_hobbies"
+                                       name="name" value="<?=$users['name']?>">
+                                <?php if(isset($errors['name'])) : ?>
+                                    <span class="error"><?=$errors['name']?></span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="control-label ">Email</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control input_hobbies"
+                                       name="email" value="<?=$users['email']?>">
+                                <?php if(isset($errors['email'])) : ?>
+                                    <span class="error"><?=$errors['email']?></span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="control-label ">Phone number</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control input_hobbies"
+                                       name="phone" value="<?=$users['phone']?>">
+                                <?php if(isset($errors['phone'])) : ?>
+                                    <span class="error"><?=$errors['phone']?></span>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="control-label ">Hobbies</label>
+                            </div>
+                            <div class="col-sm-6">
                                 <select id="select2_hobbies" multiple="multiple"
-                                        style="width:50%;" name="hobbies[]">
-                                    <?php while($hobbie = $selectAllHobbies->fetch_assoc()) : ?>
-                                        <option value="<?=$hobbie['id']?>"
-                                                name="hobbies[]"
+                                        style="width:100%;" name="hobbies[]">
+
+                                    <?php foreach ($hobbies as $hobby) :?>
+                                        <option value="<?=$hobby['id']?>"
+
                                             <?php
-                                            if (isset($_POST['hobbies']))
+                                            if (isset($users['hobbies']))
                                             {
-                                                foreach ($_POST['hobbies'] as $item)
+                                                foreach ($users['hobbies'] as $id)
                                                 {
-                                                    if ($item == $hobbie['id'])
+                                                    if ($id == $hobby['id'])
                                                         echo 'selected';
                                                 }
                                             }
                                             ?>
                                         >
-                                            <?php echo $hobbie['name'] ?>
+                                            <?=$hobby['name']?>
                                         </option>
-                                    <?php endwhile; ?>
-                                </select>
-                                <span class="show_error"><?=$hobbiesErr?></span>
-                            </div>
+                                    <?php endforeach;?>
 
-                            <div class="form-group row">
-                                <label class="col-sm-2">Programs</label>
+                                </select>
+                                <span class="error"><?=isset($errors['hobbies']) ? $errors['hobbies'] : ''; ?></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="control-label ">Program</label>
+                            </div>
+                            <div class="col-sm-6">
                                 <select id="select2_program" multiple="multiple"
-                                        style="width:50%;" name="program[]">
-                                    <?php while($program = $selectAllPrograms->fetch_assoc()) : ?>
-                                        <option value="<?php echo $program['id']?>"
-                                                name="programs[]"
+                                        style="width:100%;" name="program[]">
+
+                                    <?php foreach ($programs as $program) :?>
+                                        <option value="<?=$program['id']?>"
+
                                             <?php
-                                            if (isset($_POST['program']))
+                                            if (isset($users['program']))
                                             {
-                                                foreach ($_POST['program'] as $item)
+                                                foreach ($users['program'] as $id)
                                                 {
-                                                    if ($item == $program['id'])
+                                                    if ($id == $program['id'])
                                                         echo 'selected';
                                                 }
                                             }
                                             ?>
                                         >
-                                            <?php echo $program['name'] ?>
+                                            <?=$program['name']?>
                                         </option>
-                                    <?php endwhile; ?>
+                                    <?php endforeach;?>
+
                                 </select>
-                                <span class="show_error"><?=$programErr?></span>
+                                <span class="error"><?=isset($errors['program']) ? $errors['program'] : '';?></span>
                             </div>
+                        </div>
 
-                            <div class="row form-group">
-                                <label class="col-sm-2">Gender</label>
-                                <input type="radio" name="gender" checked
-                                       value="1"
-                                    <?php if (isset($_POST['gender']) && $_POST['gender'] == '1') {echo 'checked';} ?>
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <label class="control-label ">Gender</label>
+                            </div>
+                            <div class="col-sm-6 form-inline">
+                                <input type="radio" name="gender" checked value="1"
+                                       <?php if (isset($users['gender'])
+                                           && $users['gender'] == 1) echo 'checked'?>
                                 >Boy<br>
-                                <input type="radio" name="gender"
-                                       value="0"
-                                    <?php if (isset($_POST['gender']) && $_POST['gender'] == '0') {echo 'checked';} ?>
-                                > Girl<br>
+                                <input type="radio" name="gender" value="0"
+                                        <?php if (isset($users['gender'])
+                                           && $users['gender'] == 0) echo 'checked'?>
+                                >Girl<br>
                             </div>
+                        </div>
 
-                            <input type="submit" value="Add" name="submit">
-                        </form>
-                    </div>
+                        <div class="form-group row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-6">
+                                <input type="submit" value="Add"
+                                       name="submit" class="btn btn-success btn-sm">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
+            <div class="clearfix"></div>
         </div>
     </div>
-</div>
 
-<script src="/bower_components/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
-<script src="/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Select2 -->
-<script src="/bower_components/select2/dist/js/select2.full.min.js"></script>
+
+<?php require '../../includes/footer.php';?>
 
 <script>
-    $(document).ready(function() {
-        //select2
-        $("#select2_program").select2();
-        $("#select2_hobbies").select2();
 
+    $(document).ready(function() {
+        $('#select2_hobbies').select2();
+        $('#select2_program').select2();
     });
+
 </script>
-</body>
-</html>

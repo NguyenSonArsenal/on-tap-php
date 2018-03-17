@@ -4,22 +4,7 @@ require '../../../../bootstrap/Autoload.php';
 
 use admin\Controllers\HobbiesController;
 
-// validate
-$errors = [];
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-
-    $hobbies = isset($_POST['hobbies']) ? validate_input($_POST['hobbies']) : '';
-
-    if ($hobbies == '')
-        $errors['hobbies'] = 'Hobbies is required';
-
-    if (empty($errors))
-    {
-        HobbiesController::insert($hobbies);
-    }
-}
+$errors = HobbiesController::insert();
 
 ?>
 

@@ -8,6 +8,9 @@ class ProgramController extends Controller
 {
     private $db;
 
+    const TYPE_HOBBY    = 1;
+    const TYPE_PROGRAM  = 2;
+
     public function __construct()
     {
         $this->db = new Database();
@@ -26,9 +29,11 @@ class ProgramController extends Controller
             if ($program == '')
                 $errors['program'] = 'Program is required';
 
+            $created_at = timestamp();
+
             if (empty($errors))
             {
-                $sql = "INSERT INTO program (name) VALUE ('$program')";
+                $sql = "INSERT INTO program (name, created_at) VALUE ('$program', '$created_at')";
 
                 $query = Database::query($sql);
 
@@ -46,20 +51,24 @@ class ProgramController extends Controller
     public static function update()
     {
         $errors = [];
+        $updated_at = timestamp();
 
-        $id = isset($_GET['id']) ? clear_input((int)($_GET['id'])) : '';
-        $page = isset($_GET['page']) ? clear_input((int)($_GET['page'])) : '';
+        $id     = isset($_GET['id'])   ? clear_input((int)($_GET['id']))    : '';
+        $page   = isset($_GET['page']) ? clear_input((int)($_GET['page']))  : '';
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $program = isset($_POST['program']) ? clear_input($_POST['program']) : '';
 
             if ($program == '')
-                $errors['hobbies'] = 'Hobbies is required';
+            $errors['hobbies'] = 'Hobbies is required';
+
 
             if (empty($errors))
             {
-                $sql = "UPDATE program SET name = '$program' WHERE id = $id";
+                $sql = "UPDATE program 
+                        SET name = '$program', updated_at = '$updated_at'
+                        WHERE id = $id";
 
                 $query = Database::query($sql);
 
@@ -79,7 +88,9 @@ class ProgramController extends Controller
         $id = isset($_GET['id']) ? (int)$_GET['id'] : -1;
 
         $sql = "DELETE FROM program WHERE id = $id";
+        $query = Database::query($sql);
 
+        $sql = "DELETE FROM tag_user WHERE tag_id = $id AND type = 2";
         $query = Database::query($sql);
 
         Session::flash('delete', 'Delete successfully');
@@ -113,7 +124,7 @@ class ProgramController extends Controller
 
         $search = isset($_GET['search']) ? $_GET['search'] : '';
 
-        $page  = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $page   = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
         $limit = 2;
 
@@ -142,5 +153,37 @@ class ProgramController extends Controller
             'total'         =>  $resultCount,
             'keysearch'     =>  $search
         ];
+    }
+
+
+    public static function getListProgramsOfUser($user_id = -1)
+    {
+
+        if ($user_id == -1)
+            $id = isset($_GET['id']) ? (int)$_GET['id'] : -1;
+        else
+            $id = $user_id;
+
+        $type = self::TYPE_PROGRAM;
+
+        if ($id != -1)
+        {
+            $sql = "SELECT program.name, program.id 
+                    FROM user
+                    INNER JOIN tag_user
+                    ON tag_user.user_id = user.id
+                    INNER JOIN program
+                    ON tag_user.tag_id = program.id
+                    WHERE tag_user.type = $type AND user.id = $id";
+
+            $query = Database::query($sql);
+
+            return $query->fetchAll();
+        }
+        else
+        {
+            echo '404.php';
+            return false;
+        }
     }
 }

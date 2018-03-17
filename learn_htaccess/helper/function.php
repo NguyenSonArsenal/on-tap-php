@@ -39,3 +39,47 @@ if (!function_exists('redirect'))
         return header("Location: $param.php");
     }
 }
+
+
+if (!function_exists('dump'))
+{
+    function dump($param, $die = false)
+    {
+        echo '<pre>';
+        print_r($param);
+
+        if ($die != false)
+        {
+            die();
+        }
+    }
+}
+
+if (!function_exists('timestamp'))
+{
+    function timestamp()
+    {
+        return date('Y-m-d H:i:s');
+    }
+}
+
+if (!function_exists('getSelected'))
+{
+    function getSelected($parent=[], $child=[], $property)
+    {
+        if(isset($child))
+        {
+            foreach ($child as $item)
+            {
+                if ($item[$property] == $parent[$property] ||
+                    $property == $parent[$property])
+                {
+                    $tmp = 'selected';
+                    echo $tmp;
+                }
+            }
+        }
+
+        return '';
+    }
+}

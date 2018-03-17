@@ -6,12 +6,7 @@ use Library\Session;
 use Library\Pagination;
 
 $hobbiesC = new HobbiesController;
-
 $hobbies = $hobbiesC->listHobbies();
-
-$message_add    = Session::flash('add');
-$message_update = Session::flash('update');
-$message_delete = Session::flash('delete');
 
 ?>
 
@@ -41,6 +36,13 @@ $message_delete = Session::flash('delete');
             </div>
 
             <div class="main_content">
+
+                <?php require '../../includes/searchbox.php';?>
+
+                <?php if($hobbies['keysearch'] && $hobbies['total'] == 0) : ?>
+                    <p>Not found</p>
+                <?php endif ; ?>
+
                 <table class="table table-hover">
                     <thead class="control">
                         <tr class="tr">
@@ -56,11 +58,11 @@ $message_delete = Session::flash('delete');
                             <td><?=$stt++?></td>
                             <td><?=$hobby['name']?></td>
                             <td class="text_right">
-                                <a href="edit.php?id=<?=$hobby['id']?>"
+                                <a href="edit.php?id=<?=$hobby['id']?>&page=<?=$hobbies['current_page']?>"
                                    class="link_action link_edit btn btn-info">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                                <a href="delete.php?id=<?=$hobby['id']?>"
+                                <a href="delete.php?id=<?=$hobby['id']?>&page=<?=$hobbies['current_page']?>"
                                    class="link_action link_trash btn btn-danger"
                                    onclick="return confirm('Are you sure')"
                                 >
@@ -73,7 +75,7 @@ $message_delete = Session::flash('delete');
                 </table>
             </div>
 
-            <?php Pagination::render($hobbies); ?>
+            <?php Pagination::renderLikeGoogle($hobbies); ?>
 
         </div>
         <div class="clearfix"></div>

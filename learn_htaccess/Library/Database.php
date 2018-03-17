@@ -68,7 +68,7 @@ class Database
 
     public function getLastId()
     {
-        return $this->conn->insert_id;
+        return mysqli_insert_id($this->conn);
     }
 
     public function fetchAll()

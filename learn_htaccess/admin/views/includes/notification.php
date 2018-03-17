@@ -1,3 +1,11 @@
+<?php
+use Library\Session;
+
+$message_add    = Session::flash('add');
+$message_update = Session::flash('update');
+$message_delete = Session::flash('delete');
+?>
+
 <?php if(isset($message_add)) : ?>
     <div class="alert alert-success">
         <button type="button" class="close" data-dismiss="alert"
