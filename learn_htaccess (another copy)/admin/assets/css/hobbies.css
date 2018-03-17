@@ -1,0 +1,26 @@
+.wrapper {
+  margin-top: 20px;
+}
+.wrapper .container .side_bar {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.wrapper .container .side_bar .list-group .list-group-item {
+  border: none;
+}
+.wrapper .container .side_bar .list-group .list-group-item .link {
+  color: #333;
+}
+.wrapper .container .side_bar .active {
+  background: #ccc;
+  border: none;
+  border-radius: 0;
+}
+.wrapper .container .main {
+  border: 1px solid #dde2e4;
+}
+.wrapper .container .main .content .table {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=hobbies.css.map */

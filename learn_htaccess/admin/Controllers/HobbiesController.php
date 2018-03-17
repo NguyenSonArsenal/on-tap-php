@@ -161,12 +161,12 @@ class HobbiesController extends Controller
         {
             $limitTopProgram = self::LIMIT_TOP_HOBBY;
 
-            $sqlTopDESC5 = "SELECT program.id, program.name, count(tag_user.user_id) as count_user
-                        FROM program
+            $sqlTopDESC5 = "SELECT hobbies.id, hobbies.name, count(tag_user.user_id) as count_user
+                        FROM hobbies
                         INNER JOIN tag_user
-                        ON tag_user.tag_id = program.id
+                        ON tag_user.tag_id = hobbies.id
                         WHERE tag_user.type = $type
-                        GROUP BY program.id
+                        GROUP BY hobbies.id
                         ORDER BY count_user DESC LIMIT $limitTopProgram";
 
             $resultTopDESC5 = $this->db->query($sqlTopDESC5);
@@ -179,12 +179,12 @@ class HobbiesController extends Controller
         {
             $limitTopProgram = self::LIMIT_TOP_HOBBY;
 
-            $sqlTopASC5 = "SELECT program.id, program.name, count(tag_user.user_id) as count_user
-                        FROM program
+            $sqlTopASC5 = "SELECT hobbies.id, hobbies.name, count(tag_user.user_id) as count_user
+                        FROM hobbies
                         INNER JOIN tag_user
-                        ON tag_user.tag_id = program.id
+                        ON tag_user.tag_id = hobbies.id
                         WHERE tag_user.type = $type
-                        GROUP BY program.id
+                        GROUP BY hobbies.id
                         ORDER BY count_user ASC LIMIT $limitTopProgram";
 
             $resultTopASC5 = $this->db->query($sqlTopASC5);

@@ -1,0 +1,22 @@
+.wrapper {
+  margin-top: 20px;
+}
+.wrapper .container {
+  border: 1px solid #dde2e4;
+}
+.wrapper .container .side_bar .item {
+  width: 100%;
+  border: 1px solid #dde2e4;
+  display: inline-block;
+  margin: 10px 0px;
+  padding: 10px;
+}
+.wrapper .container .side_bar .item:hover {
+  cursor: pointer;
+}
+.wrapper .container .main {
+  border: 1px solid #dde2e4;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=add.css.map */
