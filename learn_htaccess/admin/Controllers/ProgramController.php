@@ -99,7 +99,7 @@ class ProgramController extends Controller
         return redirect('index');
     }
 
-    public static function selectAll()
+    public static function selectListAll()
     {
         $sql = "SELECT * FROM program ORDER BY id desc";
 
@@ -126,17 +126,23 @@ class ProgramController extends Controller
         $resultTopASC5  = [];
 
         $search = isset($_GET['search']) ? $_GET['search'] : '';
+
+        $page   = (isset($_GET['page']) && (int)($_GET['page'] > 0) )  ?
+                  (int)$_GET['page'] : 1;
+
+        //dump($page);
+
         if ($search != '')
         {
             $where .= "WHERE name LIKE '%$search%'";
         }
 
-        $page   = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
         $topDESC5   = isset($_GET['topDESC5'])  ? $_GET['topDESC5'] : '';
         $topASC5    = isset($_GET['topASC5'])   ? $_GET['topASC5']  : '';
 
-        $limit = 2;
+        $limit = self::LIMIT;
+
         $from = ($page -1 )*$limit;
 
         $sql = "SELECT * FROM program " . $where . " ORDER BY id DESC LIMIT $from, $limit";
@@ -186,16 +192,16 @@ class ProgramController extends Controller
         }
 
 
-        if (sizeof($resultTopDESC5) > 0)
+        if (count($resultTopDESC5) > 0)
         {
             $result         =   $resultTopDESC5;
-            $resultCount    =   sizeof($resultTopDESC5);
+            $resultCount    =   count($resultTopDESC5);
         }
 
-        if (sizeof($resultTopASC5) > 0)
+        if (count($resultTopASC5) > 0)
         {
             $result         =   $resultTopASC5;
-            $resultCount    =   sizeof($resultTopASC5);
+            $resultCount    =   count($resultTopASC5);
         }
 
         return [
@@ -239,8 +245,17 @@ class ProgramController extends Controller
         }
     }
 
-    public static function getTopProgram($needle)
+    public static function getNumberFrom()
     {
+        $limit = self::LIMIT;
 
+        $from   = (isset($_GET['page'])  && $_GET['page'] >= 0)  ?
+            (int)$_GET['page']    :  1;
+
+
+        if ($from != 1)
+            $from   =   $from * $limit - ($limit - 1);
+
+        return $from;
     }
 }

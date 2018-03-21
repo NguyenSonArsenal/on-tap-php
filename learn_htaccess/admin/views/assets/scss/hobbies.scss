@@ -1,8 +1,10 @@
 .wrapper {
     font-weight: normal;
     .navbar {
+        display: block;
         background: #2e85be;
         .title {
+            float: left;
             color: #fff;
             font-size: 18px;
             &:hover {
@@ -11,9 +13,20 @@
                 cursor: pointer;
             }
         }
+        .infor {
+            float: right;
+            padding-right: 15px;
+            .name_admin {
+                color: #fff;
+            }
+            .logout {
+                color: #fff;
+            }
+        }
     }
     .page_wrapper {
         display: flex;
+        height:100vh;
         .sidebar {
             background: #222d32;
             width: 250px;

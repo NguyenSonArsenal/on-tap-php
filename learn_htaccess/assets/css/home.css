@@ -1,0 +1,29 @@
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+.wrapper .navbar {
+  background: #e43;
+  display: block;
+}
+.wrapper .navbar .title {
+  float: left;
+}
+.wrapper .navbar .infor {
+  float: right;
+  padding-right: 15px;
+}
+.wrapper .navbar .infor .name_admin {
+  color: #fff;
+}
+.wrapper .navbar .infor .logout {
+  color: #fff;
+}
+.wrapper .main .table {
+  height: 100vh;
+}
+.wrapper .main .table .th {
+  background: yellow;
+}
+
+/*# sourceMappingURL=home.css.map */

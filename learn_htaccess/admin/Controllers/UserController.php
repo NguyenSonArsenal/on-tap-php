@@ -18,27 +18,47 @@ class UserController extends Controller
     const TYPE_HOBBY    = 1;
     const TYPE_PROGRAM  = 2;
 
+
+
     public function __construct()
     {
         $this->db = new Database();
     }
 
+
+    // get all users not limit on page
+    public static function allUser()
+    {
+        $self = new self();
+
+        $sql = "SELECT * FROM user";
+
+        $result = $self->db->query($sql);
+
+        $result = $result->fetchAll();
+
+        return $result;
+    }
+
+
+    // get users is limitted on page
     public static function listUser()
     {
         $self = new self();
 
         $where = '';
+        $limit = self::LIMIT;
 
-        $search = isset($_GET['search']) ? $_GET['search'] : '';
+
+        $search = isset($_GET['search'])    ?   $_GET['search']  : '';
+
+        $page   = (isset($_GET['page'])  && $_GET['page'] >= 0)  ?
+                    (int)$_GET['page']    :  1;
 
         if ($search != '')
             $where .= " WHERE name LIKE '%$search%' ";
 
-        $page   = isset($_GET['page']) ? $_GET['page'] : 1;
-
-        $limit = 2;
-
-        $from = ($page - 1) * $limit;
+        $from = ($page == 1) ? 1 : ($page - 1) * $limit;
 
         $sql = "SELECT * FROM user " . $where . " ORDER BY id DESC LIMIT $from, $limit";
 
@@ -55,7 +75,8 @@ class UserController extends Controller
             'current_page'  =>  $page,
             'limit'         =>  $limit,
             'total'         =>  $resultCount,
-            'keysearch'     =>  $search
+            'keysearch'     =>  $search,
+            'from'          =>  $from
         ];
     }
 
@@ -67,11 +88,12 @@ class UserController extends Controller
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
-            $name = isset($_POST['name']) ? clear_input($_POST['name']) : '';
-            $email = isset($_POST['email']) ? clear_input($_POST['email']) : '';
-            $phone = isset($_POST['phone']) ? clear_input($_POST['phone']) : '';
-            $hobbies = isset($_POST['hobbies']) ? $_POST['hobbies'] : '';
-            $program = isset($_POST['program']) ? $_POST['program'] : '';
+            $name = isset($_POST['name'])       ? trim(clear_input($_POST['name'])) : '';
+            $email = isset($_POST['email'])     ? trim(clear_input($_POST['email'])) : '';
+            $phone = isset($_POST['phone'])     ? trim(clear_input($_POST['phone'])) : '';
+            $phone = preg_replace('/[\s.-]+/', '', $phone);
+            $hobbies = isset($_POST['hobbies']) ? $_POST['hobbies'] : [];
+            $program = isset($_POST['program']) ? $_POST['program'] : [];
             $gender =  clear_input($_POST['gender']);
 
             if ($name == '')
@@ -80,13 +102,19 @@ class UserController extends Controller
             if ($email == '')
                 $errors['email'] = 'Email is required';
 
-            if ($phone == '')
-                $errors['phone'] = 'Phone is required';
+            if ((strlen($phone) != 10)  && (strlen($phone) != 11))
+                $errors['phone'] = 'Phone must be 10 or 11 number';
 
-            if ($hobbies == '')
+            if (!is_numeric($phone))
+                $errors['phone'] = 'Phone must be number';
+
+            if ($phone == '')
+            $errors['phone'] = 'Phone is required';
+
+            if ($hobbies == [])
                 $errors['hobbies'] = 'Hobbies is required';
 
-            if ($program == '')
+            if ($program == [])
                 $errors['program'] = 'Program is required';
 
             if (empty($errors))
@@ -276,4 +304,5 @@ class UserController extends Controller
 
         return $query->fetchAll();
     }
+
 }

@@ -2,7 +2,9 @@
 
 session_start();
 
-define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+if(! defined('ROOT')) {
+    define('ROOT', $_SERVER['DOCUMENT_ROOT']);
+}
 
 class Autoload
 {

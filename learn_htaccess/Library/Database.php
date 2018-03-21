@@ -52,7 +52,7 @@ class Database
     {
         if (is_object($this->result))
         {
-            return ($this->result->fetch_row())[0]; // ???
+            return ($this->result->num_rows);
         }
         else
         {

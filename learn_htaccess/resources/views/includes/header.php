@@ -1,13 +1,3 @@
-<?php
-use Library\Session;
-
-// neu chua dang nhap thi phai dang nhap
-if(Session::get('admin_logged') == 0)
-{
-    return redirect('../../login');
-}
-
-?>
 
 
 <!DOCTYPE html>
@@ -27,23 +17,33 @@ if(Session::get('admin_logged') == 0)
     <!--font awesome -->
     <link href="<?= asset('/bower_components/font-awesome/css/font-awesome.min.css')?>" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?= asset('/admin/views/assets/css/hobbies.css') ?>">
-    <link rel="stylesheet" href="<?= asset('/assets/css/pagination.css') ?>">
-    <link rel="stylesheet" href="<?= asset('/assets/css/searchbox.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/assets/css/home.css') ?>">
+    <link rel="stylesheet" href="<?= asset('/assets/css/detail.css') ?>">
+
+    <style>
+        .number_cart {
+            position: relative;
+            top: -9px;
+            color: yellow;
+            font-size: 15px;
+            display: none;
+        }
+    </style>
 
 </head>
 <body>
-<div class="wrapper">
 
+
+<div class="wrapper">
     <div class="navbar">
         <div class="title">PHP final</div>
         <div class="infor">
-            <?php if (Session::has('username')) : ?>
-                <a href="" class="name_admin"><?=$_SESSION['username'] ?></a>
-                <span> | </span>
-                <a href="../../logout.php" class="logout">Logout</a>
-            <?php endif; ?>
+            <a href="/cart" class="btn btn-sm btn-success">Cart
+                <small class="number_cart">2</small>
+            </a>
+            <a href="" class="name_admin">name</a>
+            <span> | </span>
+            <a href="../../logout.php" class="logout">Logout</a>
         </div>
         <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>

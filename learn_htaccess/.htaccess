@@ -1,1 +1,16 @@
-#RewriteEngine On
+RewriteEngine On
+
+#RewriteRule ^admin/views/module/user admin/views/module/user/index.php?page=$1
+
+#RewriteRule ^admin/views/module/user/detail-([0-9]+).html /admin/views/module/user/detail.php?id=$1
+#RewriteRule ^admin/views/module/user/detail-([\w\s]+)-([0-9]+).html /admin/views/module/user/detail.php?id=$2
+
+RewriteRule ^admin/views/module/user/([\d]+)\/edit&page=([\d]+)$    admin/views/module/user/edit.php?id=$1&page=$2
+RewriteRule ^admin/views/module/user/([\d]+)\/delete&page=([\d]+)$  admin/views/module/user/delete.php?id=$1&page=$2
+
+#RewriteRule ^admin/views/module/user admin/views/module/user/index.php?%{QUERY_STRING}
+
+RewriteRule ^home /public/index.php
+RewriteRule ^404$ /public/404.php
+RewriteRule ^user/([\d]+)$ /public/detail.php?id=$1
+RewriteRule ^cart /public/cart.php

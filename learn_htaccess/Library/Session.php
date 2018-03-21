@@ -80,11 +80,11 @@ class Session
      */
     public static function push($key, $value)
     {
-        $result = isset($_SESSION[$key]) ? $_SESSION[$key] : null;
+        $result = isset($_SESSION[$key]) ? $_SESSION[$key] : [];
 
         if(gettype($result) === 'array' & isset($value))
         {
-            array_push($_SESSION[$key], $value);
+            array_push($_SESSION, $value);
         }
         else
         {
@@ -109,7 +109,7 @@ class Session
      */
     public static function flush()
     {
-        unset($_SESSION);
+        session_destroy();
     }
 
     /*

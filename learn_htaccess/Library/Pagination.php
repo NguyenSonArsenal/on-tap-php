@@ -15,8 +15,9 @@ class Pagination
         $limit = $items['limit'];
         $totalPage = ceil($total / $limit);
 
-        echo 'total pages: ' . $totalPage;
-        echo 'page: ' . $currentPage;
+        $from = ($currentPage == 1) ? 1 : $currentPage * $limit - ($limit - 1);
+
+        $end    =   ($from + $limit -1 < $total) ? $from + $limit -1 : $total;
 
         if ($totalPage > 0)
         {
@@ -27,34 +28,45 @@ class Pagination
                             $currentPage + $space :
                             $totalPage;
 
-            echo "start: " . $start_tmp . " end: "  . $end_tmp;
+            $html = "Show $from to $end of $total records" ;
 
-            echo "<div class = 'pagination'>";
+            $html .= "<div class = 'pagination'>";
 
-            if ($currentPage > 1 && $currentPage <= $totalPage) {
+            if ($currentPage > 1 && $currentPage <= $totalPage)
+            {
                 $prev_page = $currentPage - 1;
-                echo "<a href='index.php?page=$prev_page&search=$search' 
-            class='pagination_link'><<</a>";
+                $html .= self::renderUrl($prev_page, '<<', $search);
             }
 
-            for ($i = $start_tmp; $i <= $end_tmp; $i++) {
+            for ($i = $start_tmp; $i <= $end_tmp; $i++)
+            {
                 if ($i == $currentPage)
-                    echo "<a href='index.php?page=$i&search=$search' 
-                class='pagination_link active'>$i</a>";
+                    $html .= self::renderUrl($i, $i, $search, 'active');
                 else
-                    echo "<a href='index.php?page=$i&search=$search' 
-                class='pagination_link'>$i</a>";
+                    $html .= self::renderUrl($i, $i, $search);
             }
 
-            if ($currentPage != $totalPage) {
+            if ($currentPage != $totalPage)
+            {
                 $next_page = $currentPage + 1;
-                echo "<a href='index.php?page=$next_page&search=$search'
-             class='pagination_link'>>></a>";
+                $html .= self::renderUrl($next_page, '>>', $search);
             }
 
-            echo "</div>";
-            echo "<div class='clearfix'></div>";
+            $html .= "</div>";
+            $html .= "<div class='clearfix'></div>";
+
+            return $html;
         }
+    }
+
+    public static function renderUrl($page, $sign, $search = '', $isActive = false)
+    {
+        if ($search == '')
+            return "<a href='?page=$page' 
+            class='pagination_link $isActive' > $sign </a>";
+        else
+            return "<a href='?page=$page&search=$search'  
+            class='pagination_link $isActive'  > $sign </a>";
     }
 
 

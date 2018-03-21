@@ -100,7 +100,7 @@ class HobbiesController extends Controller
     }
 
 
-    public static function selectAll()
+    public static function selectListAll()
     {
         $sql = "SELECT * FROM hobbies ORDER BY id desc";
         $listAllHobbies = Database::query($sql);
@@ -136,7 +136,7 @@ class HobbiesController extends Controller
 
         $page   = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
-        $limit = 2;
+        $limit = self::LIMIT;
 
         $from = ($page -1 )*$limit;
 
@@ -192,16 +192,16 @@ class HobbiesController extends Controller
         }
 
 
-        if (sizeof($resultTopDESC5) > 0)
+        if (count($resultTopDESC5) > 0)
         {
             $result         =   $resultTopDESC5;
-            $resultCount    =   sizeof($resultTopDESC5);
+            $resultCount    =   count($resultTopDESC5);
         }
 
-        if (sizeof($resultTopASC5) > 0)
+        if (count($resultTopASC5) > 0)
         {
             $result         =   $resultTopASC5;
-            $resultCount    =   sizeof($resultTopASC5);
+            $resultCount    =   count($resultTopASC5);
         }
 
         return [

@@ -2,9 +2,11 @@
   font-weight: normal;
 }
 .wrapper .navbar {
+  display: block;
   background: #2e85be;
 }
 .wrapper .navbar .title {
+  float: left;
   color: #fff;
   font-size: 18px;
 }
@@ -13,8 +15,19 @@
   background-color: transparent;
   cursor: pointer;
 }
+.wrapper .navbar .infor {
+  float: right;
+  padding-right: 15px;
+}
+.wrapper .navbar .infor .name_admin {
+  color: #fff;
+}
+.wrapper .navbar .infor .logout {
+  color: #fff;
+}
 .wrapper .page_wrapper {
   display: flex;
+  height: 100vh;
 }
 .wrapper .page_wrapper .sidebar {
   background: #222d32;

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACI,cAAM;EACF,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,OAAO",
+"sources": ["../scss/datail.scss"],
+"names": [],
+"file": "detail.css"
+}

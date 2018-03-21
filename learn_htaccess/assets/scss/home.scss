@@ -1,0 +1,30 @@
+.wrapper {
+    margin: 0 auto;
+    width: 80%;
+    .navbar {
+        background: #e43;
+        display: block;
+        .title {
+            float: left;
+        }
+        .infor {
+            float: right;
+            padding-right: 15px;
+            .name_admin {
+                color: #fff;
+            }
+            .logout {
+                color: #fff;
+            }
+        }
+    }
+    .main {
+        .table {
+            height: 100vh;
+            .th {
+                background: yellow;
+            }
+        }
+
+    }
+}
